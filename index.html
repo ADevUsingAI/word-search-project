@@ -428,6 +428,50 @@
         }
         return { records: out, warnings: warnings };
       }
+      // 重複行の判定用。表示文字列そのものは変更せず、比較時だけ正規化する。
+      function duplicateNormalise(value) {
+        var text = String(value == null ? '' : value).trim();
+        try { if (text.normalize) text = text.normalize('NFKC'); } catch (e) {}
+        return text.toLowerCase().replace(/[\s\u3000]+/g, ' ').trim();
+      }
+      function duplicateRecordKey(record) {
+        // IDとページは重複判定から除外。ページ違いの同一データは1行にまとめてページ情報を統合する。
+        return JSON.stringify([
+          duplicateNormalise(record.word),
+          duplicateNormalise(record.pronunciation),
+          duplicateNormalise(record.pos),
+          duplicateNormalise(record.meaning),
+          duplicateNormalise(record.weight)
+        ]);
+      }
+      function deduplicateRecords(inputRecords) {
+        var output = [], byKey = Object.create(null), duplicates = 0;
+        for (var i = 0; i < inputRecords.length; i += 1) {
+          var record = inputRecords[i];
+          var key = duplicateRecordKey(record);
+          if (Object.prototype.hasOwnProperty.call(byKey, key)) {
+            duplicates += 1;
+            var existing = output[byKey[key]];
+            var oldPages = String(existing.page || '').split(/[;；、，]/);
+            var newPages = String(record.page || '').split(/[;；、，]/);
+            var pageSet = Object.create(null);
+            oldPages.concat(newPages).forEach(function (page) {
+              page = String(page || '').trim();
+              if (!page) return;
+              var pageKey = duplicateNormalise(page);
+              if (!pageSet[pageKey]) {
+                pageSet[pageKey] = true;
+                if (!existing.page) existing.page = page;
+                else if (duplicateNormalise(existing.page).split(/[;；、，]/).indexOf(pageKey) < 0) existing.page += '、' + page;
+              }
+            });
+            continue;
+          }
+          byKey[key] = output.length;
+          output.push(record);
+        }
+        return { records: output, duplicates: duplicates };
+      }
       function getGroupKey(word) { return String(word == null ? '' : word).trim(); }
       function buildGroups(inputRecords) {
         var byKey = {}, order = [], i, item, key, group, j, found;
@@ -457,6 +501,9 @@
       }
       function setDatabase(csvText, source, persist) {
         var parsed = parseDatabase(csvText);
+        var unique = deduplicateRecords(parsed.records);
+        parsed.records = unique.records;
+        if (unique.duplicates) parsed.warnings.push(unique.duplicates + '件の重複データを除外しました。');
         records = parsed.records;
         groups = buildGroups(records);
         dataSource = source;
@@ -500,21 +547,28 @@
             continue;
           }
           parsed.records.forEach(function (record) {
-            original = String(record.id || 'row-' + (record.rowNumber || (combined.length + 1)));
-            key = original;
-            suffix = 1;
-            while (Object.prototype.hasOwnProperty.call(usedIds, key)) {
-              suffix += 1;
-              key = original + '-' + suffix;
-            }
-            if (key !== original) warnings.push(fileTexts[i].name + ': ID「' + original + '」が重複したため内部IDを補正しました。');
-            usedIds[key] = true;
-            record.id = key;
             record.sourceFile = fileTexts[i].name;
             combined.push(record);
           });
           warnings = warnings.concat(parsed.warnings);
         }
+        // 複数CSVをすべて結合してから重複排除するため、ファイルをまたぐ重複も除外できる。
+        var unique = deduplicateRecords(combined);
+        combined = unique.records;
+        if (unique.duplicates) warnings.push(unique.duplicates + '件の重複データを除外しました。');
+        // 重複排除後に内部IDを一意化。元CSVのIDが重複していてもデータは失わない。
+        combined.forEach(function (record, index) {
+          original = String(record.id || 'row-' + (record.rowNumber || (index + 1)));
+          key = original;
+          suffix = 1;
+          while (Object.prototype.hasOwnProperty.call(usedIds, key)) {
+            suffix += 1;
+            key = original + '-' + suffix;
+          }
+          if (key !== original) warnings.push(record.sourceFile + ': ID「' + original + '」が重複したため内部IDを補正しました。');
+          usedIds[key] = true;
+          record.id = key;
+        });
         return { records: combined, warnings: warnings, count: combined.length };
       }
       function setDatabaseFromFiles(fileTexts, source, persist) {
@@ -828,6 +882,65 @@
         renderScreen();
         saveAppState();
       }
+
+      function splitMeaningEntries(value) {
+        var text = String(value == null ? '' : value).replace(/\r\n?/g, '\n').trim();
+        if (!text) return [];
+        // ①②③、(1)(2)、1. などの番号が始まる位置で分割し、番号自体は残す。
+        var marker = /(?=(?:[①-⑳❶-❿]|\(\s*\d+\s*\)|\d+[.．、]))/g;
+        var parts = text.split(marker).map(function (part) { return part.trim(); }).filter(Boolean);
+        var out = [];
+        parts.forEach(function (part) {
+          part.split(/\n+/).forEach(function (line) { if (line.trim()) out.push(line.trim()); });
+        });
+        return out.length ? out : [text];
+      }
+      function relatedNormalise(value) {
+        return String(value == null ? '' : value).toLowerCase()
+          .replace(/[\s　・、。，．.!！?？:：;；()（）「」『』【】\[\]{}]+/g, ' ').trim();
+      }
+      function relatedTokens(value) {
+        var text = relatedNormalise(value), tokens = [], match;
+        var english = /[a-z][a-z'-]{1,}/g;
+        while ((match = english.exec(text))) tokens.push(match[0]);
+        var japanese = text.replace(/[a-z0-9' -]/g, ' ').replace(/\s+/g, '');
+        // 日本語は2文字以上の連続文字列と2-gramを使い、短い助詞だけの一致を避ける。
+        var runs = japanese.match(/[\u3040-\u30ff\u3400-\u9fff]{2,}/g) || [];
+        runs.forEach(function (run) {
+          if (run.length <= 8) tokens.push(run);
+          for (var k = 0; k < run.length - 1; k += 1) tokens.push(run.slice(k, k + 2));
+        });
+        return Array.from(new Set(tokens));
+      }
+      function getRelatedScore(source, target, sourceMeaningText) {
+        var score = 0, sourceMeanings = source.meanings.map(relatedNormalise);
+        var targetMeanings = target.meanings.map(relatedNormalise);
+        var sourceText = sourceMeanings.join(' '), targetText = targetMeanings.join(' ');
+        var i, j, token, overlap = 0, targetTokens = relatedTokens(targetText);
+        // 意味が完全一致する場合は最も強い関連。
+        for (i = 0; i < sourceMeanings.length; i += 1) {
+          for (j = 0; j < targetMeanings.length; j += 1) {
+            if (sourceMeanings[i] && sourceMeanings[i] === targetMeanings[j]) score = Math.max(score, 100);
+            else if (sourceMeanings[i].length >= 3 && targetMeanings[j].length >= 3 &&
+              (sourceMeanings[i].indexOf(targetMeanings[j]) >= 0 || targetMeanings[j].indexOf(sourceMeanings[i]) >= 0)) score = Math.max(score, 65);
+          }
+        }
+        // 相手の英単語が意味欄に明示されている場合。
+        var escaped = target.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        if (target.word.length >= 2 && new RegExp('(^|[^A-Za-z0-9])' + escaped + '([^A-Za-z0-9]|$)', 'i').test(sourceMeaningText)) score = Math.max(score, 90);
+        // 意味欄どうしの語彙的な重なり。重複語の数に応じて加点。
+        var sourceTokens = relatedTokens(sourceText);
+        for (i = 0; i < sourceTokens.length; i += 1) {
+          token = sourceTokens[i];
+          if (token.length >= 2 && targetTokens.indexOf(token) >= 0) overlap += token.length >= 4 ? 2 : 1;
+        }
+        if (overlap >= 3) score = Math.max(score, 20 + Math.min(overlap, 25));
+        // 単語自体が相手の意味欄に現れる場合も関連候補にする。
+        escaped = source.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        if (source.word.length >= 2 && new RegExp('(^|[^A-Za-z0-9])' + escaped + '([^A-Za-z0-9]|$)', 'i').test(targetText)) score = Math.max(score, 85);
+        return score;
+      }
+
       function openGroup(key, recordAction) {
         var group = null, i, j, meanings = '', chips = '', pron, pageText;
         for (i = 0; i < groups.length; i += 1) if (groups[i].key === key) { group = groups[i]; break; }
@@ -840,29 +953,25 @@
         if (group.pages.length) chips += '<span class="chip">' + escapeHtml(pageLabel(group.pages.join(', '))) + '</span>';
         $('detailChips').innerHTML = chips || '<span class="chip">追加情報なし</span>';
         if (group.meanings.length) {
-          for (j = 0; j < group.meanings.length; j += 1) meanings += '<div class="definition">' + escapeHtml(group.meanings[j]).replace(/\n/g, '<br>') + '</div>';
-        } else { meanings = '<div class="definition">日本語の意味は登録されていません。</div>'; }
-        $('detailMeanings').innerHTML = meanings;
-        // 関連単語：意味が共通する単語、または意味文中に英単語として登場する単語を抽出。
-        // 表示文字列はCSVの表記をそのまま使用し、リンク先は内部キーで管理する。
-        var related = [], relatedSeen = Object.create(null), relatedHtml = '', candidate, sharedMeaning, mentioned;
-        for (i = 0; i < groups.length; i += 1) {
-          candidate = groups[i];
-          if (candidate.key === group.key || relatedSeen[candidate.key]) continue;
-          sharedMeaning = false;
-          for (j = 0; j < candidate.meanings.length && !sharedMeaning; j += 1) {
-            if (group.meanings.indexOf(candidate.meanings[j]) >= 0) sharedMeaning = true;
-          }
-          mentioned = false;
-          if (!sharedMeaning && candidate.word.length >= 2) {
-            for (j = 0; j < group.meanings.length && !mentioned; j += 1) {
-              var escapedWord = candidate.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-              var wordPattern = new RegExp('(^|[^A-Za-z0-9])' + escapedWord + '([^A-Za-z0-9]|$)', 'i');
-              if (wordPattern.test(group.meanings[j])) mentioned = true;
+          for (j = 0; j < group.meanings.length; j += 1) {
+            var meaningParts = splitMeaningEntries(group.meanings[j]);
+            for (var mp = 0; mp < meaningParts.length; mp += 1) {
+              meanings += '<div class="definition">' + escapeHtml(meaningParts[mp]).replace(/\n/g, '<br>') + '</div>';
             }
           }
-          if (sharedMeaning || mentioned) { relatedSeen[candidate.key] = true; related.push(candidate); }
+        } else { meanings = '<div class="definition">日本語の意味は登録されていません。</div>'; }
+        $('detailMeanings').innerHTML = meanings;
+        // 関連単語は複数の根拠を点数化して順位付けする。CSVの単語表記は変更しない。
+        var related = [], relatedHtml = '', candidate, score, scored = [];
+        var currentMeaningText = group.meanings.join(' ');
+        for (i = 0; i < groups.length; i += 1) {
+          candidate = groups[i];
+          if (candidate.key === group.key) continue;
+          score = getRelatedScore(group, candidate, currentMeaningText);
+          if (score > 0) scored.push({ group: candidate, score: score });
         }
+        scored.sort(function (a, b) { return b.score - a.score || a.group.word.localeCompare(b.group.word); });
+        related = scored.slice(0, 30).map(function (item) { return item.group; });
         for (i = 0; i < related.length; i += 1) {
           relatedHtml += '<button type="button" class="related-word" data-related-key="' + escapeHtml(related[i].key) + '">' + escapeHtml(related[i].word) + '</button>';
         }
