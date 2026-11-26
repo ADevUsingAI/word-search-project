@@ -1,0 +1,581 @@
+word,meaning,weight
+i,"【代】私は、私が [1]",bold
+ice,"【名】氷 [1]",bold
+ice cream,"【名】アイスクリーム [1]",bold
+icicle,"【名】つらら [2]",normal
+icon,"【名】アイコン [2]",normal
+idea,"【名】考え、アイディア [1]",bold
+ideal,"【形】理想的な [2]",normal
+identical,"【形】同一の、そっくりの [2]",normal
+identification,"【名】身分証明書 [2]",normal
+identify,"【動】〜を特定する、確認する [2]",normal
+idiom,"【名】慣用句、熟語 [2]",normal
+if,"【接】もし〜なら、もし〜ならば [1], even if ~ たとえ〜でも [2]",bold
+ignorance,"【名】無知 [2]",normal
+ignore,"【動】〜を無視する [2]",normal
+ill,"【形】病気で、具合が悪くて [2]",normal
+illegal,"【形】違法の [2]",normal
+illness,"【名】病気 [2]",normal
+illustrate,"【動】〜をイラストで説明する、例証する [2]",normal
+illustration,"【名】イラスト、挿絵 [2]",normal
+image,"【名】画像、イメージ [2]",normal
+imagination,"【名】想像力 [2]",normal
+imagine,"【動】〜を想像する [2]",normal
+immediate,"【形】即座の、当面の [2]",normal
+immediately,"【副】すぐに、直ちに [2]",normal
+immigrant,"【名】移民 [2]",normal
+immigration,"【名】移民、入国管理局 [2]",normal
+impact,"【名】影響、衝撃 [2]",normal
+impatient,"【形】いら立った、待ちきれない [2]",normal
+imply,"【動】〜をほのめかす、暗示する [2]",normal
+import,"【動】〜を輸入する [2], 【名】輸入 [2]",normal
+importance,"【名】重要性 [2]",normal
+important,"【形】重要な [1], be important to ~ 〜にとって重要である [1]",bold
+impose,"【動】〜を課す、押しつける [2]",normal
+impossible,"【形】不可能な [2]",normal
+impress,"【動】〜に強い印象を与える [2]",normal
+impression,"【名】印象 [2]",normal
+impressive,"【形】印象的な、見事な [2]",normal
+improve,"【動】〜を改善する、向上させる [2]",normal
+improvement,"【名】改善、進歩 [2]",normal
+in,"【前】①〔空間〕〜の中に［で］ [1], ②〔時間〕〜に、〜の後に [1], ③〔状態〕〜の状態にある [2], ④〔言語・衣服〕〜で [2], 【副】中に、屋内に [1]",bold
+inch,"【名】インチ〔長さの単位〕 [2]",normal
+incident,"【名】出来事、事件 [2]",normal
+include,"【動】〜を含む [2]",normal
+including,"【前】〜を含めて [2]",normal
+income,"【名】収入、所得 [2]",normal
+incorrect,"【形】不正確な、間違った [2]",normal
+increase,"【動】増える、〜を増やす [2], 【名】増加 [2]",normal
+increasingly,"【副】ますます [2]",normal
+incredible,"【形】信じられないような、すばらしい [2]",normal
+indeed,"【副】本当に、実に [2]",normal
+independence,"【名】独立 [2]",normal
+independent,"【形】独立した [2]",normal
+index,"【名】索引、指標 [2]",normal
+india,"【名】インド [1]",bold
+indian,"【名】【形】インド人（の）、インディアン（の） [2]",normal
+indicate,"【動】〜を示す [2]",normal
+indication,"【名】しるし、兆候 [2]",normal
+indigenous,"【形】先住の、固有の [2]",normal
+individual,"【形】個人の、個別の [2], 【名】個人 [2]",normal
+Indonesia,"【名】インドネシア [1]",bold
+indoor,"【形】屋内の [2]",normal
+indoors,"【副】屋内で [2]",normal
+industrial,"【形】工業の、産業の [2]",normal
+industry,"【名】産業、工業 [2]",normal
+inevitable,"【形】避けられない、必然的な [2]",normal
+infant,"【名】乳幼児 [2]",normal
+infect,"【動】〜に感染させる [2]",normal
+infection,"【名】感染 [2]",normal
+infer,"【動】推論する [2]",normal
+inflation,"【名】インフレ、物価高 [2]",normal
+influence,"【名】影響（力） [2], 【動】〜に影響を与える [2]",normal
+influential,"【形】影響力のある [2]",normal
+info,"【名】情報 [1]",bold
+inform,"【動】〜に知らせる、通知する [2]",normal
+information,"【名】情報 [1]",bold
+infrastructure,"【名】インフラ、基盤 [2]",normal
+ingredient,"【名】材料、成分 [2]",normal
+initial,"【形】最初の、初めの [2]",normal
+initially,"【副】最初は、初めに [2]",normal
+initiative,"【名】主導権、イニシアチブ [2]",normal
+injure,"【動】〜を傷つける、負傷させる [2]",normal
+injured,"【形】負傷した [2]",normal
+injury,"【名】けが、負傷 [2]",normal
+ink,"【名】インク [1]",bold
+innocent,"【形】無邪気な、無実の [2]",normal
+input,"【名】【動】入力（する） [2]",normal
+inquire,"【動】尋ねる [2]",normal
+insect,"【名】昆虫、虫 [2]",normal
+inside,"【前】【副】〜の内側に［で］ [1], 【名】内側 [2]",bold
+insight,"【名】洞察力 [2]",normal
+insist,"【動】主張する [2]",normal
+inspect,"【動】〜を検査する [2]",normal
+inspire,"【動】〜を奮起させる、ひらめきを与える [2]",normal
+install,"【動】〜を設置する、インストールする [2]",normal
+instance,"【名】例、実例 [2], for instance 例えば [2]",normal
+instant,"【形】即座の、インスタントの [1]",bold
+instead,"【副】その代わりに [2], instead of ~ 〜の代わりに [2]",normal
+institute,"【名】研究所、機関 [2]",normal
+institution,"【名】機関、制度 [2]",normal
+instruct,"【動】〜を指導する、指示する [2]",normal
+instruction,"【名】指示、説明書 [2]",normal
+instructor,"【名】指導員、講師 [2]",normal
+instrument,"【名】楽器、器具 [1]",bold
+insult,"【動】〜を侮辱する [2]",normal
+insurance,"【名】保険 [2]",normal
+intake,"【名】摂取量 [2]",normal
+integral,"【形】不可欠な、完全な [2]",normal
+integrate,"【動】統合する [2]",normal
+integrated,"【形】統合された [2]",normal
+intellectual,"【形】知的な [2]",normal
+intelligence,"【名】知性、情報 [2]",normal
+intelligent,"【形】知的な、賢い [2]",normal
+intend,"【動】〜するつもりである、意図する [2]",normal
+intense,"【形】激しい、強烈な [2]",normal
+intensity,"【名】強烈さ、強度 [2]",normal
+intention,"【名】意図、意志 [2]",normal
+interaction,"【名】相互作用、交流 [2]",normal
+interest,"【名】興味、関心 [1], have an interest in ~ 〜に関心がある [1], 【動】〜に興味を起こさせる [2]",bold
+interested,"【形】興味を持った [1], be interested in ~ 〜に興味がある [1]",bold
+interesting,"【形】おもしろい、興味深い [1]",bold
+interface,"【名】インターフェース [2]",normal
+interfere,"【動】干渉する、邪魔をする [2]",normal
+interior,"【名】【形】内部（の）、インテリア [2]",normal
+intermediate,"【形】中級の、中間の [2]",normal
+internal,"【形】内部の、国内の [2]",normal
+international,"【形】国際的な [1]",bold
+internet,"【名】インターネット [1]",bold
+interpreter,"【名】通訳者 [2]",normal
+interrupt,"【動】〜を遮る、中断させる [2]",normal
+interval,"【名】間隔、休憩時間 [2]",normal
+interview,"【名】面接、インタビュー [1], 【動】インタビューする [1]",bold
+intimate,"【形】親密な [2]",normal
+into,"【前】①〜の中に［へ］ [1], ②〔変化〕〜に（なって） [2]",bold
+introduce,"【動】〜を紹介する [1], introduce ~ to ... 〜を…に紹介する [1]",bold
+introduction,"【名】紹介、序論 [2]",normal
+invade,"【動】〜に侵入する、侵略する [2]",normal
+invasion,"【名】侵略 [2]",normal
+invent,"【動】〜を発明する [1]",bold
+invention,"【名】発明、発明品 [1]",bold
+inventor,"【名】発明家 [1]",bold
+invest,"【動】投資する [2]",normal
+investigate,"【動】〜を調査する [2]",normal
+investment,"【名】投資 [2]",normal
+invitation,"【名】招待、招待状 [2]",normal
+invite,"【動】〜を招待する [1]",bold
+involve,"【動】〜を巻き込む、伴う [2]",normal
+involved,"【形】巻き込まれた、熱心な [2]",normal
+involvement,"【名】関与 [2]",normal
+iron,"【名】アイロン、鉄 [1]",bold
+island,"【名】島 [1]",bold
+isolate,"【動】〜を隔離する [2]",normal
+issue,"【名】問題、発行物 [2]",normal
+it,"【代】それは、それが [1]",bold
+italian,"【名】【形】イタリア語（の）、イタリア人（の） [1]",bold
+italy,"【名】イタリア [1]",bold
+item,"【名】項目、品目 [1]",bold
+its,"【代】その [1]",bold
+itself,"【代】それ自身 [1]",bold
+jacket,"【名】ジャケット、上着 [1]",bold
+jam,"【名】ジャム、渋滞 [1]",bold
+january,"【名】1月 [1]",bold
+japan,"【名】日本 [1]",bold
+japanese,"【名】【形】日本語（の）、日本人（の） [1]",bold
+jar,"【名】瓶、壺 [2]",normal
+jaw,"【名】あご [2]",normal
+jazz,"【名】ジャズ [1]",bold
+jeans,"【名】ジーンズ、ジーパン [1]",bold
+jelly,"【名】ゼリー [1]",bold
+jellyfish,"【名】クラゲ [1]",bold
+jet,"【名】ジェット機 [2]",normal
+jewel,"【名】宝石 [2]",normal
+job,"【名】仕事、職業 [1]",bold
+jog,"【動】ジョギングする [1]",bold
+join,"【動】①（クラブなど）に加わる、参加する [1], ②〜をつなぐ [2]",bold
+joint,"【名】関節 [2]",normal
+joke,"【名】冗談、ジョーク [1], 【動】冗談を言う [2]",bold
+journal,"【名】雑誌、日誌 [2]",normal
+journalist,"【名】ジャーナリスト、記者 [2]",normal
+journey,"【名】旅、旅行 [2]",normal
+joy,"【名】喜び、歓喜 [2]",normal
+judge,"【動】〜を判断する、審査する [2], 【名】裁判官、審査員 [2]",normal
+judgment,"【名】判断、判定 [2]",normal
+judo,"【名】柔道 [1]",bold
+juice,"【名】ジュース [1]",bold
+July,"【名】7月 [1]",bold
+jump,"【動】跳ぶ、ジャンプする [1], 【名】ジャンプ [2]",bold
+June,"【名】6月 [1]",bold
+jungle,"【名】ジャングル、密林 [1]",bold
+junior,"【形】後輩の、下級の、年下の [2]",normal
+junior high school,"【名】中学校 [1]",bold
+junk,"【名】ガラクタ、ジャンク [2]",normal
+jury,"【名】陪審員団 [2]",normal
+just,"【副】①ちょうど、まさに [1], ②たった、ほんの [1], ③〔現在完了とともに〕ちょうど〜したところだ [2], Just a minute. ちょっと待ってください。 [1], Just a second. ちょっと待って。 [2]",bold
+justice,"【名】正義、公正 [2]",normal
+justify,"【動】〜を正当化する [2]",normal
+kangaroo,"【名】カンガルー [1]",bold
+keen,"【形】熱心な、鋭い [2]",normal
+keep,"【動】①〜を保つ、〜の状態にしておく [1], ②（習慣など）を続ける [2], ③〜をとっておく [2], keep ~ from ...ing 〜が…するのを防ぐ [2], keep in touch 連絡を取り合う [2], keep on ~ing 〜し続ける [2], keep one's promise 約束を守る [1]",bold
+Kenya,"【名】ケニア [2]",normal
+keyboard,"【名】キーボード [1]",bold
+kick,"【動】〜を蹴る [1], 【名】キック [2]",bold
+kid,"【名】子供、子ども [1]",bold
+kill,"【動】〜を殺す [2]",normal
+kilo,"【名】キログラム、キロ [1]",bold
+kilometer,"【名】キロメートル [1]",bold
+kind,"【名】種類 [1], a kind of ~ 一種の〜 [1], 【形】親切な、優しい [1]",bold
+kindergarten,"【名】幼稚園 [2]",normal
+kindness,"【名】親切、優しさ [2]",normal
+king,"【名】王、国王 [1]",bold
+kingdom,"【名】王国 [2]",normal
+kiss,"【動】【名】キス（する） [1]",bold
+kitchen,"【名】台所、キッチン [1]",bold
+kite,"【名】凧 [1]",bold
+kitten,"【名】子猫 [1]",bold
+knee,"【名】ひざ [1]",bold
+knew,"【動】know の過去形 [1]",bold
+knife,"【名】ナイフ [1]",bold
+knight,"【名】騎士、ナイト [2]",normal
+knit,"【動】〜を編む [2]",normal
+knock,"【動】（ドアなどを）ノックする、叩く [1], 【名】ノック [2]",bold
+knot,"【名】結び目 [2]",normal
+know,"【動】（〜を）知っている、わかる [1], As you know. ご存知のように。 [2]",bold
+knowledge,"【名】知識 [2]",normal
+korean,"【名】【形】韓国語（の）、韓国人（の） [1]",bold
+label,"【名】ラベル、札 [2]",normal
+laboratory,"【名】実験室、研究室 [2]",normal
+laborer,"【名】労働者 [2]",normal
+lack,"【名】【動】不足（している） [2]",normal
+lad,"【名】少年、若者 [2]",normal
+ladder,"【名】はしご [2]",normal
+lady,"【名】婦人、レディ [1]",bold
+lake,"【名】湖 [1]",bold
+lamb,"【名】子羊の肉、子羊 [2]",normal
+lamp,"【名】ランプ、照明器具 [1]",bold
+land,"【名】陸、土地、国 [1], 【動】着陸する [2]",bold
+landscape,"【名】風景、景色 [2]",normal
+language,"【名】言語、言葉 [1]",bold
+lantern,"【名】ランタン、提灯 [2]",normal
+large,"【形】大きい、広い [1]",bold
+largely,"【副】主に、大部分は [2]",normal
+laser,"【名】レーザー [2]",normal
+last,"【形】①最後の、この前の [1], ②昨夜の、去年の [1], 【副】最後に、この前に [2], 【動】続く、持続する [2]",bold
+late,"【形】【副】遅い［く］ [1], be late for ~ 〜に遅れる [1]",bold
+lately,"【副】最近、近頃 [2]",normal
+later,"【副】あとで、もっと後に [1], See you later. またね。 [2]",bold
+latin,"【形】【名】ラテン語（の） [2]",normal
+latter,"【形】後半の、後者の [2]",normal
+laugh,"【動】笑う [1], 【名】笑い声 [2]",bold
+laughter,"【名】笑い [2]",normal
+launch,"【動】（事業など）を始める、打ち上げる [2], 【名】開始、打ち上げ [2]",normal
+laundry,"【名】洗濯、洗濯物 [1]",bold
+lavatory,"【名】化粧室、トイレ [2]",normal
+law,"【名】法律 [2]",normal
+lawn,"【名】芝生 [2]",normal
+lawyer,"【名】弁護士 [2]",normal
+lay,"【動】（卵）を産む、〜を置く [2]",normal
+layout,"【名】レイアウト、配置 [2]",normal
+lazy,"【形】怠け者の、けだるい [2]",normal
+lead,"【動】①導く、案内する [2], ②（生活など）を送る [2], lead to ~ 〜につながる [2], 【名】リード、先頭 [2]",normal
+leader,"【名】指導者、リーダー [1]",bold
+leadership,"【名】指導力、リーダーシップ [2]",normal
+leading,"【形】主要な、リードしている [2]",normal
+leaf,"【名】葉 [1]",bold
+league,"【名】同盟、リーグ [2]",normal
+lean,"【動】傾く、寄りかかる [2]",normal
+leap,"【動】跳ぶ、跳ねる [2]",normal
+learn,"【動】（〜を）学ぶ、習得する [1]",bold
+learned,"【形】学識のある [2]",normal
+learning,"【名】学習、学問 [2]",normal
+least,"【形】【副】最も少ない［少なく］ [2], at least 少なくとも [2]",normal
+leather,"【名】【形】革、レザー（製） [2]",normal
+leave,"【動】①出発する [1], ②〜を去る [2], ③〜をそのままにしておく [2], ④〜を置き忘れる [2], leave ~ behind 〜を置き忘れる [2], leave for ~ 〜に向けて出発する [2]",bold
+lecture,"【名】講義、講演 [2]",normal
+left,"【形】【名】左の［に］ [1], 【動】leave の過去形・過去分詞 [1]",bold
+leg,"【名】脚、足 [1]",bold
+legal,"【形】法律の、適法の [2]",normal
+legend,"【名】伝説、言い伝え [2]",normal
+leisure,"【名】余暇、レジャー [2]",normal
+lemon,"【名】レモン [1]",bold
+lemonade,"【名】レモネード [1]",normal
+lend,"【動】〜を貸す [1]",bold
+length,"【名】長さ [2]",normal
+lens,"【名】レンズ [2]",normal
+lent,"【動】lend の過去形・過去分詞 [2]",normal
+leopard,"【名】ヒョウ [2]",normal
+less,"【形】【副】より少ない［少なく］ [2], less than ~ 〜未満で [2]",normal
+lesson,"【名】レッスン、授業、教訓 [1]",bold
+let,"【動】①〔let ~ do で〕〜に…させてやる [1], ②〔Let's ~ で〕〜しよう [1], let out ~ 〜をもらす [2]",bold
+letter,"【名】①手紙 [1], ②文字 [1]",bold
+lettuce,"【名】レタス [1]",bold
+level,"【名】レベル、水準 [1]",bold
+liar,"【名】嘘つき [2]",normal
+liberal,"【形】自由主義の、寛大な (106)",normal
+liberation,"【名】解放 [2]",normal
+liberty,"【名】自由 [2]",normal
+librarian,"【名】司書、図書館員 [2]",normal
+library,"【名】図書館 [1]",bold
+license,"【名】免許証、ライセンス [2]",normal
+lick,"【動】〜をなめる [2]",normal
+lid,"【名】蓋、ふた [2]",normal
+lie,"【動】①横たわる、ある [2], ②嘘をつく [2], 【名】嘘 [2]",normal
+life,"【名】①生命、命 [1], ②人生、生活 [1]",bold
+lifestyle,"【名】ライフスタイル、生活様式 [2]",normal
+lifetime,"【名】一生、生涯 [2]",normal
+lift,"【動】〜を持ち上げる [2], 【名】エレベーター〔英国式〕 [2]",normal
+light,"【名】光、明かり、信号機 [1], 【形】①軽い [1], ②明るい [2], 【動】〜に火をつける、明るくする [2]",bold
+lightning,"【名】稲妻、雷 [2]",normal
+like,"【動】〜が好きである [1], 【前】〜のような [1], 【接】〜のように [2]",bold
+likely,"【形】ありそうな、〜しそうである [2]",normal
+limit,"【名】制限、限界 [2], 【動】〜を制限する [2]",normal
+limited,"【形】限られた、有限の [2]",normal
+line,"【名】①線、行 [1], ②電話回線 [2], ③列 [2]",bold
+linear,"【形】直線状の [2]",normal
+linen,"【名】亜麻布、リネン [2]",normal
+liner,"【名】定期船 [2]",normal
+lining,"【名】裏地 [2]",normal
+link,"【名】リンク、つながり [1], 【動】〜をつなぐ、リンクさせる [1]",bold
+lion,"【名】ライオン [1]",bold
+lip,"【名】唇 [2]",normal
+liquid,"【名】【形】液体（の） [2]",normal
+list,"【名】リスト、一覧表 [1], 【動】〜をリストに載せる [1]",bold
+listen,"【動】（耳を傾けて）聞く [1], listen to ~ 〜を聴く、聞く [1]",bold
+liter,"【名】リットル [1]",normal
+literacy,"【名】読み書きの能力 [2]",normal
+literature,"【名】文学 [1]",bold
+little,"【形】小さい [1], 【副】【代】少し（は） [1], a little 少し [1]",bold
+live,"【動】住む、生きる [1], 【形】生放送の、生の [1]",bold
+lively,"【形】活気のある、生き生きとした [2]",normal
+liver,"【名】肝臓 [2]",normal
+livestock,"【名】家畜 [2]",normal
+living,"【名】生計、暮らし [2], 【形】生きている [2]",normal
+load,"【名】荷物、負担 [2], 【動】〜を積み込む [2]",normal
+loaf,"【名】（パンの）一塊 [2]",normal
+loan,"【名】ローン、借入金 [2]",normal
+local,"【形】地元の、現地の [1]",bold
+locate,"【動】〜の位置を探し出す、置く [2]",normal
+located,"【形】位置して [2], be located in ~ 〜に位置している [2]",normal
+location,"【名】場所、位置 [2]",normal
+lock,"【動】〜に鍵をかける [2], 【名】錠 [2]",normal
+locust,"【名】バッタ [2]",normal
+lodge,"【名】ロッジ、宿泊所 [2]",normal
+log,"【名】丸太 [2]",normal
+logic,"【名】論理、ロジック [2]",normal
+logical,"【形】論理的な [2]",normal
+lonely,"【形】孤独な、寂しい [1]",normal
+long,"【形】長い [1], for a long time 長い間 [1], 【副】長く [2]",bold
+look,"【動】①見る [1], ②〜のように見える [1], look after ~ 〜の世話をする [2], look at ~ 〜を見る [1], look for ~ 〜を探す [1], look forward to ~ 〜を楽しみに待つ [1], look like ~ 〜のように見える [1], look up ~ （辞書などで）〜を調べる [1], 【名】見る事、表情 [2]",bold
+loose,"【形】緩い、ほどけた [2]",normal
+lord,"【名】主、貴族 [2]",normal
+lorry,"【名】トラック〔英国式〕 [2]",normal
+lose,"【動】①〜を失う [1], ②（試合などに）負ける [2], lose one's way 道に迷う [1]",bold
+loss,"【名】損失、喪失 [2]",normal
+lost,"【動】lose の過去形・過去分詞 [1], get lost 道に迷う [1]",bold
+lot,"【名】たくさん [1], a lot 多くのこと、とても [1], a lot of ~ たくさんの〜 [1]",bold
+lotion,"【名】ローション [2]",normal
+loud,"【形】【副】大声の［で］ [1]",bold
+loudly,"【副】大声で、うるさく [1]",normal
+lounge,"【名】ラウンジ、休憩室 [2]",normal
+love,"【動】〜を愛する、大好む [1], 【名】愛、愛情 [1]",bold
+lovely,"【形】すばらしい、愛らしい [1]",bold
+low,"【形】低い [2]",normal
+lower,"【動】〜を下げる [2]",normal
+luck,"【名】運、幸運 [1], Good luck! がんばって！ [1]",bold
+lucky,"【形】幸運な [1], be lucky to ~ 幸運にも〜である [1]",bold
+luggage,"【名】手荷物 [1]",bold
+lumber,"【名】木材 [2]",normal
+lunar,"【形】月の [1]",normal
+lunch,"【名】昼食、ランチ [1], have lunch 昼食をとる [1]",bold
+lunchbox,"【名】弁当箱 [1]",bold
+lung,"【名】肺 [2]",normal
+luxury,"【形】【名】ぜいたく（な） [2]",normal
+machine,"【名】機械 [1]",bold
+mad,"【形】怒った、狂った [2]",normal
+madam,"【名】奥様、マダム [2]",normal
+magazine,"【名】雑誌 [1]",bold
+magic,"【名】【形】魔法（の）、マジック [1]",bold
+magical,"【形】魔法の、魔術的な [1]",bold
+magnet,"【名】磁石 [2]",normal
+magnificent,"【形】壮大な、素晴らしい [2]",normal
+maid,"【名】メイド、召使い [2]",normal
+mail,"【名】郵便（物）、メール [1], 【動】郵便で送る [1]",bold
+mailbox,"【名】郵便受け [1]",bold
+main,"【形】主な、主要な [2]",normal
+mainly,"【副】主に [2]",normal
+maintain,"【動】〜を維持する [2]",normal
+major,"【形】主要な、重大な [2], 【名】専攻 [2]",normal
+majority,"【名】大半、大多数 [2]",normal
+make,"【動】①〜を作る [1], ②〔make + O + C で〕OをCの状態にする [2], ③〔make + 人 + 動詞の原形で〕人に〜させる [2], make a cake ケーキを作る [1], make a choice 選択する [2], make a mistake 間違う [1], make a plan 計画を立てる [2], make friends with ~ 〜と友達になる [1], make sure ~ 確かめる、必ず〜するようにする [2]",bold
+makeup,"【名】化粧、メイク [2]",normal
+malaria,"【名】マラリア [2]",normal
+Malaysia,"【名】マレーシア [1]",bold
+male,"【形】【名】男性の、雄の [2]",normal
+mall,"【名】モール、ショッピングモール [1]",bold
+man,"【名】男、男性、人間 [1]",bold
+manage,"【動】どうにかやりくりする、管理する [2]",normal
+management,"【名】経営、管理 [2]",normal
+manager,"【名】マネージャー、経営者 [2]",normal
+mandarin,"【名】標準中国語、マンダリン [2]",normal
+manner,"【名】マナー、礼儀、方法 [2]",normal
+manual,"【形】【名】手動の、説明書 [2]",normal
+manufacture,"【動】〜を製造する [2]",normal
+manufacturer,"【名】製造業者 [2]",normal
+many,"【形】【代】多くの、多数の [1], a great many 非常に多くの [2], as many as ~ 〜もの数の [2], how many ~ いくつの〜 [1]",bold
+map,"【名】地図 [1]",bold
+marathon,"【名】マラソン [1]",bold
+marble,"【名】大理石、ビー玉 [2]",normal
+march,"【名】3月 [1], 【動】行進する [2]",bold
+margin,"【名】余白、端 [2]",normal
+marine,"【形】海の、海洋の [2]",normal
+mark,"【名】印、記号、点数 [1], 【動】〜に印をつける [1]",bold
+market,"【名】市場、マーケット [1]",bold
+marketing,"【名】マーケティング [2]",normal
+marriage,"【名】結婚 [2]",normal
+marry,"【動】結婚する [1]",bold
+mask,"【名】マスク、仮面 [1]",bold
+mass,"【名】かたまり、大衆 [2]",normal
+massive,"【形】巨大な、大規模な [2]",normal
+master,"【名】主人、名人、修士 [2], 【動】〜を習得する [2]",normal
+mat,"【名】マット、敷物 [2]",normal
+match,"【名】試合、マッチ [1], 【動】調和する、匹敵する [2]",bold
+mate,"【名】仲間、連れ [1]",bold
+material,"【名】材料、生地、資料 [1]",bold
+math,"【名】数学 [1]",bold
+mathematics,"【名】数学 [1]",bold
+matter,"【名】事柄、問題 [2], What's the matter? どうしたのですか。 [1], 【動】重要である [2]",bold
+mature,"【形】成熟した [2]",normal
+maximum,"【形】【名】最大の（もの）、最高 [2]",normal
+may,"【助】①〜かもしれない [1], ②〜してもよい〔許可〕 [2]",bold
+maybe,"【副】もしかすると、たぶん [1]",bold
+mayor,"【名】市長 [2]",normal
+me,"【代】私を、私に [1]",bold
+meal,"【名】食事 [1]",bold
+mean,"【動】〜を意味する、意図する [1], What do you mean? どういう意味ですか。 [1], 【形】意地悪な [2]",bold
+meaning,"【名】意味 [1]",bold
+means,"【名】手段、方法 [2]",normal
+meanwhile,"【副】その間に [2]",normal
+measles,"【名】はしか [2]",normal
+measure,"【動】〜を測定する、測る [2], 【名】測定、手段 [2]",normal
+measurement,"【名】測定、寸法 [2]",normal
+meat,"【名】肉 [1]",bold
+mechanic,"【名】整備士、メカニック [2]",normal
+mechanical,"【形】機械の [2]",normal
+mechanism,"【名】仕組み、メカニズム [2]",normal
+medal,"【名】メダル [1]",bold
+media,"【名】メディア、媒体 [2]",normal
+medical,"【形】医療の、医学の [2]",normal
+medication,"【名】薬、薬剤 [2]",normal
+medicine,"【名】薬、医学 [1]",bold
+medium,"【形】【名】中間の、媒体 [2]",normal
+meet,"【動】①（〜に）会う [1], ②〜を出迎える [2], ③（要求など）を満たす [2], Nice to meet you. はじめまして。 [1]",bold
+meeting,"【名】会議、集まり [1]",bold
+melon,"【名】メロン [1]",bold
+melt,"【動】溶ける、〜を溶かす [2]",normal
+member,"【名】メンバー、一員 [1]",bold
+membership,"【名】会員資格 [2]",normal
+memorial,"【名】【形】記念碑（の）、追悼の [2]",normal
+memory,"【名】記憶、思い出 [1]",bold
+mental,"【形】精神の、知的な [2]",normal
+mention,"【動】〜に言及する、述べる [2]",normal
+menu,"【名】メニュー [1]",bold
+merchant,"【名】商人 [2]",normal
+mercy,"【名】慈悲、情け [2]",normal
+mere,"【形】単なる、ほんの [2]",normal
+merely,"【副】単に、ただ [2]",normal
+merit,"【名】長所、功績 [2]",normal
+merry,"【形】陽気な、楽しい [1], Merry Christmas! メリークリスマス！ [1]",bold
+mess,"【名】散らかった状態、混乱 [2]",message,"【名】メッセージ、伝言 [1]",bold
+messenger,"【名】使者、メッセンジャー [2]",normal
+metal,"【名】【形】金属（製） [2]",normal
+method,"【名】方法、方式 [2]",normal
+mexico,"【名】メキシコ [1]",bold
+microscope,"【名】顕微鏡 [2]",normal
+microwave,"【名】電子レンジ [1]",bold
+midday,"【名】正午、昼 [2]",normal
+middle,"【名】【形】真ん中、中間の [1], in the middle of ~ 〜の真ん中に [1]",bold
+midnight,"【名】真夜中、夜の12時 [1]",bold
+might,"【助】may の過去形、〜かもしれない [2]",normal
+mild,"【形】穏やかな、軽い [2]",normal
+mile,"【名】マイル〔長さの単位〕 [2]",normal
+military,"【形】【名】軍事の、軍隊 [2]",normal
+milk,"【名】牛乳、ミルク [1]",bold
+millennium,"【名】ミレニアム、1000年間 [2]",normal
+million,"【名】【形】100万（の） [1]",bold
+mind,"【名】心、精神、頭脳 [1], Never mind. 気にしないで。 [1], 【動】〜を気にする、嫌がる [2]",bold
+mine,"【代】私のもの [1], 【名】鉱山 [2]",bold
+mineral,"【名】【形】ミネラル、鉱物（の） [2]",normal
+mingle,"【動】混ぜる、交わる [2]",normal
+miniature,"【形】【名】ミニチュアの、ミニチュア [2]",normal
+ міні,"【形】ミニの、小型の [2]",normal
+minimum,"【形】【名】最小の（もの）、最低 [2]",normal
+minister,"【名】大臣、聖職者 [2]",normal
+minor,"【形】重要でない、少数の [2]",normal
+minority,"【名】少数派 [2]",normal
+minute,"【名】①分 [1], ②ちょっとの間 [2], Wait a minute. ちょっと待ってください。 [1]",bold
+miracle,"【名】奇跡 [2]",normal
+mirror,"【名】鏡 [1]",bold
+miserable,"【形】惨めな、不幸な [2]",normal
+misery,"【名】惨めさ、不幸 [2]",normal
+misfortune,"【名】不運、不幸 [2]",normal
+miss,"【動】①〜を逃す、乗り遅れる [2], ②〜がいないのを寂しく思う [1], Miss ~ 〜（未婚女性の苗字など） [1]",bold
+missile,"【名】ミサイル [2]",normal
+missing,"【形】行方不明の、見当たらない [2]",normal
+mission,"【名】任務、使命 [2]",normal
+mistake,"【名】間違い、誤り [1], make a mistake 間違う [1], 【動】〜を誤解する [2]",bold
+mix,"【動】〜を混ぜる、混ざる [1]",bold
+mixture,"【名】混合（物） [2]",normal
+mobile,"【形】移動式の、携帯の [1]",bold
+mobile phone,"【名】携帯電話 [1]",bold
+mode,"【名】方式、モード [2]",normal
+model,"【名】モデル、型、模範 [1]",bold
+moderate,"【形】適度な、穏健な [2]",normal
+modern,"【形】現代の、近代的な [1]",bold
+modest,"【形】謙虚な、控えめな [2]",normal
+modification,"【名】修正、変更 [2]",normal
+modify,"【動】〜を修正する、変更する [2]",normal
+moist,"【形】湿った、潤った [2]",normal
+moisture,"【名】水分、湿気 [2]",normal
+molecule,"【名】分子 [2]",normal
+moment,"【名】瞬間、ちょっとの間 [1], for a moment ちょっとの間 [2]",bold
+mom,"【名】お母さん [1]",bold
+moments,"【名】moment の複数形 [2]",normal
+monarch,"【名】君主、国王 [2]",normal
+monastery,"【名】修道院 [2]",normal
+monday,"【名】月曜日 [1]",bold
+money,"【名】お金、金銭 [1]",bold
+monitor,"【名】モニター、監視装置 [2]",normal
+monkey,"【名】サル [1]",bold
+monopoly,"【名】独占 [2]",normal
+monster,"【名】怪物、モンスター [1]",bold
+month,"【名】月、カレンダーの月 [1]",bold
+monument,"【名】記念碑、遺跡 [2]",normal
+mood,"【名】気分、機嫌 [2]",normal
+moon,"【名】月 [1]",bold
+moral,"【形】【名】道徳的な（もの）、教訓 [2]",normal
+morality,"【名】道徳、倫理 [2]",normal
+more,"【代】【副】もっと多くのもの、さらに [1], more than ~ 〜以上 [2], what is more さらに [2]",bold
+moreover,"【副】その上、さらに [2]",normal
+morning,"【名】朝、午前 [1], in the morning 朝に [1]",bold
+mosquito,"【名】蚊 [2]",normal
+most,"【形】【代】【副】最も、大半の [1], most of ~ 〜の大部分 [2]",bold
+mostly,"【副】主に、たいてい [2]",normal
+mother,"【名】母親、母 [1]",bold
+motion,"【名】動き、運動 [2]",normal
+motive,"【名】動機、目的 [2]",normal
+motor,"【名】モーター、発動機 [2]",normal
+motorcycle,"【名】オートバイ、バイク [1]",bold
+mount,"【動】〜を据え付ける、乗る [2]",normal
+mountain,"【名】山 [1]",bold
+mouse,"【名】ネズミ、マウス [1]",bold
+mouth,"【名】口 [1]",bold
+move,"【動】①動く、〜を動かす [1], ②引っ越す [2], ③（人の心）を感動させる [2], 【名】引っ越し、移動 [2]",bold
+movement,"【名】動き、運動 [2]",normal
+movie,"【名】映画 [1]",bold
+movie theater,"【名】映画館 [1]",bold
+moving,"【形】感動的な [1]",bold
+much,"【代】【形】【副】たくさんの、大いに [1], very much とても [1], how much ~ いくらの〜、どれくらいの量 [1]",bold
+mud,"【名】泥 [2]",normal
+muddy,"【形】泥だらけの [2]",normal
+multi-,"複〜、多数の [2]",normal
+multiple,"【形】多様な、複数の [2]",normal
+multiply,"【動】掛ける、増やす [2]",normal
+municipal,"【形】市町村の、自治体の [2]",normal
+murder,"【名】【動】殺人（する） [2]",normal
+muscle,"【名】筋肉 [2]",normal
+museum,"【名】博物館、美術館 [1]",bold
+mushroom,"【名】キノコ [1]",bold
+music,"【名】音楽 [1]",bold
+musical,"【形】音楽の [1], 【名】ミュージカル [1]",bold
+musician,"【名】音楽家、ミュージシャン [1]",bold
+must,"【助】①〜しなければならない [1], ②にちがいない [2], must not ~ 〜してはならない [1]",bold
+mutant,"【名】突然変異体 [2]",normal
+mute,"【形】声が出ない、ミュートの [2]",normal
+mutter,"【動】つぶやく [2]",normal
+mutton,"【名】羊肉 [2]",normal
+mutual,"【形】相互の、共通の [2]",normal
+my,"【代】私の [1]",bold
+myself,"【代】私自身 [1]",bold
+mysterious,"【形】神秘的な、不可解な [2]",normal
+mystery,"【名】神秘、ミステリー [1]",bold
+myth,"【名】神話 [2]",normal

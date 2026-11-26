@@ -1,0 +1,963 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="単語検索">
+  <meta name="description" content="英単語・日本語の意味・品詞・ページをまとめて検索できる、シンプルな単語検索アプリ。">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" sizes="192x192" href="./icon-192.png">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231a73e8'/%3E%3Cpath d='M15 18h34M15 29h25M15 40h30' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <title>単語検索</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #fff;
+      --surface: #fff;
+      --text: #202124;
+      --muted: #5f6368;
+      --subtle: #80868b;
+      --line: #dadce0;
+      --line-soft: #eceff1;
+      --accent: #1a73e8;
+      --accent-soft: #e8f0fe;
+      --shadow: 0 1px 6px rgba(32,33,36,.18);
+      --danger: #b3261e;
+      --success: #188038;
+      --overlay: rgba(32,33,36,.42);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+        --page: #202124;
+        --surface: #292a2d;
+        --text: #e8eaed;
+        --muted: #bdc1c6;
+        --subtle: #9aa0a6;
+        --line: #5f6368;
+        --line-soft: #3c4043;
+        --accent: #8ab4f8;
+        --accent-soft: #303f57;
+        --shadow: 0 1px 6px rgba(0,0,0,.4);
+        --danger: #f2b8b5;
+        --success: #81c995;
+        --overlay: rgba(0,0,0,.62);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { min-height: 100%; background: var(--page); -webkit-text-size-adjust: 100%; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0 20px calc(24px + env(safe-area-inset-bottom));
+      color: var(--text);
+      background: var(--page);
+      font-family: Arial, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    button, input, select { font: inherit; }
+    button { -webkit-tap-highlight-color: transparent; }
+    button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .app-shell { width: 100%; max-width: 1000px; margin: 0 auto; }
+    .topbar { height: 64px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line-soft); }
+    .brand { color: var(--text); text-decoration: none; font-size: 17px; font-weight: 600; letter-spacing: .01em; }
+    .top-actions { display: flex; align-items: center; gap: 8px; }
+    .top-link { padding: 8px 4px; border: 0; color: var(--muted); background: transparent; font-size: 13px; cursor: pointer; }
+    .search-area { padding: 72px 0 30px; text-align: center; }
+    .hero-title { margin: 0 0 9px; color: var(--text); font-size: clamp(30px, 5vw, 40px); line-height: 1.2; font-weight: 500; letter-spacing: -.045em; }
+    .hero-caption { margin: 0 0 28px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+    .search-panel { width: min(100%, 660px); margin: 0 auto; }
+    .search-field {
+      display: flex; align-items: center; gap: 13px; width: 100%; min-height: 54px;
+      padding: 0 18px; border: 1px solid var(--line); border-radius: 28px;
+      background: var(--surface); transition: box-shadow .16s ease, border-color .16s ease;
+    }
+    .search-field:hover, .search-field:focus-within { border-color: transparent; box-shadow: var(--shadow); }
+    .search-icon { width: 19px; height: 19px; flex: 0 0 19px; color: var(--subtle); }
+    .search-field input { width: 100%; min-width: 0; height: 50px; padding: 0; border: 0; outline: 0; color: var(--text); background: transparent; font-size: 16px; }
+    .search-field input::placeholder { color: var(--subtle); opacity: 1; }
+    .clear-button { display: none; flex: 0 0 30px; width: 30px; height: 30px; align-items: center; justify-content: center; border: 0; border-radius: 50%; color: var(--muted); background: transparent; font-size: 23px; line-height: 1; cursor: pointer; }
+    .clear-button.visible { display: inline-flex; }
+    .clear-button:hover { background: var(--line-soft); }
+    .toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 48px; margin-top: 10px; padding: 0 2px; border-bottom: 1px solid var(--line-soft); }
+    .result-title { font-size: 13px; font-weight: 600; }
+    .result-count { margin-left: 8px; color: var(--muted); font-size: 12px; font-weight: 400; }
+    .toolbar-actions { display: flex; align-items: center; gap: 18px; }
+    .text-button { padding: 8px 0; border: 0; color: var(--accent); background: transparent; font-size: 12px; cursor: pointer; }
+    .text-button:hover, .top-link:hover { text-decoration: underline; }
+    .result-list { display: block; max-width: 820px; }
+    .word-card { display: block; width: 100%; padding: 17px 3px 18px; border: 0; border-bottom: 1px solid var(--line-soft); border-radius: 0; text-align: left; color: var(--text); background: transparent; cursor: pointer; }
+    .word-card:hover .word-title { text-decoration: underline; }
+    .word-title { display: block; color: var(--accent); font-size: 18px; line-height: 1.4; font-weight: 500; overflow-wrap: anywhere; }
+    .word-pron-line { display: block; margin-top: 2px; }
+    .word-pron { color: var(--muted); font-size: 12px; }
+    .meaning-preview { display: block; margin-top: 6px; color: var(--text); font-size: 14px; line-height: 1.7; overflow-wrap: anywhere; }
+    .result-meta { display: block; margin-top: 5px; color: var(--muted); font-size: 11px; line-height: 1.55; }
+    .meaning-more { display: block; margin-top: 4px; color: var(--subtle); font-size: 11px; }
+    .empty-state { padding: 44px 10px 48px; color: var(--muted); text-align: center; }
+    .empty-title { color: var(--text); font-size: 15px; font-weight: 500; }
+    .empty-text { max-width: 500px; margin: 8px auto 0; font-size: 12px; line-height: 1.8; }
+    .bottom-tools { display: flex; align-items: center; gap: 10px; padding: 18px 0 2px; }
+    .tool-button { min-height: 36px; padding: 0 13px; border: 1px solid var(--line); border-radius: 18px; color: var(--muted); background: var(--surface); font-size: 12px; cursor: pointer; }
+    .tool-button:hover { background: var(--line-soft); }
+    .tool-button.primary { border-color: var(--accent); color: #fff; background: var(--accent); }
+    .tool-button.primary:hover { filter: brightness(.96); }
+    .footer-note { margin-top: 20px; color: var(--subtle); font-size: 10px; line-height: 1.7; text-align: center; }
+    .status-line { display: flex; align-items: center; justify-content: center; gap: 7px; margin-top: 11px; color: var(--muted); font-size: 10px; }
+    .status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--success); }
+    .status-dot.warn { background: #d69e2e; }
+    .hidden { display: none !important; }
+    .screen-heading { display: flex; align-items: center; gap: 12px; padding: 35px 0 17px; }
+    .back-button { width: 36px; height: 36px; border: 1px solid var(--line); border-radius: 50%; color: var(--text); background: var(--surface); font-size: 20px; cursor: pointer; }
+    .screen-heading h2 { margin: 0; font-size: 21px; font-weight: 500; }
+    .screen-heading p { margin: 4px 0 0; color: var(--muted); font-size: 11px; }
+    .history-list { display: grid; }
+    .history-item { display: flex; align-items: center; gap: 12px; width: 100%; padding: 13px 4px; border: 0; border-bottom: 1px solid var(--line-soft); color: var(--text); background: transparent; text-align: left; cursor: pointer; }
+    .history-item:hover .history-label { color: var(--accent); }
+    .history-type { min-width: 38px; color: var(--muted); font-size: 10px; }
+    .history-copy { min-width: 0; flex: 1; }
+    .history-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; }
+    .history-meta { margin-top: 4px; color: var(--subtle); font-size: 10px; }
+    .history-arrow { color: var(--subtle); font-size: 17px; }
+    .overlay { position: fixed; z-index: 50; inset: 0; display: flex; align-items: center; justify-content: center; padding: 18px; background: var(--overlay); }
+    .overlay[hidden] { display: none !important; }
+    .dialog { width: 100%; max-width: 520px; max-height: min(86vh, 760px); overflow: auto; overscroll-behavior: contain; padding: 23px; border: 1px solid var(--line); border-radius: 18px; color: var(--text); background: var(--surface); box-shadow: 0 12px 40px rgba(0,0,0,.22); }
+    .dialog-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
+    .dialog h2 { margin: 0; font-size: 20px; font-weight: 500; overflow-wrap: anywhere; }
+    .dialog-sub { margin: 5px 0 0; color: var(--muted); font-size: 11px; }
+    .close-button { width: 32px; height: 32px; flex: 0 0 32px; border: 0; border-radius: 50%; color: var(--muted); background: transparent; font-size: 21px; cursor: pointer; }
+    .close-button:hover { background: var(--line-soft); }
+    .detail-row { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin-top: 13px; }
+    .chip { display: inline-flex; align-items: center; padding: 4px 8px; border-radius: 12px; color: var(--muted); background: var(--line-soft); font-size: 10px; }
+    .chip.pos { color: var(--accent); background: var(--accent-soft); }
+    .detail-section { margin-top: 18px; padding-top: 15px; border-top: 1px solid var(--line-soft); }
+    .section-label { margin-bottom: 8px; color: var(--muted); font-size: 10px; font-weight: 600; }
+    .definition { color: var(--text); font-size: 14px; line-height: 1.8; overflow-wrap: anywhere; }
+    .definition + .definition { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--line-soft); }
+    .dialog-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 21px; }
+    .dialog-actions .tool-button { min-width: 90px; }
+    .dialog-text { margin: 13px 0 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+    .form-row { margin-top: 17px; }
+    .form-row label { display: block; margin-bottom: 7px; font-size: 12px; font-weight: 600; }
+    .form-row select { width: 100%; min-height: 42px; padding: 0 11px; border: 1px solid var(--line); border-radius: 8px; color: var(--text); background: var(--surface); }
+    .file-pick { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 43px; margin-top: 13px; border: 1px solid var(--accent); border-radius: 22px; color: #fff; background: var(--accent); font-size: 12px; font-weight: 600; cursor: pointer; }
+    .file-pick input { display: none; }
+    .check-row { display: flex; align-items: flex-start; gap: 9px; margin-top: 15px; color: var(--muted); font-size: 11px; line-height: 1.5; }
+    .check-row input { margin-top: 2px; accent-color: var(--accent); }
+    .toast { position: fixed; z-index: 80; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom)); transform: translateX(-50%); max-width: calc(100% - 30px); padding: 10px 15px; border-radius: 8px; color: #fff; background: #323232; box-shadow: var(--shadow); font-size: 12px; text-align: center; opacity: 0; pointer-events: none; transition: opacity .18s ease; }
+    .toast.show { opacity: 1; }
+    @media (max-width: 600px) {
+      body { padding-left: 16px; padding-right: 16px; }
+      .topbar { height: 56px; }
+      .search-area { padding-top: 59px; padding-bottom: 22px; }
+      .hero-caption { margin-bottom: 22px; font-size: 12px; }
+      .search-field { min-height: 52px; padding: 0 15px; }
+      .toolbar { min-height: 45px; }
+      .toolbar-actions { gap: 12px; }
+      .word-card { padding: 15px 2px 16px; }
+      .dialog { padding: 19px; border-radius: 16px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; scroll-behavior: auto !important; } }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="./index.html" aria-label="単語検索 ホーム">単語検索</a>
+    </header>
+
+    <main id="searchScreen">
+      <section class="search-area" aria-label="単語検索">
+        <h1 class="hero-title">単語検索</h1>
+        <p class="hero-caption">英単語・日本語の意味・品詞・ページをまとめて検索</p>
+        <div class="search-panel">
+          <div class="search-field">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>
+            <input id="searchInput" type="search" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="単語や意味を入力" aria-label="単語・意味を検索">
+            <button id="clearButton" class="clear-button" type="button" aria-label="検索語を消去">×</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="toolbar">
+        <div><span class="result-title" id="resultHeading">検索結果</span><span class="result-count" id="resultCount"></span></div>
+        <div class="toolbar-actions">
+          <button class="text-button" id="historyButton" type="button">履歴</button>
+          <button class="text-button" id="importButton" type="button">CSVを読み込む</button>
+        </div>
+      </div>
+      <section class="result-list" id="resultList" aria-live="polite">
+        <div class="empty-state"><div class="empty-title">単語データを準備しています</div><div class="empty-text">CSVファイルを読み込んでいます。</div></div>
+      </section>
+      <div class="status-line"><span class="status-dot warn" id="statusDot"></span><span id="dataStatus">CSVを確認中...</span></div>
+      <div class="footer-note">検索履歴と読み込んだデータは、この端末のブラウザ内に保存されます。</div>
+    </main>
+
+    <section id="historyScreen" class="hidden">
+      <div class="screen-heading">
+        <button class="back-button" id="historyBackButton" type="button" aria-label="戻る">‹</button>
+        <div><h2>検索履歴</h2><p>最近の検索・開いた単語（最大100件）</p></div>
+      </div>
+      <div class="toolbar" style="margin-top:0">
+        <div><span class="result-title">最近の操作</span><span class="result-count" id="historyCount"></span></div>
+        <button class="text-button" id="clearHistoryButton" type="button">履歴を消去</button>
+      </div>
+      <div class="history-list" id="historyList"></div>
+      <div class="footer-note">履歴はこの端末のブラウザ内に保存されます。</div>
+    </section>
+  </div>
+
+  <div class="overlay" id="detailOverlay" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+      <div class="dialog-top">
+        <div><h2 id="detailTitle"></h2><p class="dialog-sub" id="detailPron"></p></div>
+        <button class="close-button" type="button" data-close="detailOverlay" aria-label="閉じる">×</button>
+      </div>
+      <div class="detail-row" id="detailChips"></div>
+      <div class="detail-section"><div class="section-label">日本語の意味</div><div id="detailMeanings"></div></div>
+      <div class="detail-section"><div class="section-label">掲載ページ</div><div class="definition" id="detailPages"></div></div>
+      <div class="dialog-actions"><button class="tool-button" type="button" id="detailBackButton">戻る</button><button class="tool-button primary" type="button" id="detailCloseButton">閉じる</button></div>
+    </section>
+  </div>
+
+  <div class="overlay" id="importOverlay" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="importTitle">
+      <div class="dialog-top"><div><h2 id="importTitle">CSVを読み込む</h2><p class="dialog-sub">複数のCSVをまとめて読み込めます</p></div><button class="close-button" type="button" data-close="importOverlay" aria-label="閉じる">×</button></div>
+      <p class="dialog-text">GitHub Pagesでは、同じフォルダに置いた <strong>1.csv・2.csv・3.csv</strong> を自動で読み込みます。ここから別のCSVを複数選択することもできます。</p>
+      <div class="form-row"><label for="encodingSelect">文字コード</label><select id="encodingSelect"><option value="UTF-8">UTF-8</option><option value="Shift_JIS">Shift_JIS（Excel保存など）</option></select></div>
+      <label class="file-pick" for="csvFileInput">CSVファイルを選択<input id="csvFileInput" type="file" accept=".csv,text/csv,.txt,text/plain" multiple></label>
+      <p class="dialog-text">各CSVの1行目は「word,meaning,weight」です。この見出し行は自動で読み飛ばします。weight列は現在、検索や表示順には使用しません。旧形式のCSVも読み込めます。</p>
+    </section>
+  </div>
+
+  <div class="overlay" id="resumeOverlay" hidden>
+    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="resumeTitle">
+      <div class="dialog-top"><div><h2 id="resumeTitle">前回の続きから再開しますか？</h2><p class="dialog-sub">前回の検索状態が端末に残っています。</p></div></div>
+      <p class="dialog-text" id="resumeDescription">前回の検索を復元できます。</p>
+      <label class="check-row"><input type="checkbox" id="resumeNoAsk"><span>次回から確認せず、自動で前回の状態を復元する</span></label>
+      <div class="dialog-actions"><button class="tool-button" type="button" id="startFreshButton">新しく始める</button><button class="tool-button primary" type="button" id="resumeButton">続きから再開</button></div>
+    </section>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>
+    (function () {
+      'use strict';
+
+      var KEYS = {
+        history: 'wordFinder_history_v1',
+        state: 'wordFinder_state_v1',
+        resume: 'wordFinder_resumeNoAsk_v1',
+        csv: 'wordFinder_csvCache_v1'
+      };
+      var MAX_HISTORY = 100;
+      var MAX_LOCAL_CSV_CHARS = 1800000;
+      var DEFAULT_CSV_FILES = ['1.csv', '2.csv', '3.csv'];
+      var records = [];
+      var groups = [];
+      var historyItems = [];
+      var currentMode = 'all';
+      var currentQuery = '';
+      var currentScreen = 'search';
+      var currentGroupKey = '';
+      var savedStateAtStart = null;
+      var searchTimer = null;
+      var toastTimer = null;
+      var dataSource = '未読み込み';
+      var modes = { all: 'すべて' };
+      var $ = function (id) { return document.getElementById(id); };
+
+      function storageGet(key) {
+        try { return window.localStorage.getItem(key); } catch (e) { return null; }
+      }
+      function storageSet(key, value) {
+        try { window.localStorage.setItem(key, value); return true; } catch (e) { return false; }
+      }
+      function storageRemove(key) {
+        try { window.localStorage.removeItem(key); } catch (e) {}
+      }
+      function parseStored(key, fallback) {
+        var raw = storageGet(key);
+        if (!raw) return fallback;
+        try { return JSON.parse(raw); } catch (e) { return fallback; }
+      }
+      function escapeHtml(value) {
+        return String(value == null ? '' : value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+      }
+      function normalise(value) {
+        return String(value == null ? '' : value).toLowerCase().replace(/[\s\u3000]+/g, ' ').trim();
+      }
+      function showToast(message) {
+        var el = $('toast');
+        el.textContent = message;
+        el.className = 'toast show';
+        if (toastTimer) window.clearTimeout(toastTimer);
+        toastTimer = window.setTimeout(function () { el.className = 'toast'; }, 2600);
+      }
+      function showOverlay(id) { $(id).hidden = false; }
+      function hideOverlay(id) { $(id).hidden = true; }
+
+      function detectDelimiter(firstLine) {
+        var comma = 0, tab = 0, quoted = false, i, ch;
+        for (i = 0; i < firstLine.length; i += 1) {
+          ch = firstLine.charAt(i);
+          if (ch === '"') {
+            if (quoted && firstLine.charAt(i + 1) === '"') { i += 1; }
+            else { quoted = !quoted; }
+          } else if (!quoted && ch === ',') { comma += 1; }
+          else if (!quoted && ch === '\t') { tab += 1; }
+        }
+        return tab > comma ? '\t' : ',';
+      }
+      function parseCsv(text) {
+        text = String(text == null ? '' : text).replace(/^\uFEFF/, '');
+        var firstBreak = text.indexOf('\n');
+        var firstLine = firstBreak >= 0 ? text.substring(0, firstBreak) : text;
+        var delimiter = detectDelimiter(firstLine);
+        var rows = [], row = [], cell = '', quoted = false, i, ch, next;
+        for (i = 0; i < text.length; i += 1) {
+          ch = text.charAt(i);
+          next = text.charAt(i + 1);
+          if (quoted) {
+            if (ch === '"' && next === '"') { cell += '"'; i += 1; }
+            else if (ch === '"') { quoted = false; }
+            else { cell += ch; }
+          } else {
+            if (ch === '"' && cell.length === 0) { quoted = true; }
+            else if (ch === delimiter) { row.push(cell); cell = ''; }
+            else if (ch === '\n') { row.push(cell.replace(/\r$/, '')); rows.push(row); row = []; cell = ''; }
+            else if (ch === '\r') {
+              if (next !== '\n') { row.push(cell); rows.push(row); row = []; cell = ''; }
+            } else { cell += ch; }
+          }
+        }
+        if (cell.length || row.length) { row.push(cell.replace(/\r$/, '')); rows.push(row); }
+        while (rows.length && rows[rows.length - 1].length === 1 && rows[rows.length - 1][0] === '') rows.pop();
+        return rows;
+      }
+      function headerKey(value) {
+        return String(value == null ? '' : value).toLowerCase().replace(/[\s\u3000_\-‐‑–—/\\()[\]【】「」]/g, '').replace(/[：:]/g, '');
+      }
+      var headerAliases = {
+        id: ['id', 'no', 'number', '番号', '識別子', '管理番号', '単語id'],
+        word: ['word', 'english', '英単語', '単語', '見出し語', '見出し', 'headword', 'term', '英語'],
+        pronunciation: ['pronunciation', 'phonetic', 'ipa', '発音', '発音記号', '発音表記', '音標'],
+        pos: ['pos', 'partofspeech', '品詞', '品詞記号', '品詞表記', '語品'],
+        meaning: ['meaning', 'japanese', 'translation', 'definition', '日本語', '日本語訳', '意味', '訳', '和訳', '語義'],
+        page: ['page', 'pageno', 'pagenumber', 'ページ', '頁', '掲載ページ', '出典ページ'],
+        weight: ['weight', 'importance', 'priority', '重み', '重要度']
+      };
+      function findHeaderMap(headerRow) {
+        var map = { id: -1, word: -1, pronunciation: -1, pos: -1, meaning: -1, page: -1, weight: -1 };
+        var normalHeaders = [], i, field, aliases, j;
+        for (i = 0; i < headerRow.length; i += 1) normalHeaders.push(headerKey(headerRow[i]));
+        for (field in headerAliases) {
+          if (Object.prototype.hasOwnProperty.call(headerAliases, field)) {
+            aliases = headerAliases[field];
+            for (i = 0; i < normalHeaders.length; i += 1) {
+              for (j = 0; j < aliases.length; j += 1) {
+                if (normalHeaders[i] === headerKey(aliases[j])) { map[field] = i; break; }
+              }
+              if (map[field] >= 0) break;
+            }
+          }
+        }
+        return map;
+      }
+      function isWordMeaningWeightHeader(headerRow) {
+        // 1.csv・2.csv・3.csvで共通して使う「word,meaning,weight」を明示的に認識する。
+        // BOM・大文字小文字・前後の空白があっても headerKey() で正規化して判定する。
+        if (!headerRow || headerRow.length < 3) return false;
+        var normalized = headerRow.map(headerKey);
+        return normalized.indexOf('word') >= 0 &&
+          normalized.indexOf('meaning') >= 0 &&
+          normalized.indexOf('weight') >= 0;
+      }
+      function parseDatabase(csvText) {
+        var rows = parseCsv(csvText);
+        if (!rows.length) return { records: [], warnings: ['CSVにデータがありません。'] };
+        var detected = findHeaderMap(rows[0]);
+        // word,meaning,weight は各CSVの見出し行なので、必ず1行目をデータから除外する。
+        var hasHeader = isWordMeaningWeightHeader(rows[0]) || detected.word >= 0;
+        var map, start, warnings = [], out = [], usedIds = Object.create(null), i, row, record, originalId, baseId, suffix;
+        if (hasHeader) {
+          map = detected;
+          start = 1;
+        } else {
+          // 見出し行がない場合の標準順：ID, 英単語, 発音記号, 品詞, 日本語の意味, ページ
+          map = { id: 0, word: 1, pronunciation: 2, pos: 3, meaning: 4, page: 5, weight: -1 };
+          start = 0;
+          warnings.push('見出し行を検出できなかったため、標準の6列順として読み込みました。');
+        }
+        if (map.word < 0) return { records: [], warnings: ['英単語の列を特定できません。見出しを「英単語」または「word」にしてください。'] };
+        for (i = start; i < rows.length; i += 1) {
+          row = rows[i];
+          if (!row || !row.length) continue;
+          record = {
+            id: map.id >= 0 ? String(row[map.id] || '').trim() : '',
+            word: map.word >= 0 ? String(row[map.word] || '').trim() : '',
+            pronunciation: map.pronunciation >= 0 ? String(row[map.pronunciation] || '').trim() : '',
+            pos: map.pos >= 0 ? String(row[map.pos] || '').trim() : '',
+            meaning: map.meaning >= 0 ? String(row[map.meaning] || '').trim() : '',
+            page: map.page >= 0 ? String(row[map.page] || '').trim() : '',
+            weight: map.weight >= 0 ? String(row[map.weight] || '').trim() : '',
+            rowNumber: i + 1
+          };
+          if (!record.word && !record.meaning && !record.pos && !record.page) continue;
+          if (!record.word) { warnings.push((i + 1) + '行目：英単語が空のためスキップしました。'); continue; }
+          originalId = record.id;
+          baseId = originalId || 'row-' + (i + 1);
+          suffix = 1;
+          while (usedIds[baseId]) { suffix += 1; baseId = (originalId || 'row-' + (i + 1)) + '-' + suffix; }
+          if (baseId !== originalId && originalId) warnings.push((i + 1) + '行目：ID「' + originalId + '」が重複しているため、内部IDを補正しました。');
+          usedIds[baseId] = true;
+          record.id = baseId;
+          out.push(record);
+        }
+        return { records: out, warnings: warnings };
+      }
+      function getGroupKey(word) { return normalise(word); }
+      function buildGroups(inputRecords) {
+        var byKey = {}, order = [], i, item, key, group, j, found;
+        for (i = 0; i < inputRecords.length; i += 1) {
+          item = inputRecords[i];
+          key = getGroupKey(item.word);
+          if (!byKey[key]) {
+            byKey[key] = { key: key, word: item.word, pronunciation: [], pos: [], meanings: [], pages: [], rows: [] };
+            order.push(key);
+          }
+          group = byKey[key];
+          group.rows.push(item);
+          if (item.pronunciation && group.pronunciation.indexOf(item.pronunciation) < 0) group.pronunciation.push(item.pronunciation);
+          if (item.pos && group.pos.indexOf(item.pos) < 0) group.pos.push(item.pos);
+          if (item.meaning && group.meanings.indexOf(item.meaning) < 0) group.meanings.push(item.meaning);
+          if (item.page) {
+            var pagePieces = item.page.split(/[;；、，]/);
+            for (j = 0; j < pagePieces.length; j += 1) {
+              var pageText = pagePieces[j].trim();
+              if (pageText && group.pages.indexOf(pageText) < 0) group.pages.push(pageText);
+            }
+          }
+        }
+        var result = [];
+        for (i = 0; i < order.length; i += 1) result.push(byKey[order[i]]);
+        return result;
+      }
+      function setDatabase(csvText, source, persist) {
+        var parsed = parseDatabase(csvText);
+        records = parsed.records;
+        groups = buildGroups(records);
+        dataSource = source;
+        if (persist) {
+          if (csvText.length <= MAX_LOCAL_CSV_CHARS) {
+            if (!storageSet(KEYS.csv, csvText)) showToast('端末の保存容量が不足しています。次回はCSVを再読み込みしてください。');
+          } else {
+            storageRemove(KEYS.csv);
+            showToast('CSVが大きいため、端末への一時保存は省略しました。');
+          }
+        }
+        updateDataStatus();
+        renderResults();
+        if (parsed.warnings.length) {
+          var message = parsed.warnings.length + '件の読み込み注意があります。';
+          if (!records.length) message = parsed.warnings[0];
+          showToast(message);
+        }
+        return parsed;
+      }
+      function updateDataStatus() {
+        var dot = $('statusDot');
+        if (records.length) {
+          dot.className = 'status-dot';
+          $('dataStatus').textContent = groups.length + '語・' + records.length + '行を読み込み済み（' + dataSource + '）';
+        } else {
+          dot.className = 'status-dot warn';
+          $('dataStatus').textContent = '単語データなし（1.csv・2.csv・3.csv を確認してください）';
+        }
+      }
+      function parseCsvFileSet(fileTexts) {
+        var combined = [], warnings = [], usedIds = Object.create(null), i, parsed, original, key, suffix;
+        for (i = 0; i < fileTexts.length; i += 1) {
+          if (!fileTexts[i] || typeof fileTexts[i].text !== 'string') {
+            warnings.push((fileTexts[i] && fileTexts[i].name ? fileTexts[i].name : 'CSV') + ': ファイル内容を読み取れませんでした。');
+            continue;
+          }
+          parsed = parseDatabase(fileTexts[i].text);
+          if (!parsed.records.length) {
+            warnings.push(fileTexts[i].name + ': ' + (parsed.warnings[0] || '有効なデータがありません。'));
+            continue;
+          }
+          parsed.records.forEach(function (record) {
+            original = String(record.id || 'row-' + (record.rowNumber || (combined.length + 1)));
+            key = original;
+            suffix = 1;
+            while (Object.prototype.hasOwnProperty.call(usedIds, key)) {
+              suffix += 1;
+              key = original + '-' + suffix;
+            }
+            if (key !== original) warnings.push(fileTexts[i].name + ': ID「' + original + '」が重複したため内部IDを補正しました。');
+            usedIds[key] = true;
+            record.id = key;
+            record.sourceFile = fileTexts[i].name;
+            combined.push(record);
+          });
+          warnings = warnings.concat(parsed.warnings);
+        }
+        return { records: combined, warnings: warnings, count: combined.length };
+      }
+      function setDatabaseFromFiles(fileTexts, source, persist) {
+        var parsed = parseCsvFileSet(fileTexts);
+        records = parsed.records;
+        groups = buildGroups(records);
+        dataSource = source;
+        if (persist) {
+          var cacheObject = { type: 'wordfinder-csv-set-v1', files: fileTexts };
+          var cacheText = JSON.stringify(cacheObject);
+          if (cacheText.length <= MAX_LOCAL_CSV_CHARS) {
+            if (!storageSet(KEYS.csv, cacheText)) showToast('端末の保存容量が不足しています。次回はCSVを再読み込みしてください。');
+          } else {
+            storageRemove(KEYS.csv);
+            showToast('CSVが大きいため、端末への一時保存は省略しました。');
+          }
+        }
+        updateDataStatus();
+        renderResults();
+        if (parsed.warnings.length) showToast(parsed.warnings.length + '件の読み込み注意があります。');
+        return parsed;
+      }
+      function readCachedCsvFiles(cached) {
+        if (!cached) return { files: [], legacyText: '' };
+        try {
+          var obj = JSON.parse(cached);
+          if (obj && obj.type === 'wordfinder-csv-set-v1' && Array.isArray(obj.files)) {
+            return {
+              files: obj.files.filter(function (file) {
+                return file && typeof file.name === 'string' && typeof file.text === 'string';
+              }),
+              legacyText: ''
+            };
+          }
+        } catch (e) { /* 旧形式のCSV本文として扱う */ }
+        return { files: [], legacyText: cached };
+      }
+      function restoreCsvCache(cached) {
+        var saved = readCachedCsvFiles(cached);
+        if (saved.files.length) {
+          setDatabaseFromFiles(saved.files, '端末キャッシュ', false);
+          if (records.length) return true;
+        }
+        if (saved.legacyText) {
+          var oldParsed = setDatabase(saved.legacyText, '端末キャッシュ', false);
+          return oldParsed.records.length > 0;
+        }
+        return false;
+      }
+      function loadDefaultCsv() {
+        var cached = storageGet(KEYS.csv);
+        var saved = readCachedCsvFiles(cached);
+        if (window.location.protocol === 'file:') {
+          if (!restoreCsvCache(cached)) {
+            records = []; groups = []; updateDataStatus(); renderResults();
+            showToast('ローカル起動ではCSVを自動取得できません。CSVを選択してください。');
+          }
+          checkResumeState();
+          return;
+        }
+
+        var loaded = Object.create(null);
+        var completed = 0;
+        var finished = false;
+        function finishOne(fileName, request, succeeded) {
+          if (finished) return;
+          if (succeeded) loaded[fileName] = { name: fileName, text: request.responseText || '' };
+          completed += 1;
+          if (completed !== DEFAULT_CSV_FILES.length) return;
+          finished = true;
+
+          // ネットワークで取得できなかったファイルは、以前の端末キャッシュで補完する。
+          saved.files.forEach(function (file) {
+            if (DEFAULT_CSV_FILES.indexOf(file.name) < 0) return;
+            if (!loaded[file.name]) {
+              loaded[file.name] = file;
+              return;
+            }
+            // Service Workerの「未キャッシュ時に返す空CSV」は、保存済みデータで補う。
+            var networkText = String(loaded[file.name].text || '').replace(/^\uFEFF/, '').trim();
+            // ヘッダーだけの空CSVや空レスポンスなら、実データのある端末キャッシュを優先する。
+            if (!networkText || !parseDatabase(loaded[file.name].text).records.length) {
+              if (parseDatabase(file.text).records.length) loaded[file.name] = file;
+            }
+          });
+          var fileSet = DEFAULT_CSV_FILES.filter(function (name) { return !!loaded[name]; }).map(function (name) { return loaded[name]; });
+          if (fileSet.length) {
+            var parsed = setDatabaseFromFiles(fileSet, fileSet.map(function (f) { return f.name; }).join(' + '), false);
+            if (parsed.records.length) {
+              var cacheObject = { type: 'wordfinder-csv-set-v1', files: fileSet };
+              var cacheText = JSON.stringify(cacheObject);
+              if (cacheText.length <= MAX_LOCAL_CSV_CHARS) storageSet(KEYS.csv, cacheText);
+              if (fileSet.length < DEFAULT_CSV_FILES.length) showToast('読み込めたCSVを使用しています。一部ファイルは未取得です。');
+            } else if (!restoreCsvCache(cached)) {
+              records = []; groups = []; updateDataStatus(); renderResults();
+              showToast('CSVに有効な単語データがありません。列名と内容を確認してください。');
+            }
+          } else if (!restoreCsvCache(cached)) {
+            records = []; groups = []; updateDataStatus(); renderResults();
+            showToast('1.csv・2.csv・3.csvを読み込めません。ファイル名と配置を確認してください。');
+          }
+          checkResumeState();
+        }
+
+        DEFAULT_CSV_FILES.forEach(function (fileName) {
+          var request = new XMLHttpRequest();
+          var settled = false;
+          function settle(ok) {
+            if (settled) return;
+            settled = true;
+            finishOne(fileName, request, ok);
+          }
+          try {
+            request.open('GET', './' + fileName, true);
+            request.timeout = 12000;
+            request.onload = function () { settle(request.status >= 200 && request.status < 300); };
+            request.onerror = function () { settle(false); };
+            request.ontimeout = function () { settle(false); };
+            request.onabort = function () { settle(false); };
+            request.send(null);
+          } catch (e) {
+            settle(false);
+          }
+        });
+      }
+      function loadUploadedFileList(files) {
+        if (!files || !files.length) return;
+        var encoding = $('encodingSelect').value || 'UTF-8';
+        var fileTexts = [], remaining = files.length, failed = 0;
+        Array.prototype.forEach.call(files, function (file) {
+          var reader = new FileReader();
+          var settled = false;
+          function finishOne(ok) {
+            if (settled) return;
+            settled = true;
+            if (ok) fileTexts.push({ name: file.name, text: String(reader.result || '') });
+            else failed += 1;
+            remaining -= 1;
+            if (remaining !== 0) return;
+            fileTexts.sort(function (a, b) { return a.name.localeCompare(b.name, 'ja', { numeric: true }); });
+            if (!fileTexts.length) {
+              showToast('CSVを読み込めませんでした。ファイルを確認してください。');
+              $('csvFileInput').value = '';
+              return;
+            }
+            var parsed = setDatabaseFromFiles(fileTexts, fileTexts.map(function (f) { return f.name; }).join(' + '), true);
+            hideOverlay('importOverlay');
+            if (parsed.records.length) {
+              showToast(parsed.records.length + '行を読み込みました。' + (failed ? '一部ファイルは読み込めませんでした。' : ''));
+            } else {
+              showToast(parsed.warnings[0] || '有効な単語データがありません。');
+            }
+            $('csvFileInput').value = '';
+          }
+          reader.onload = function () { finishOne(true); };
+          reader.onerror = function () { finishOne(false); };
+          reader.onabort = function () { finishOne(false); };
+          try { reader.readAsText(file, encoding); }
+          catch (e) {
+            try { reader.readAsText(file); }
+            catch (secondError) { finishOne(false); }
+          }
+        });
+      }
+
+      function pageMatches(page, query) {
+        var q = String(query).replace(/[^0-9]/g, '');
+        if (!q) return false;
+        var matches = String(page || '').match(/\d+/g) || [];
+        return matches.indexOf(q) >= 0;
+      }
+      function recordMatches(record, query, mode) {
+        var q = normalise(query);
+        if (!q) return false;
+        if (mode === 'ja') return normalise(record.meaning).indexOf(q) >= 0;
+        if (mode === 'en') return normalise(record.word).indexOf(q) >= 0;
+        if (mode === 'pos') return normalise(record.pos).indexOf(q) >= 0;
+        if (mode === 'page') return /^\d+$/.test(q) && pageMatches(record.page, q);
+        return normalise(record.word).indexOf(q) >= 0 || normalise(record.meaning).indexOf(q) >= 0 || normalise(record.pos).indexOf(q) >= 0 || normalise(record.pronunciation).indexOf(q) >= 0 || pageMatches(record.page, q);
+      }
+      function groupMatches(group, query, mode) {
+        var i;
+        for (i = 0; i < group.rows.length; i += 1) if (recordMatches(group.rows[i], query, mode)) return true;
+        return false;
+      }
+      function getFilteredGroups() {
+        var q = currentQuery.trim(), result = [], i;
+        if (!q) return result;
+        for (i = 0; i < groups.length; i += 1) if (groupMatches(groups[i], q, currentMode)) result.push(groups[i]);
+        return result;
+      }
+      function posLabel(value) {
+        var v = String(value || '').trim();
+        if (!v) return '';
+        if (/^[【\[].+[】\]]$/.test(v)) return v;
+        if (v.length <= 4 && !/[、,;；/]/.test(v)) return '【' + v + '】';
+        return v;
+      }
+      function pageLabel(value) {
+        var v = String(value || '').trim();
+        return v ? 'p. ' + v.replace(/\s+/g, '') : '';
+      }
+      function renderResults() {
+        var list = $('resultList');
+        var items = getFilteredGroups();
+        if ($('searchInput').value !== currentQuery) $('searchInput').value = currentQuery;
+        $('clearButton').className = currentQuery ? 'clear-button visible' : 'clear-button';
+        $('resultCount').textContent = currentQuery ? items.length + '件' : (groups.length ? groups.length + '語を収録' : '');
+        $('resultHeading').textContent = currentQuery ? '検索結果' : '単語データ';
+
+        if (!records.length) {
+          list.innerHTML = '<div class="empty-state"><div class="empty-title">単語データがまだありません</div><div class="empty-text">1.csv・2.csv・3.csvを同じフォルダに置くか、CSVを読み込んでください。</div></div>';
+          return;
+        }
+        if (!currentQuery.trim()) {
+          list.innerHTML = '<div class="empty-state"><div class="empty-title">検索したい言葉を入力してください</div><div class="empty-text">英単語、日本語の意味、品詞、ページ番号をまとめて検索できます。</div></div>';
+          return;
+        }
+        if (!items.length) {
+          list.innerHTML = '<div class="empty-state"><div class="empty-title">一致する単語がありません</div><div class="empty-text">入力した文字を確認するか、別の言葉で検索してください。</div></div>';
+          return;
+        }
+        var html = '';
+        for (var i = 0; i < items.length; i += 1) {
+          var g = items[i];
+          var pron = g.pronunciation.length ? '<span class="word-pron">' + escapeHtml(g.pronunciation.join(' ・ ')) + '</span>' : '';
+          var metadata = [];
+          for (var j = 0; j < g.pos.length && j < 3; j += 1) metadata.push(posLabel(g.pos[j]));
+          if (g.pages.length) metadata.push(pageLabel(g.pages.join(', ')));
+          var preview = g.meanings.length ? g.meanings.slice(0, 2).join(' ／ ') : '意味は登録されていません';
+          html += '<button class="word-card" type="button" data-word-key="' + escapeHtml(g.key) + '">' +
+            '<span class="word-title">' + escapeHtml(g.word) + '</span>' +
+            (pron ? '<span class="word-pron-line">' + pron + '</span>' : '') +
+            '<span class="meaning-preview">' + escapeHtml(preview).replace(/\n/g, '<br>') + '</span>' +
+            (metadata.length ? '<span class="result-meta">' + escapeHtml(metadata.join('　·　')) + '</span>' : '') +
+            (g.meanings.length > 2 ? '<span class="meaning-more">ほか ' + (g.meanings.length - 2) + ' 件の意味</span>' : '') +
+          '</button>';
+        }
+        list.innerHTML = html;
+      }
+      function renderHistory() {
+        var list = $('historyList');
+        $('historyCount').textContent = historyItems.length + '件';
+        if (!historyItems.length) {
+          list.innerHTML = '<div class="empty-state"><div class="empty-title">履歴はまだありません</div><div class="empty-text">検索したり、単語の意味を開くと、ここに履歴が保存されます。</div></div>';
+          return;
+        }
+        var html = '', i, item, date, typeLabel, meta;
+        for (i = 0; i < historyItems.length; i += 1) {
+          item = historyItems[i];
+          date = new Date(item.time || new Date().getTime());
+          typeLabel = item.type === 'open' ? '単語' : '検索';
+          meta = date.getFullYear() + '/' + (date.getMonth() + 1) + '/' + date.getDate() + ' ' + ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2);
+          html += '<button class="history-item" type="button" data-history-index="' + i + '"><span class="history-type">' + escapeHtml(typeLabel) + '</span><span class="history-copy"><span class="history-label">' + escapeHtml(item.label || item.query || '') + '</span><span class="history-meta">' + escapeHtml(meta) + '</span></span><span class="history-arrow">›</span></button>';
+        }
+        list.innerHTML = html;
+      }
+      function addHistory(item) {
+        var now = new Date().getTime();
+        var last = historyItems.length ? historyItems[0] : null;
+        item.time = now;
+        if (last && last.type === item.type && last.query === item.query && last.mode === item.mode && now - last.time < 4000) {
+          historyItems[0] = item;
+        } else {
+          historyItems.unshift(item);
+        }
+        if (historyItems.length > MAX_HISTORY) historyItems = historyItems.slice(0, MAX_HISTORY);
+        storageSet(KEYS.history, JSON.stringify(historyItems));
+      }
+      function saveAppState() {
+        var state = {
+          query: currentQuery,
+          mode: currentMode,
+          screen: currentScreen,
+          selectedKey: currentGroupKey,
+          time: new Date().getTime(),
+          active: !!(currentQuery || currentGroupKey || currentScreen === 'history')
+        };
+        storageSet(KEYS.state, JSON.stringify(state));
+      }
+      function checkResumeState() {
+        savedStateAtStart = parseStored(KEYS.state, null);
+        if (!savedStateAtStart || !savedStateAtStart.active) return;
+        var noAsk = storageGet(KEYS.resume) === '1';
+        if (noAsk) restoreSavedState();
+        else {
+          var desc = savedStateAtStart.query ? '前回の検索：「' + savedStateAtStart.query + '」' : '前回開いていた画面を復元できます。';
+          $('resumeDescription').textContent = desc;
+          showOverlay('resumeOverlay');
+        }
+      }
+      function restoreSavedState() {
+        if (!savedStateAtStart) return;
+        currentQuery = savedStateAtStart.query || '';
+        currentMode = 'all';
+        currentScreen = savedStateAtStart.screen === 'history' ? 'history' : 'search';
+        currentGroupKey = savedStateAtStart.selectedKey || '';
+        renderScreen();
+        hideOverlay('resumeOverlay');
+        if (currentGroupKey) openGroup(currentGroupKey, false);
+        saveAppState();
+      }
+      function startFresh() {
+        if ($('resumeNoAsk').checked) storageSet(KEYS.resume, '1');
+        savedStateAtStart = null;
+        currentQuery = '';
+        currentMode = 'all';
+        currentScreen = 'search';
+        currentGroupKey = '';
+        hideOverlay('resumeOverlay');
+        renderScreen();
+        saveAppState();
+      }
+      function openGroup(key, recordAction) {
+        var group = null, i, j, meanings = '', chips = '', pron, pageText;
+        for (i = 0; i < groups.length; i += 1) if (groups[i].key === key) { group = groups[i]; break; }
+        if (!group) return;
+        currentGroupKey = key;
+        $('detailTitle').textContent = group.word.toUpperCase();
+        pron = group.pronunciation.length ? group.pronunciation.join(' · ') : '発音記号は登録されていません';
+        $('detailPron').textContent = pron;
+        for (i = 0; i < group.pos.length; i += 1) chips += '<span class="chip pos">' + escapeHtml(posLabel(group.pos[i])) + '</span>';
+        if (group.pages.length) chips += '<span class="chip">' + escapeHtml(pageLabel(group.pages.join(', '))) + '</span>';
+        $('detailChips').innerHTML = chips || '<span class="chip">追加情報なし</span>';
+        if (group.meanings.length) {
+          for (j = 0; j < group.meanings.length; j += 1) meanings += '<div class="definition">' + escapeHtml(group.meanings[j]).replace(/\n/g, '<br>') + '</div>';
+        } else { meanings = '<div class="definition">日本語の意味は登録されていません。</div>'; }
+        $('detailMeanings').innerHTML = meanings;
+        pageText = group.pages.length ? group.pages.join(' ／ ') : 'ページ情報は登録されていません。';
+        $('detailPages').textContent = pageText;
+        showOverlay('detailOverlay');
+        if (recordAction) addHistory({ type: 'open', query: group.word, mode: currentMode, label: group.word });
+        saveAppState();
+      }
+      function closeDetail() {
+        hideOverlay('detailOverlay');
+        currentGroupKey = '';
+        saveAppState();
+      }
+      function renderScreen() {
+        if (currentScreen === 'history') {
+          $('searchScreen').className = 'hidden';
+          $('historyScreen').className = '';
+          renderHistory();
+        } else {
+          $('searchScreen').className = '';
+          $('historyScreen').className = 'hidden';
+          renderResults();
+        }
+      }
+      function setQuery(value, logAction) {
+        currentQuery = value;
+        currentScreen = 'search';
+        currentGroupKey = '';
+        $('searchScreen').className = '';
+        $('historyScreen').className = 'hidden';
+        renderResults();
+        saveAppState();
+        if (logAction && String(value).trim()) addHistory({ type: 'search', query: String(value).trim(), mode: currentMode, label: '検索：' + String(value).trim() });
+      }
+      function setMode(mode) {
+        if (!modes[mode]) return;
+        currentMode = mode;
+        currentScreen = 'search';
+        currentGroupKey = '';
+        renderScreen();
+        saveAppState();
+      }
+      function handleSearchInput() {
+        currentQuery = $('searchInput').value;
+        currentGroupKey = '';
+        renderResults();
+        saveAppState();
+        if (searchTimer) window.clearTimeout(searchTimer);
+        searchTimer = window.setTimeout(function () {
+          if (currentQuery.trim()) addHistory({ type: 'search', query: currentQuery.trim(), mode: currentMode, label: '検索：' + currentQuery.trim() });
+        }, 900);
+      }
+      function registerServiceWorker() {
+        if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
+          navigator.serviceWorker.register('./sw.js').then(function () { /* 登録成功 */ }).catch(function () { /* 未対応環境では通常のWebアプリとして動作 */ });
+        }
+      }
+      function handleHistoryClick(target) {
+        var indexText = target.getAttribute('data-history-index');
+        if (indexText === null) return;
+        var item = historyItems[parseInt(indexText, 10)];
+        if (!item) return;
+        if (item.type === 'open') {
+          currentScreen = 'search';
+          renderScreen();
+          openGroup(getGroupKey(item.query), true);
+        } else {
+          currentMode = 'all';
+          setQuery(item.query || '', false);
+        }
+      }
+
+      $('searchInput').addEventListener('input', handleSearchInput);
+      $('searchInput').addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          if (searchTimer) window.clearTimeout(searchTimer);
+          if (currentQuery.trim()) addHistory({ type: 'search', query: currentQuery.trim(), mode: currentMode, label: '検索：' + currentQuery.trim() });
+          $('searchInput').blur();
+        }
+      });
+      $('clearButton').addEventListener('click', function () { setQuery('', false); $('searchInput').focus(); });
+      $('resultList').addEventListener('click', function (event) {
+        var target = event.target;
+        while (target && target !== $('resultList') && !target.getAttribute('data-word-key')) target = target.parentNode;
+        if (target && target.getAttribute) { var key = target.getAttribute('data-word-key'); if (key) openGroup(key, true); }
+      });
+      $('historyButton').addEventListener('click', function () { currentScreen = 'history'; renderScreen(); saveAppState(); });
+      $('historyBackButton').addEventListener('click', function () { currentScreen = 'search'; currentGroupKey = ''; renderScreen(); saveAppState(); });
+      $('historyList').addEventListener('click', function (event) {
+        var target = event.target;
+        while (target && target !== $('historyList') && target.getAttribute('data-history-index') === null) target = target.parentNode;
+        if (target && target !== $('historyList')) handleHistoryClick(target);
+      });
+      $('clearHistoryButton').addEventListener('click', function () {
+        if (!window.confirm('検索履歴をすべて消去しますか？')) return;
+        historyItems = [];
+        storageRemove(KEYS.history);
+        renderHistory();
+        showToast('履歴を消去しました。');
+      });
+      $('importButton').addEventListener('click', function () { showOverlay('importOverlay'); });
+      $('csvFileInput').addEventListener('change', function (event) { loadUploadedFileList(event.target.files); });
+      $('detailBackButton').addEventListener('click', closeDetail);
+      $('detailCloseButton').addEventListener('click', closeDetail);
+      document.addEventListener('click', function (event) {
+        var target = event.target;
+        if (target && target.getAttribute && target.getAttribute('data-close')) hideOverlay(target.getAttribute('data-close'));
+      });
+      $('resumeButton').addEventListener('click', function () {
+        if ($('resumeNoAsk').checked) storageSet(KEYS.resume, '1');
+        restoreSavedState();
+      });
+      $('startFreshButton').addEventListener('click', startFresh);
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+          if (!$('detailOverlay').hidden) closeDetail();
+          else if (!$('importOverlay').hidden) hideOverlay('importOverlay');
+        }
+      });
+      window.addEventListener('pagehide', saveAppState);
+
+      historyItems = parseStored(KEYS.history, []);
+      if (!Array.isArray(historyItems)) historyItems = [];
+      registerServiceWorker();
+      loadDefaultCsv();
+    }());
+  </script>
+</body>
+</html>

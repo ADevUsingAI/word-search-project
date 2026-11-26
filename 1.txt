@@ -1,0 +1,1408 @@
+word,meaning,weight
+a,"【冠】①ある、1つ〔人・匹などの〕[1], ②〜につき、〜ごとに [1], ~ hour(s) a day 1日〜時間 [1]",bold
+abacus,"【名】そろばん [1]",normal
+able,"【形】〔be able to 〜で〕〜することができる [2]",normal
+about,"【前】〜について（の） [1], 【副】〜ぐらい、〜頃、約〜 [1]",bold
+above,"【前】〜の上に、〜よりもむしろ [2], above all 何よりも [2]",normal
+abroad,"【副】外国に［へ・で］ [2]",normal
+accept,"【動】〜を受け入れる [2]",normal
+access,"【名】①通路、交通手段 [2], ②（面会・利用などの）権利、機会 69, have access to ~ 〜を利用することができる 69",normal
+accessory,"【名】アクセサリー 64",normal
+according,"【前】〔according to 〜で〕〜によれば [2]",normal
+ache,"【動】うずく、痛む [2]",normal
+achoo,"【間】ハクション ([1])",normal
+acid rain,"【名】酸性雨 127",normal
+across,"【前】①〜の向こうに、〜を越えたところに [2], ②〜と出くわして 66, ③〜じゅうに、〜のあちこちで 92",normal
+act,"【動】①行動する、実行する 36, ②振る舞う 93",normal
+acting,"【名】演技 [2]",normal
+action,"【名】①アクション [2], ②行動 [2], take action 行動を起こす 36",normal
+active,"【形】①活発な、元気な [1], ②自発的な (巻頭3)",bold
+activity,"【名】活動 [1]",bold
+actor,"【名】（女性も含め）俳優 [1]",bold
+actually,"【副】実は、実際は [2]",bold
+add,"【動】〜を加える 60",bold
+addition,"【名】追加 57, in addition その上 57, in addition to ~ 〜に加えて (107)",normal
+admire,"【動】〜に感心する、〜を尊敬する 64",normal
+adult,"【名】大人、成人 (46, 107), 122",normal
+advance,"【名】前進 [2], in advance 前もって、あらかじめ [2]",normal
+adventure,"【名】冒険、はらはらする経験 65",normal
+advice,"【名】助言、アドバイス 105",normal
+affect,"【動】〜に影響する 64",normal
+affection,"【名】愛情 94",normal
+affordable,"【形】入手可能な 127",normal
+afraid,"【形】（〜が）怖い 92, be afraid to ~ 〜するのが怖い、怖くて〜できない 92, I'm afraid ~. 申し訳ないが〜。 (113)",normal
+Africa,"【名】アフリカ 68",normal
+African,"【形】アフリカ（人）の 10, 【名】アフリカ人 109",normal
+after,"【前】①〔時間〕〜の後に [1], ②〔順序〕〜の次に、〜の後について [1], after a while しばらくすると [2], after that その後 [1], 【接】〜した後に ([1], 7)",normal
+afternoon,"【名】午後 [1]",bold
+again,"【副】再び、もう一度 [2], again and again 何度も、くり返して 93",bold
+against,"【前】〜に反対して 44",normal
+age,"【名】年齢 [1]",normal
+aged,"【形】高齢の、年をとった [2]",normal
+aging,"【形】高齢化している 127",normal
+ago,"【副】〜前に [2]",normal
+agree,"【動】賛成する 27, agree with ~ 〜に賛成する 27",bold
+agricultural,"【形】農業の 82",normal
+ahead,"【副】前に、先に 52, Go ahead. どうぞ。 52",normal
+AI,"【略】人工知能〔artificial intelligence の略〕 47",normal
+air,"【名】空気 92",normal
+air mail,"【名】航空郵便 [1]",normal
+airport,"【名】空港 [2]",normal
+alarm clock,"【名】目覚まし時計 124",normal
+album,"【名】アルバム [1]",normal
+all,"【代】全て、みんな [1], all of ~ 〜の（うちの）全て、みんな [2], not all ~ 全てが〜とは限らない 54, That's all. それだけです。 [2], 【副】全く、すっかり [1], all over ~ 〜じゅうで [2], all right ①〔All right. で〕よろしい。はい。結構です。 [1], ②大丈夫な、元気な [1], ③申し分ない [2], 【形】全ての、全体の [2], all the ~ 全ての〜 [2], all year round 1年中 89",bold
+almost,"【副】ほとんど、もう少しで [1]",normal
+alone,"【副】〜だけで、1人で 36",bold
+along,"【前】〜に沿って、〜を通って [1]",normal
+aloud,"【副】声を［に］出して 123",normal
+already,"【副】もう、すでに 23",normal
+also,"【副】〜もまた、さらに [1]",bold
+always,"【副】①いつも、常に [1], ②ずっと [2]",bold
+am,"【動】①〜である、〜だ [1], ②（〜に）いる [1], 【助】〔am + -ing で現在進行形の文をつくる〕〜している、〜するつもりでいる [1]",bold
+a.m.,"【副】午後 [1]",normal
+amazing,"【形】びっくりするような、驚くほど見事な [2]",normal
+ambition,"【名】野望 128",normal
+ambitious,"【形】大志を抱いた 97",normal
+America,"【名】アメリカ [2]",normal
+American,"【形】アメリカ（人）の [2], 【名】アメリカ人 ([2]), 36",normal
+among,"【前】〜に含まれて、〜の中に [2]",normal
+amused,"【形】おもしろがって 128",normal
+amusement park,"【名】遊園地 [1], 21",bold
+an,"【冠】〔母音で始まる語の前で〕ある、1つ〔人・匹などの〕 [1]",bold
+anchor,"【名】ニュースキャスター 125",normal
+and,"【接】①〜と…、および [1], ②それから、そして、だから [1], ③（また）一方 [1], ④〔同一語を結んで〕どんどん、〜も〜も 56, ~, and so on 〜など ([1]), And you? あなたはどうですか。 [1]",bold
+android,"【名】アンドロイド ([2])",normal
+angry,"【形】怒った、腹を立てた [1]",bold
+animal,"【名】動物 [1]",bold
+animated,"【形】アニメの 79",normal
+animated movie,"【名】アニメ映画 79",normal
+anime,"【名】（日本の）アニメ [1]",normal
+ankle,"【名】足首 [2]",normal
+another,"【形】①別の、他の [2], ②もう1つの、もう1人の [2], 【代】別のもの［こと］、別の人 14",bold
+answer,"【名】答え [2], 【動】（〜に）答える 32",normal
+ant,"【名】アリ ([2])",normal
+anxiety,"【名】心配、不安 86",normal
+anxious,"【形】不安で、心配な 128",normal
+any,"【形】①〔疑問文で〕いくつかの、いくらかの、何らかの [1], ②〔否定文で〕少しも（〜ない） ([1]), ③どんな〜でも、誰でも、どれでも ([1])",bold
+anybody,"【代】誰でも [2]",normal
+anymore,"【副】これ以上、もはや [2]",normal
+anyone,"【代】①誰でも [1], ②誰か 30",normal
+anything,"【代】①何でも [1], ②何か [2], ③〔否定文で全否定を表す〕何も、どれも 56",normal
+anyway,"【副】それでもやはり [2]",normal
+apologize,"【動】謝る [2], apologize (to ~) for ... （〜に）…のことで謝る [2]",normal
+appeal,"【動】（人の心に）訴える (106)",normal
+appear,"【動】現れる、（〜に）出る [1]",normal
+apple,"【名】リンゴ [1]",bold
+April,"【名】4月 [1]",bold
+apron,"【名】エプロン 123",normal
+aquarium,"【名】水族館 [1]",bold
+Arab,"【名】【形】アラブ人（の） [2]",normal
+architect,"【名】建築家 [2]",normal
+are,"【動】①〜である、〜だ [1], ②（〜に）ある［いる］ [1], 【助】①〔are + -ing で現在進行形の文をつくる〕〜している、〜するつもりでいる [1], ②〔are + 過去分詞で受け身の文をつくる〕〜される、〜されている [2]",bold
+area,"【名】エリア、地域、地区 [2]",normal
+aren't,"are not の短縮形 [1]",normal
+argument,"【名】口論 [2]",normal
+arm,"【名】腕 [2]",normal
+arm wrestling,"【名】腕相撲 [2]",normal
+around,"【副】①ぐるりと回って [1], ②あちこちを [2], ③約〜、およそ〜、〜頃 68, 【前】①〜の周りに [1], ②〜のあちこちに [2]",bold
+arrest,"【動】〜を逮捕する (110), 【名】逮捕 (110)",normal
+arrival,"【名】到着 [2]",normal
+arrive,"【動】着く、到着する [2]",normal
+art,"【名】〔教科としての〕美術、芸術 [1]",bold
+article,"【名】記事 59",normal
+artisan,"【名】職人 ([2])",normal
+artist,"【名】芸術家 [1]",bold
+as,"【前】〜として、〜のときに [1], 【接】①〔as ~ as …で〕…と同じくらい〜 [2], ②〜（する）ように、〜（する）とおりに 27, ③〜（する）ときに、〜（する）と同時に 42, as if ~ まるで〜（である）かのように 93",normal
+ashamed,"【形】恥ずかしく思う [2]",normal
+Asia,"【名】アジア 69",normal
+Asian,"【名】【形】アジア人（の） [2]",normal
+ask,"【動】①（人）にたずねる [1], ②〜に頼む [2], ask for ~ 〜を求める 41, ask ~ to ... 〜に…するよう頼む [2]",bold
+asleep,"【形】眠って（いる） 126",normal
+assemble,"【動】〜を組み立てる [2]",normal
+assignment,"【名】課題、宿題 (106)",normal
+assistance,"【名】援助、助力 [2]",normal
+astronaut,"【名】宇宙飛行士 [1]",bold
+astronomy,"【名】天文学 [1]",normal
+at,"【前】①〔地点・場所〕〜に［で］ [1], ②〔方向・目標〕〜に、〜に向かって [1], ③〔優劣などを表す言葉と〕〜の点で [1], ④〔時間・年齢・順序・回数〕〜に [1]",bold
+ate,"【動】eat の過去形 [1]",bold
+athlete,"【名】運動選手、運動好きな人 [1]",bold
+atmosphere,"【名】雰囲気 [2]",normal
+atomic bomb,"【名】原子爆弾 30",normal
+attention,"【名】注意、関心 [2], pay attention to ~ 〜に注意を払う [2]",normal
+attitude,"【名】態度 [2]",normal
+attractive,"【形】魅力的な 44",normal
+audience,"【名】観客 [2]",normal
+audio,"【形】音声の [2]",normal
+August,"【名】8月 [1]",bold
+aunt,"【名】おば [1]",normal
+Australia,"【名】オーストラリア [1]",bold
+automatically,"【副】自動で 48",normal
+award,"【名】賞 (46), 126",normal
+away,"【副】①〔移動〕あちらへ [1], ②〔位置・時間〕〜から離れて [2], ③〔消失〕除いて、なくなって [2]",normal
+awesome,"【形】すごい、とてもよい [2]",normal
+baby,"【名】赤ちゃん ([2]), 122",normal
+back,"【副】（元に）戻って [2], 【名】①背中 [1], ②後ろ、後部 (109), 【形】後ろの、奥の (108)",normal
+background,"【名】（人の）背景 [2]",normal
+backpack,"【名】リュックサック 123",normal
+bacon,"【名】ベーコン [2]",bold
+bad,"【形】①気の毒で [1], ②悪い [1], ③嫌な、ひどい [2], That's too bad. 残念です。気の毒に。 [1]",bold
+badminton,"【名】バドミントン [1]",bold
+bag,"【名】①かばん、バッグ [1], ②〔a bag of 〜で〕1袋の〜 [2]",bold
+bake,"【動】（パン・ケーキなどを）焼く [1]",normal
+baker,"【名】パン職人 [2]",bold
+baking sheet,"【名】（クッキーなどを焼くための平らな）鉄板 [2]",normal
+balance,"【名】バランス、均衡 [2]",normal
+ball,"【名】ボール、球 [1]",bold
+ballet,"【名】バレエ [2]",normal
+balloon,"【名】風船 [1]",bold
+banana,"【名】バナナ [1]",bold
+band,"【名】バンド [1], 21",bold
+bandage,"【名】包帯 [2]",normal
+bang,"【動】激しく打つ 111",normal
+Bangladesh,"【名】バングラデシュ (46)",normal
+bank,"【名】①銀行 [1], ②（川の）土手、岸 [2]",bold
+bar,"【名】①棒、延べ棒 [2], ②（板状の）〜バー ([2])",normal
+barbecue,"【名】バーベキュー [1]",bold
+barber shop,"【名】理髪店 [2]",normal
+barely,"【副】かろうじて [2]",normal
+barrier,"【名】障壁、バリア [2]",normal
+base,"【名】基地、拠点 [2]",normal
+baseball,"【名】野球 [1]",bold
+basement,"【名】地下室 [2]",normal
+basic,"【形】基礎の、基本的な [2]",normal
+basin,"【名】洗面器 [2]",normal
+basket,"【名】かご、バスケット [1]",bold
+basketball,"【名】バスケットボール [1]",bold
+bat,"【名】バット [1]",bold
+bath,"【名】入浴 [1], have a bath 入浴する [1]",bold
+bathing suit,"【名】水着 [2]",normal
+bathroom,"【名】浴室、バスルーム、トイレ [1]",bold
+bathtub,"【名】浴槽 [2]",normal
+battery,"【名】電池、バッテリー [2]",bold
+battle,"【名】戦い 65",normal
+be,"【動】①〜である、〜だ [1], ②（〜に）ある［いる］ [1], 【助】〔be + -ing で現在進行形の文をつくる〕〜している [1], 〔be + 過去分詞で受け身の文をつくる〕〜される [2]",bold
+beach,"【名】浜、海岸 [1]",bold
+bean,"【名】豆 [1]",bold
+bear,"【名】クマ [1], 【動】①（子供）を生む 111, ②耐える、我慢する (109)",bold
+beast,"【名】獣 77",normal
+beat,"【動】（チームなど）を負かす [2], 【名】拍、拍子 124",normal
+beautiful,"【形】美しい、きれいな [1]",bold
+beauty,"【名】美、美しさ 128",normal
+because,"【接】なぜなら…だから [1], because of ~ 〜が理由で、〜のために [2]",bold
+become,"【動】〜になる [1]",bold
+bed,"【名】ベッド [1], go to bed 就寝する、床につく [1]",bold
+bedroom,"【名】寝室 [2]",normal
+bee,"【名】ハチ ([1])",normal
+beef,"【名】牛肉 [1]",bold
+been,"【動】be の過去分詞 [1]",normal
+beer,"【名】ビール [2]",normal
+before,"【前】①〔時間〕〜の前に [1], ②〔順序〕〜の前に、〜を前にして [2], 【副】以前に [1], 【接】〜する前に [2]",normal
+beg,"【動】懇願する 92",normal
+begin,"【動】始まる、〜を始める [1]",bold
+beginning,"【名】初め、最初 [2]",normal
+behalf,"【名】支持、利益 106",normal
+behavior,"【名】振る舞い、態度 [2]",normal
+behind,"【前】①〜の後ろに [1], ②〜の背後に [2], 【副】後ろに [2]",bold
+beige,"【形】ベージュ色の [2]",normal
+Belgium,"【名】ベルギー [1]",normal
+believe,"【動】①（〜を）信じる [1], ②〜だと思う [2], believe it or not 信じられないかもしれないが 76",bold
+bell,"【名】ベル、鈴 [1]",bold
+belly,"【名】おなか 123",normal
+belong,"【動】所属している [2], belong to ~ 〜に所属している [2]",normal
+below,"【前】〜より下に、〜未満で [1], 【副】下に、下記に [2]",normal
+bench,"【名】ベンチ [2]",bold
+bend,"【動】〜を曲げる [2]",normal
+benefit,"【名】利益、恩恵 62",normal
+beside,"【前】〜のそばに [1]",normal
+besides,"【前】〜のほかに [2]",normal
+best,"【形】【副】もっとも、一番 [1], do one's best 最善を尽くす [1], the best 最もよいもの［こと］ [1]",bold
+better,"【形】【副】よりよい、より上手に [1], had better ~ 〜したほうがよい [2]",bold
+between,"【前】①〔2つのもの・人の〕間に、間を [1], ②〔時間などの〕間に [2]",normal
+beyond,"【前】〜の向こうに [2]",normal
+bicycle,"【名】自転車 [1]",bold
+big,"【形】大きい [1]",bold
+bike,"【名】自転車 [1]",bold
+bill,"【名】①紙幣 [2], ②請求書 [2]",normal
+billion,"【名】【形】10億（の） [2]",normal
+binary,"【形】二進法の 10",normal
+binder,"【名】バインダー [1]",normal
+biography,"【名】伝記 126",normal
+biological,"【形】生物の 16",normal
+biology,"【名】生物学 [1]",bold
+bird,"【名】鳥 [1]",bold
+birth,"【名】誕生、出産 [2]",normal
+birthday,"【名】誕生日 [1], Happy birthday! お誕生日おめでとう。 [1]",bold
+biscuit,"【名】ビスケット [1]",bold
+bit,"【名】少し、少量 [2], a bit 少し [2]",normal
+bite,"【動】〜をかむ 126",normal
+bitter,"【形】苦い [2]",bold
+black,"【形】【名】黒（い） [1]",bold
+blackboard,"【名】黒板 [1]",bold
+blade,"【名】刃 10",normal
+blame,"【動】〜を責める [2]",normal
+blank,"【名】空白、空欄 [2]",normal
+blanket,"【名】毛布 [2]",normal
+blind,"【形】目の見えない [2]",normal
+block,"【名】①ブロック、区画 [1], ②かたまり [2], 【動】〜を遮る 86",bold
+blog,"【名】ブログ [1]",bold
+blonde,"【形】ブロンドの [2]",normal
+blood,"【名】血、血液 [2]",normal
+blouse,"【名】ブラウス [2]",bold
+blow,"【動】①（風が）吹く [2], ②息を吹きかける [2], blow out ~ 〜を吹き消す [1]",normal
+blue,"【形】【名】青（い） [1]",bold
+board,"【名】板、ボード、黒板 [1]",bold
+boat,"【名】ボート、小舟 [1]",bold
+body,"【名】体、肉体 [1]",bold
+boil,"【動】〜をゆでる、沸騰させる [1]",bold
+boiled egg,"【名】ゆで卵 [1]",bold
+bold,"【形】大胆な、勇敢な 101",normal
+bomb,"【名】爆弾 30",normal
+bone,"【名】骨 [2]",bold
+book,"【名】本、書籍 [1], 【動】〜を予約する 124",bold
+bookmark,"【名】しおり [1]",bold
+bookshelf,"【名】本棚 [1]",normal
+bookstore,"【名】書店、本屋 [1]",bold
+boot,"【名】ブーツ、長靴 [1], 123",bold
+border,"【名】国境、境界 [2]",normal
+boring,"【形】退屈な、つまらない [1]",normal
+born,"【動】bear の過去分詞 [1], be born 生まれる [1]",bold
+borrow,"【動】〜を借りる [1]",bold
+boss,"【名】上司、ボス 72",normal
+both,"【代】【形】両方（の）、双方が［な］ [1], both A and B AもBも両方とも [1]",bold
+bother,"【動】〜を悩ませる、困らせる 111",normal
+bottle,"【名】瓶、ボトル [1]",bold
+bottom,"【名】底 [2]",normal
+bought,"【動】buy の過去形、過去分詞 [1]",normal
+boulevard,"【名】大通り (108)",normal
+bow,"【動】おじぎをする [2], 【名】おじぎ [2]",normal
+bowl,"【名】鉢、どんぶり、茶碗 [1]",bold
+box,"【名】箱、ボックス [1]",bold
+boy,"【名】男の子 [1]",bold
+boyfriend,"【名】ボーイフレンド [1]",bold
+braille,"【名】点字 41",bold
+brain,"【名】脳、頭脳 [2]",normal
+brake,"【名】ブレーキ [2]",normal
+branch,"【名】枝 [2]",normal
+brave,"【形】勇敢な [1]",normal
+bread,"【名】パン [1]",bold
+break,"【動】①〜を壊す、割る [2], ②（骨など）を折る [2], ③壊れる、折れる [2], break into ~ 〜に押し入る (110), break the world record 世界記録を破る [1], 【名】休憩 [1], have a break 休憩する [2]",bold
+breakfast,"【名】朝食 [1], have breakfast 朝食をとる [1]",bold
+breath,"【名】息、呼吸 [2]",normal
+breathe,"【動】呼吸する [2]",normal
+brick,"【名】レンガ [2]",normal
+bridge,"【名】橋 [1]",bold
+brief,"【形】簡潔な [2]",normal
+bright,"【形】①明るい [2], ②（色などが）鮮やかな [2], ③頭のよい 56",normal
+brilliant,"【形】すばらしい [2]",normal
+bring,"【動】①〜を持って来る [1], ②〜を連れて来る [1], bring about ~ 〜をもたらす 16, bring back ~ 〜を思い出させる [2]",bold
+Britain,"【名】イギリス、英国 65",normal
+British,"【形】英国の [2]",normal
+broad,"【形】広い [2]",normal
+broadcast,"【動】〜を放送する 125",normal
+brochure,"【名】パンフレット [2]",normal
+broken,"【形】壊れた [2]",normal
+brother,"【名】兄、弟 [1]",bold
+brown,"【形】【名】茶色（の） [1]",bold
+brush,"【動】（歯など）を磨く [1], 【名】ブラシ、筆 [1]",bold
+brush up one's English,"英語の腕を磨く [1]",normal
+bucket,"【名】バケツ [2]",normal
+bud,"【名】つぼみ 124",normal
+budget,"【名】予算 [2]",normal
+bug,"【名】虫 [2]",normal
+build,"【動】〜を建てる、組み立てる [1]",bold
+builder,"【名】建築業者 [2]",normal
+building,"【名】建物 [1]",bold
+built,"【動】build の過去形、過去分詞 [1]",normal
+bullet train,"【名】新幹線 [2]",normal
+bunch,"【名】房、束 10",normal
+bundle,"【名】束 [2]",normal
+burden,"【名】負担 [2]",normal
+burger,"【名】ハンバーガー [1]",bold
+burn,"【動】燃える、〜を燃やす [1]",bold
+bus,"【名】バス [1]",bold
+bus stop,"【名】バス停 [2]",normal
+business,"【名】①仕事、ビジネス [2], ②商業 62",normal
+busy,"【形】忙しい [1], be busy with ~ 〜で忙しい [1]",bold
+but,"【接】しかし、だが [1]",bold
+butter,"【名】バター [1]",bold
+butterfly,"【名】チョウ [1]",bold
+button,"【名】ボタン [1]",bold
+buy,"【動】〜を買う [1]",bold
+buyer,"【名】買い手 [2]",normal
+by,"【前】①〔手段・方法〕〜によって、〜で [1], ②〔期限〕〜までに [2], ③〔近接〕〜のそばに [1], ④〔受身の行為者〕〜によって [2], ⑤〔基準〕〜単位で [2], ⑥〔差異〕…だけ [2], by the way ところで [1]",bold
+bye,"【間】さようなら [1]",bold
+byte,"【名】バイト 10",normal
+cabinet,"【名】内閣、キャビネット (106)",normal
+cable,"【名】ケーブル 123",normal
+cafeteria,"【名】カフェテリア、食堂 [1]",bold
+cage,"【名】鳥かご、檻 [2]",normal
+cake,"【名】ケーキ [1]",bold
+calculate,"【動】〜を計算する [2]",normal
+calendar,"【名】カレンダー [1]",bold
+call,"【動】①〜に電話をかける [1], ②〜を…と呼ぶ [1], call back 折り返し電話をする [2], call off ~ 〜を中止する [2], 【名】電話 [1], have a call 電話がかかる [2]",bold
+calm,"【形】冷静な、落ち着いた [1]",normal
+camera,"【名】カメラ [1]",bold
+camp,"【名】キャンプ [1], 【動】キャンプをする [1]",bold
+campaign,"【名】キャンペーン [1]",normal
+camping car,"【名】キャンピングカー [2]",normal
+campus,"【名】キャンパス [1]",normal
+can,"【助】①〜することができる [1], ②〔可能・能力〕〜できる [1], ③〔許可〕〜してもよい [1], ④〔依頼〕〜してくれますか [1], 【名】缶 [1]",bold
+Canada,"【名】カナダ [1]",bold
+Canadian,"【形】【名】カナダの、カナダ人 [1]",bold
+canal,"【名】運河 (108)",normal
+cancel,"【動】〜を中止する [2]",normal
+cancer,"【名】がん [2]",normal
+candidate,"【名】候補者 (106)",normal
+candle,"【名】ろうそく [1]",bold
+candy,"【名】キャンディ、飴 [1]",bold
+cannot,"〜できない [1]",bold
+canoe,"【名】カヌー [1]",bold
+can't,"can not の短縮形 [1]",bold
+canteen,"【名】食堂 [1]",normal
+cap,"【名】キャップ、帽子 [1], 123",bold
+capital,"【名】首都 [1]",bold
+captain,"【名】キャプテン [1]",bold
+car,"【名】①車、自動車 [1], ②（列車の）車両 [2]",bold
+carbon,"【名】炭素 62",normal
+carbon dioxide,"【名】二酸化炭素 62",normal
+card,"【名】カード [1]",bold
+cardboard,"【名】段ボール（の） [2]",normal
+care,"【名】世話、手入れ [2], take care of ~ 〜の世話をする [2], take care. じゃあね、気をつけて。 [2], 【動】気にする、かまう [2]",normal
+career,"【名】職業、キャリア [2]",normal
+careful,"【形】注意深い、慎重な [1], be careful about ~ 〜に気をつける [2]",normal
+carefully,"【副】注意深く、慎重に [1]",normal
+carpet,"【名】じゅうたん、カーペット [2]",normal
+carrot,"【名】ニンジン [1]",bold
+carry,"【動】①〜を運ぶ、持っていく [1], ②〜を携行する 22, carry out ~ 〜を実行する 62",bold
+cartoon,"【名】マンガ、アニメ [1]",bold
+case,"【名】①場合 [1], ②事例、事件 65, in case of ~ 〜の場合には [2]",normal
+cash,"【名】現金 [2]",normal
+cashless,"【形】キャッシュレスの [2]",normal
+cassette,"【名】カセット [1]",normal
+cat,"【名】ネコ [1]",bold
+catch,"【動】①〜をつかまえる [1], ②（バスなど）に間に合う、乗る [2], ③（病気）にかかる [2], catch a cold 風邪をひく [1], catch up (with ~) （〜に）追いつく [2]",bold
+caterpillar,"【名】イモムシ ([2])",normal
+cathedral,"【名】大聖堂 126",normal
+cattle,"【名】ウシ類 82",normal
+caught,"【動】catch の過去形、過去分詞 [2]",normal
+cause,"【動】〜を引き起こす 16, 【名】原因、理由 57",normal
+CD,"【名】CD [1]",bold
+ceiling,"【名】天井 [2]",normal
+celebrate,"【動】〜を祝う [1]",normal
+celebration,"【名】お祝い [2]",normal
+cell,"【名】細胞 [2]",normal
+cellphone,"【名】携帯電話、スマホ [1]",bold
+Celsius,"【名】【形】摂氏（の） [1]",normal
+cent,"【名】セント [1]",bold
+center,"【名】中心、中央 [1]",bold
+central,"【形】中央の、中心的な [2]",normal
+century,"【名】世紀、100年 20",normal
+cereal,"【名】シリアル [1]",bold
+ceremony,"【名】式、式典 [2]",normal
+certain,"【形】確信している、確かな 92",normal
+certainly,"【副】確実に、もちろん [2]",normal
+certificate,"【名】証明書 [2]",normal
+chain,"【名】鎖 [2]",normal
+chair,"【名】椅子 [1]",bold
+chairman,"【名】議長、会長 [2]",normal
+chalk,"【名】チョーク [1]",bold
+challenge,"【名】挑戦 [1], 【動】〜に挑戦する [1]",bold
+challenging,"【形】やりがいのある、困難な [2]",normal
+champion,"【名】チャンピオン [1]",bold
+chance,"【名】機会、チャンス [1]",normal
+change,"【動】①〜を変える [1], ②変わる [1], ③〜を着替える [2], change buses 乗り換える [2], change trains 電車を乗り換える [2], 【名】①変化 [2], ②お釣り [2], ③小銭 123",bold
+channel,"【名】チャンネル [1]",bold
+chaos,"【名】大混乱、カオス [2]",normal
+chapter,"【名】章 [2]",normal
+character,"【名】①登場人物 [1], ②文字 [1]",bold
+characteristic,"【名】特徴 57",normal
+charge,"【動】①請求する [2], ②充電する 46, 【名】料金 [2]",normal
+charity,"【名】チャリティー [2]",normal
+chart,"【名】図表 [2]",normal
+chase,"【動】〜を追いかける [2]",normal
+chat,"【動】おしゃべりをする [1]",bold
+cheap,"【形】安価な、安い [1]",bold
+check,"【動】①〜を調べる、確認する [1], ②チェックする [1], check in チェックインする [2], check out ①〜を調べる [2], ②チェックアウトする [2], 【名】チェック、点検 [1]",bold
+chef,"【名】料理長、シェフ [1]",bold
+chemical,"【名】化学物質 127",normal
+cherry,"【名】サクランボ、桜 [1]",bold
+cherry blossom,"【名】桜の花 [1]",bold
+chess,"【名】チェス [1]",bold
+chest,"【名】胸 [2]",bold
+chestnut,"【名】クリ [1]",bold
+chicken,"【名】鶏肉、チキン [1]",bold
+chief,"【名】長、責任者 65",normal
+child,"【名】子供 [1]",bold
+childhood,"【名】子供時代 122",normal
+children,"【名】child の複数形 [1]",bold
+Chile,"【名】チリ [1]",normal
+China,"【名】中国 [1]",bold
+Chinese,"【名】【形】中国語（の）、中国人（の） [1]",bold
+chocolate,"【名】チョコレート [1]",bold
+choice,"【名】選択 [2]",normal
+choir,"【名】合唱団 [2]",normal
+choose,"【動】〜を選ぶ [2]",normal
+chopstick,"【名】箸 [1]",bold
+chorus,"【名】合唱、コーラス [2]",normal
+chosen,"【動】choose の過去分詞 [2]",normal
+christianity,"【名】キリスト教 [2]",normal
+Christmas,"【名】クリスマス [1]",bold
+Christmas Eve,"【名】クリスマスイブ [1]",normal
+chubby,"【形】ぽっちゃりした 122",normal
+church,"【名】教会 [1]",bold
+cinema,"【名】映画館 [1]",bold
+circle,"【名】円 [1]",bold
+circulate,"【動】循環する、流通する 62",normal
+circumstance,"【名】状況、環境 108",normal
+circus,"【名】サーカス [1]",bold
+citizen,"【名】市民 107",normal
+city,"【名】市、都市 [1]",bold
+clap,"【動】（手を）たたく [2]",normal
+class,"【名】①授業 [1], ②クラス、学級 [1], ③等級 [2]",bold
+classic,"【形】古典的な、名作の 75",normal
+classical,"【形】クラシックの [1]",bold
+classmate,"【名】クラスメイト、同級生 [1]",bold
+classroom,"【名】教室 [1]",bold
+clean,"【形】清潔な、きれいな [1], 【動】〜を掃除する [1]",bold
+cleaning,"【名】掃除 [1]",normal
+cleanliness,"【名】清潔さ 127",normal
+clear,"【形】①透明な [1], ②はっきりした、明らかな 88, 【動】〜を取り除く [2]",bold
+clearly,"【副】はっきりと、明瞭に [1]",normal
+clerk,"【名】事務員、店員 [2]",normal
+clever,"【形】利口な、賢い [1]",normal
+click,"【動】クリックする [1]",bold
+climate,"【名】気候 [2]",normal
+climb,"【動】（山・木など）に登る [1]",bold
+clinic,"【名】診療所、クリニック [2]",normal
+clock,"【名】時計 [1]",bold
+clone,"【名】クローン [1]",bold
+close,"【動】①〜を閉める [1], ②閉まる [1], 【形】①近い [1], ②親密な 58",bold
+closed,"【形】閉まった、休業の [1]",normal
+closet,"【名】クローゼット、押入れ [2]",normal
+cloth,"【名】布、生地 [2]",normal
+clothes,"【名】衣服、服 [1]",bold
+clothing,"【名】衣類 [2]",normal
+cloud,"【名】雲 [2]",bold
+cloudy,"【形】曇りの [2]",normal
+club,"【名】クラブ、部活 [1]",bold
+clue,"【名】手がかり、ヒント [2]",normal
+coach,"【名】コーチ、指導者 [1]",bold
+coal,"【名】石炭 62",normal
+coast,"【名】海岸、沿岸 [2]",normal
+coat,"【名】コート [1], 123",bold
+code,"【名】コード、暗号、法典 [2]",normal
+coffee,"【名】コーヒー [1]",bold
+coin,"【名】硬貨、コイン [1]",bold
+cola,"【名】コーラ [1]",bold
+cold,"【形】①寒い、冷たい [1], ②風邪を引いた [2], 【名】風邪 [1]",bold
+collar,"【名】襟 [2]",normal
+colleague,"【名】同僚 122",normal
+collect,"【動】〜を集める、収集する [1]",bold
+collection,"【名】コレクション、収集品 [2]",normal
+college,"【名】大学 [2]",normal
+colony,"【名】植民地 109",normal
+color,"【名】色 [1]",bold
+colorful,"【形】色鮮やかな、カラフルな [1]",bold
+comb,"【名】くし [1]",normal
+combine,"【動】〜を結合させる、組み合わせる [2]",normal
+come,"【動】来る、やって来る [1], come about 起こる [2], come across ~ 〜に偶然出会う 64, come back 戻ってくる [1], come from ~ 〜の出身である [1], come home 家に帰る [1], come on さあ、頼むから [1], come true 実現する 64",bold
+comedy,"【名】コメディ、喜劇 [1]",bold
+comfort,"【名】快適さ [2]",normal
+comfortable,"【形】快適な、心地よい [2]",normal
+comic,"【名】漫画、コミック [1]",bold
+comma,"【名】カンマ、コンマ [2]",normal
+commercial,"【形】商業の [2]",normal
+committee,"【名】委員会 [2]",normal
+common,"【形】共通の、普通の、一般的な [2], in common 共通して [2]",normal
+communicate,"【動】意思疎通をする、連絡を取る [2]",normal
+communication,"【名】コミュニケーション、意思疎通 [2]",normal
+community,"【名】地域社会、コミュニティ [2]",normal
+companion,"【名】仲間、連れ [2]",normal
+company,"【名】会社、企業 [1]",bold
+compare,"【動】〜を比較する [2]",normal
+comparison,"【名】比較 [2]",normal
+compete,"【動】競争する [2]",normal
+competence,"【名】能力 127",normal
+competition,"【名】競争、コンテスト [1]",bold
+competitor,"【名】競争相手、競合他社 [2]",normal
+complain,"【動】不平を言う、文句を言う 108",normal
+complete,"【動】〜を完了する、完成させる [2], 【形】完全な、完了した [2]",normal
+completely,"【副】完全に、すっかり [2]",normal
+complex,"【形】複雑な [2]",normal
+complicated,"【形】複雑な [2]",normal
+component,"【名】構成要素、部品 [2]",normal
+compose,"【動】（音楽など）を作曲する [2]",normal
+composition,"【名】作文、構成 [2]",normal
+computer,"【名】コンピューター、パソコン [1]",bold
+concentrate,"【動】集中する [2]",normal
+concern,"【名】心配、懸念 [2]",normal
+concert,"【名】コンサート、音楽会 [1]",bold
+conclude,"【動】締めくくる、結論を下す [2]",normal
+conclusion,"【名】結論 [2]",normal
+condition,"【名】状態、条件 [2]",normal
+conference,"【名】会議 [2]",normal
+confidence,"【名】自信 [2]",normal
+confident,"【形】自信がある [2]",normal
+confirm,"【動】〜を確認する [2]",normal
+conflict,"【名】紛争、対立 65",normal
+congratulate,"【動】〜を祝う、お祝いを言う [2]",normal
+congratulations,"【名】おめでとう [1], Congratulations! おめでとう！ [1]",bold
+connect,"【動】〜をつなぐ、接続する [2]",normal
+connection,"【名】つながり、接続 [2]",normal
+conquer,"【動】〜を征服する 109",normal
+conscious,"【形】意識している [2]",normal
+consequence,"【名】結果 [2]",normal
+conservative,"【形】保守的な (106)",normal
+consider,"【動】〜を考慮する、よく考える [2]",normal
+consideration,"【名】考慮 [2]",normal
+consist,"【動】成る [2], consist of ~ 〜から成る [2]",normal
+constant,"【形】絶え間ない [2]",normal
+construct,"【動】〜を建設する [2]",normal
+construction,"【名】建設、工事 [2]",normal
+consult,"【動】〜に相談する [2]",normal
+consume,"【動】〜を消費する [2]",normal
+consumer,"【名】消費者 [2]",normal
+contact,"【名】接触、連絡 [2], 【動】〜に連絡する [2]",normal
+contain,"【動】〜を含む [2]",normal
+container,"【名】容器 [2]",normal
+contemporary,"【形】現代の [2]",normal
+content,"【名】内容、中身 [2]",normal
+contest,"【名】コンテスト、試合 [1]",bold
+context,"【名】文脈、状況 [2]",normal
+continent,"【名】大陸 68",normal
+continue,"【動】続く、〜を続ける [2]",normal
+contract,"【名】契約 [2]",normal
+contribute,"【動】貢献する、寄付する [2]",normal
+contribution,"【名】貢献 [2]",normal
+control,"【動】〜を支配する、制御する [2], 【名】支配、管理 [2]",normal
+convenient,"【形】便利な、都合のよい [2]",normal
+conversation,"【名】会話 [1]",bold
+convert,"【動】〜を転換する、変換する [2]",normal
+cook,"【動】料理する、〜を料理する [1], 【名】コック、料理人 [1]",bold
+cookie,"【名】クッキー [1]",bold
+cooking,"【名】料理 [1]",bold
+cool,"【形】①涼しい [1], ②かっこいい [1], 【間】すごい、いいね [1]",bold
+copy,"【名】写し、コピー [1], 【動】〜をコピーする、真似る [1]",bold
+cord,"【名】コード、紐 [2]",normal
+core,"【名】中心、核心 [2]",normal
+corn,"【名】トウモロコシ [1]",bold
+corner,"【名】角、曲がり角 [1]",bold
+correct,"【形】正しい [1], 【動】〜を直す、訂正する [2]",bold
+correctly,"【副】正しく [1]",normal
+cost,"【動】（費用が）かかる [2], 【名】費用、代価 [2]",normal
+costume,"【名】衣装、コスチューム [2]",normal
+cottage,"【名】コテージ、小屋 [2]",normal
+cotton,"【名】【形】綿、コットン（製） [2]",normal
+cough,"【動】せきをする [2]",normal
+could,"【助】can の過去形、〜できた [1], 〔丁寧な依頼〕〜してくださいませんか [2]",normal
+council,"【名】会議、評議会 [2]",normal
+count,"【動】〜を数える [1]",bold
+counter,"【名】カウンター [2]",normal
+country,"【名】国、田舎 [1]",bold
+countryside,"【名】田舎 [2]",normal
+couple,"【名】一対、カップル [1]",bold
+courage,"【名】勇気 [2]",normal
+course,"【名】①コース [1], ②進路、方針 [2], of course もちろん [1]",bold
+court,"【名】コート、裁判所 [1]",bold
+cousin,"【名】いとこ [1]",bold
+cover,"【動】〜を覆う、包む [2], 【名】カバー [2]",normal
+cow,"【名】ウシ、雌牛 [1]",bold
+coworker,"【名】同僚 [2]",normal
+coyote,"【名】コヨーテ [1]",normal
+crab,"【名】カニ [1]",bold
+crack,"【動】ひびが入る、〜を割る [2]",normal
+craft,"【名】工芸、手芸 [2]",normal
+crash,"【動】衝突する、墜落する [2]",normal
+crazy,"【形】狂ったような、夢中になって [2], be crazy about ~ 〜に夢中である [2]",normal
+cream,"【名】クリーム [1]",bold
+create,"【動】〜を創造する、作り出す [2]",normal
+creation,"【名】創造、作品 [2]",normal
+creative,"【形】創造的な、クリエイティブな [1]",bold
+creature,"【名】生き物、生物 16",normal
+credit,"【名】クレジット、信用 [2]",normal
+crew,"【名】乗組員、クルー [2]",normal
+crime,"【名】犯罪 [2]",normal
+criminal,"【名】【形】犯罪者（の） [2]",normal
+crisis,"【名】危機 [2]",normal
+crispy,"【形】パリッとした、サクサクした [2]",normal
+criterion,"【名】基準 [2]",normal
+crop,"【名】作物、収穫物 82",normal
+cross,"【動】〜を横切る、渡る [1], 【名】十字架 [2]",bold
+crossing,"【名】交差点、横断歩道 [2]",normal
+crowd,"【名】群衆 [2]",normal
+crowded,"【形】混雑した、満員の [2]",normal
+crown,"【名】王冠 [2]",normal
+crucial,"【形】重大な、決定的な [2]",normal
+cruel,"【形】残酷な、冷酷な [2]",normal
+cry,"【動】①泣く [1], ②叫ぶ [2], 【名】泣き声、叫び声 [2]",bold
+crystal,"【名】水晶、クリスタル [2]",normal
+cube,"【名】立方体 [2]",normal
+cucumber,"【名】キュウリ [1]",bold
+culture,"【名】文化 [1]",bold
+cup,"【名】カップ、茶碗 [1]",bold
+cupboard,"【名】食器棚 [2]",normal
+cure,"【動】〜を治す、治療する [2]",normal
+curious,"【形】好奇心が強い [2]",normal
+currency,"【名】通貨 [2]",normal
+current,"【形】現在の、流通している [2], 【名】流れ [2]",normal
+curry,"【名】カレー [1]",bold
+curry and rice,"【名】カレーライス [1]",bold
+curtain,"【名】カーテン [2]",normal
+curve,"【名】カーブ [2]",normal
+cushion,"【名】クッション [2]",normal
+custom,"【名】習慣、風習 [1]",normal
+customer,"【名】顧客、客 [1]",bold
+customs,"【名】税関 [2]",normal
+cut,"【動】①〜を切る [1], ②切れる [1], cut down ~ 〜を切り倒す、削減する 82, cut in 割り込む [2], cut off ~ 〜を切って離す [2], cut up ~ 〜を細かく切る [1]",bold
+cute,"【形】かわいい [1]",bold
+cycle,"【名】循環、周期 [2]",normal
+cycling,"【名】サイクリング [1]",bold
+cylinder,"【名】円柱 [2]",normal
+dad,"【名】お父さん [1]",bold
+daily,"【形】毎日の、日常の [2]",normal
+dam,"【名】ダム (108)",normal
+damage,"【名】損害、被害 [2], 【動】〜に損害を与える [2]",normal
+damp,"【形】湿った [2]",normal
+dance,"【動】踊る [1], 【名】ダンス [1]",bold
+dancer,"【名】ダンサー [1]",bold
+danger,"【名】危険 [1]",normal
+dangerous,"【形】危険な [1]",bold
+dare,"【動】あえて〜する [2]",normal
+dark,"【形】暗い [1]",bold
+darkness,"【名】暗闇 [2]",normal
+data,"【名】データ [1]",bold
+database,"【名】データベース [2]",normal
+date,"【名】①日付 [1], ②デート [1], 【動】日付を書く [2]",bold
+daughter,"【名】娘 [1]",bold
+dawn,"【名】夜明け、暁 [2]",normal
+day,"【名】①日、一日 [1], ②日中、昼 [2], all day long 一日中 [1], every day 毎日 [1], some day いつか [1], the day after tomorrow 明後日 [1], the day before yesterday 一昨日 [1]",bold
+daytime,"【名】昼間、日中 [2]",normal
+dead,"【形】死んだ [2]",normal
+deadline,"【名】締め切り、期限 [2]",normal
+deaf,"【形】耳が聞こえない [2]",normal
+deal,"【名】取引、契約 [2], deal with ~ 〜に対処する、〜を扱う 24",normal
+dear,"【形】親愛なる [1], Oh, dear! おやまあ！ [1]",bold
+death,"【名】死、死亡 [2]",normal
+debate,"【名】討論、ディベート [1], 【動】討論する [1]",bold
+debt,"【名】借金、負債 [2]",normal
+decade,"【名】10年間 20",normal
+decide,"【動】〜を決定する、決心する [1]",bold
+decision,"【名】決定、決断 [2]",normal
+deck,"【名】デッキ、甲板 [2]",normal
+declaration,"【名】宣言 [2]",normal
+decorate,"【動】〜を飾る [1]",bold
+decrease,"【動】減る、〜を減らす [2]",normal
+dee-1,"デフ・ワン〔人名〕 (111)",normal
+deep,"【形】深い [2]",normal
+deeply,"【副】深く [2]",normal
+deer,"【名】シカ [1]",bold
+defeat,"【動】〜を打ち負かす [2]",normal
+defend,"【動】〜を守る、防御する [2]",normal
+defense,"【名】防御、防衛 [2]",normal
+define,"【動】〜を定義する [2]",normal
+definite,"【形】明確な [2]",normal
+definitely,"【副】絶対に、確実に [2]",normal
+degree,"【名】①度〔温度・角度の単位〕 [1], ②程度 [2]",normal
+delay,"【動】遅らせる、延期する [2]",normal
+deliberate,"【形】故意の、計画的な [2]",normal
+delicate,"【形】繊細な、デリケートな [2]",normal
+delicious,"【形】おいしい、味の良い [1]",bold
+delight,"【名】大喜び、歓喜 [2]",normal
+deliver,"【動】〜を配達する、届ける [2]",normal
+delivery,"【名】配達 [2]",normal
+demand,"【名】需要、要求 [2]",normal
+democracy,"【名】民主主義 (106)",normal
+democratic,"【形】民主主義の (106)",normal
+demonstrate,"【動】〜を証明する、デモを行う [2]",normal
+denial,"【名】否定 [2]",normal
+denmark,"【名】デンマーク (106)",normal
+dense,"【形】密集した、濃い [2]",normal
+deny,"【動】〜を否定する [2]",normal
+depart,"【動】出発する [2]",normal
+department,"【名】部門、学部、売り場 [2]",normal
+department store,"【名】デパート、百貨店 [1]",bold
+departure,"【名】出発 [2]",normal
+depend,"【動】頼る [2], depend on ~ 〜しだいで決まる、〜に頼る [2]",normal
+depressed,"【形】気がめいった、憂鬱な [2]",normal
+depth,"【名】深さ [2]",normal
+derive,"【動】由来する [2]",normal
+describe,"【動】〜を描写する、説明する [2]",normal
+description,"【名】描写、説明 [2]",normal
+desert,"【名】砂漠 [1]",bold
+deserve,"【動】〜に値する [2]",normal
+design,"【名】デザイン、設計 [1], 【動】〜を設計する、デザインする [1]",bold
+designer,"【名】デザイナー [1]",bold
+desire,"【名】欲望、願い [2]",normal
+desk,"【名】机 [1]",bold
+desktop,"【名】デスクトップ [2]",normal
+desperate,"【形】必死の、絶望的な [2]",normal
+despite,"【前】〜にもかかわらず [2]",normal
+dessert,"【名】デザート [1]",bold
+destination,"【名】目的地 [2]",normal
+destroy,"【動】〜を破壊する [2]",normal
+destruction,"【名】破壊 [2]",normal
+detail,"【名】詳細 [2]",normal
+detailed,"【形】詳細な [2]",normal
+detect,"【動】〜を見つける、検知する [2]",normal
+determination,"【名】決意、闘志 [2]",normal
+determine,"【動】〜を決定する、決心する [2]",normal
+develop,"【動】〜を発達させる、開発する [2]",normal
+developing,"【形】発展途上の [2]",normal
+development,"【名】発展、開発 [2]",normal
+device,"【名】装置、デバイス [2]",normal
+devote,"【動】〜をささげる [2]",normal
+diagram,"【名】図、図表 [2]",normal
+dial,"【動】ダイヤルを回す [2]",dialogue,"【名】対話、ダイアログ [1]",bold
+diamond,"【名】ダイヤモンド [1]",bold
+diary,"【名】日記 [1]",bold
+dictionary,"【名】辞書、国語辞典 [1]",bold
+die,"【動】死ぬ [2]",normal
+diet,"【名】食事、ダイエット [1]",bold
+differ,"【動】異なる [2]",normal
+difference,"【名】違い、相違 [2], make a difference 影響を与える、重要である [2]",normal
+different,"【形】違った、異なる [1]",bold
+differently,"【副】異なって [2]",normal
+difficult,"【形】難しい、困難な [1]",bold
+difficulty,"【名】困難 [2]",normal
+dig,"【動】〜を掘る [2]",normal
+digital,"【形】デジタルの [1]",bold
+dignity,"【名】尊厳 [2]",normal
+dilemma,"【名】ジレンマ [2]",normal
+dimension,"【名】次元、寸法 [2]",normal
+dine,"【動】食事をする [2]",normal
+dining room,"【名】食堂 [2]",normal
+dinner,"【名】夕食 [1], have dinner 夕食をとる [1]",bold
+dinosaur,"【名】恐竜 [1]",bold
+dioxide,"【名】二酸化物 62",normal
+diplomat,"【名】外交官 [2]",normal
+direct,"【形】直接の [2], 【動】〜を向ける、監督する [2]",normal
+direction,"【名】方向、方角 [2]",normal
+directly,"【副】直接に [2]",normal
+director,"【名】監督、責任者 [2]",normal
+dirt,"【名】泥、汚れ [2]",normal
+dirty,"【形】汚い、汚れた [1]",bold
+disability,"【名】障がい [2]",normal
+disabled,"【形】障がいのある [2]",normal
+disadvantage,"【名】不利、不都合 [2]",normal
+disagree,"【動】意見が合わない [2]",normal
+disappear,"【動】消える、姿を消す [2]",normal
+disappoint,"【動】〜を落胆させる [2]",normal
+disappointed,"【形】がっかりした、失望した [2]",normal
+disappointing,"【形】期待外れの、がっかりさせる [2]",normal
+disaster,"【名】災害、惨事 [2]",normal
+discipline,"【名】規律、しつけ [2]",normal
+disclose,"【動】〜を明らかにする [2]",normal
+discount,"【名】割引 [2]",normal
+discover,"【動】〜を発見する [2]",normal
+discovery,"【名】発見 [2]",normal
+discuss,"【動】〜について話し合う、議論する [2]",normal
+discussion,"【名】議論、話し合い [2]",normal
+disease,"【名】病気 [2]",normal
+dish,"【名】皿、料理 [1]",bold
+disk,"【名】ディスク [2]",normal
+dislike,"【動】〜を嫌う [2]",normal
+dismiss,"【動】〜を解雇する、退ける [2]",normal
+disorder,"【名】混乱、不調 [2]",normal
+display,"【名】展示、ディスプレイ [2], 【動】〜を表示する、展示する [2]",normal
+dispute,"【名】紛争、論争 [2]",normal
+distance,"【名】距離 [2]",normal
+distant,"【形】遠い、離れた [2]",normal
+distinct,"【形】明確な、独特の [2]",normal
+distinction,"【名】区別、違い [2]",normal
+distinguish,"【動】〜を見分ける、区別する [2]",normal
+distribute,"【動】〜を分配する、流通させる [2]",normal
+distribution,"【名】分布、流通 [2]",normal
+district,"【名】地区、地域 [2]",normal
+disturb,"【動】〜を邪魔する、乱す [2]",normal
+dive,"【動】ダイビングする、飛び込む [1]",bold
+diverse,"【形】多様な [2]",normal
+diversity,"【名】多様性 [2]",normal
+divide,"【動】〜を分ける、分割する [2]",normal
+division,"【名】部門、分割 [2]",normal
+divorce,"【名】【動】離婚（する） [2]",normal
+do,"【動】①（〜を）する [1], ②〔疑問文・否定文をつくる助動詞〕 [1], ③〔強調〕本当に〜する [2], ④（十分に）間に合う、役立つ [2], How do you do? はじめまして。 [1], How do you like ~? 〜はいかがですか。 [1], What do you say to ~? 〜するのはどうですか。 [2], 【助】①〔一般動詞の疑問文・否定文を作る〕 [1], ②〔動詞の強調〕 [2]",bold
+doctor,"【名】医者、医師 [1]",bold
+document,"【名】書類、文書 [2]",normal
+dog,"【名】イヌ [1]",bold
+doll,"【名】人形 [1]",bold
+dollar,"【名】ドル [1]",bold
+dolphin,"【名】イルカ [1]",bold
+domain,"【名】領域、ドメイン [2]",normal
+domestic,"【形】国内の [2]",normal
+donate,"【動】〜を寄付する [2]",normal
+donation,"【名】寄付 [2]",normal
+don't,"do not の短縮形 [1]",bold
+door,"【名】ドア、扉 [1]",bold
+dormitory,"【名】寮 [2]",normal
+dot,"【名】点、ドット [2]",normal
+double,"【形】2倍の、ダブルの [2]",normal
+doubt,"【名】疑い [2], 【動】〜を疑う [2]",normal
+down,"【副】下へ、下方に [1], 【前】〜に沿って、〜を下って [2]",bold
+download,"【動】〜をダウンロードする [1]",bold
+downstairs,"【副】階下へ、下の階に [2]",normal
+downward,"【形】【副】下向きの［に］ [2]",normal
+dozen,"【名】ダース、12個 [2]",normal
+draft,"【名】下書き、ドラフト [2]",normal
+drag,"【動】〜を引っ張る、ドラッグする [2]",normal
+drama,"【名】ドラマ、演劇 [1]",bold
+dramatic,"【形】劇的な [2]",normal
+draw,"【動】①（絵など）を描く [1], ②（線など）を引く [2], ③〜を引っ張る [2]",bold
+drawer,"【名】引き出し [2]",normal
+drawing,"【名】素描、ドローイング [2]",normal
+dreadful,"【形】ひどい、恐ろしい [2]",normal
+dream,"【名】夢 [1], 【動】夢を見る [1]",bold
+dress,"【名】ドレス、ワンピース [1], 【動】服を着る [2]",bold
+dried,"【形】乾燥した [2]",normal
+drift,"【動】漂う、流される [2]",normal
+drill,"【名】ドリル、訓練 [2]",normal
+drink,"【動】（〜を）飲む [1], 【名】飲み物 [1]",bold
+drive,"【動】①（車を）運転する [1], ②〜を運転して送る [2], 【名】ドライブ [1]",bold
+driver,"【名】運転手、ドライバー [1]",bold
+driveway,"【名】私道 [2]",normal
+drop,"【動】①〜を落す [2], ②落ちる [2], drop by 立ち寄る [2], 【名】一滴、しずく [2]",normal
+drought,"【名】干ばつ [2]",normal
+drove,"【動】drive の過去形 [2]",normal
+drug,"【名】薬、麻薬 [2]",normal
+drum,"【名】ドラム、太鼓 [1]",bold
+drunk,"【形】酔った [2]",normal
+dry,"【形】乾いた、乾燥した [1], 【動】〜を乾かす [1]",bold
+ dryer,"【名】乾燥機、ドライヤー [2]",normal
+duck,"【名】アヒル [1]",bold
+due,"【形】予定された、期限の [2], due to ~ 〜が原因で、〜のために [2]",normal
+dull,"【形】退屈な、鈍い [2]",normal
+dumpling,"【名】ダンプリング、餃子、団子 [2]",normal
+during,"【前】〜の間（ずっと）、〜の間に [1]",bold
+dust,"【名】ほこり、ちり [2]",normal
+duty,"【名】義務、職務 [2]",normal
+dynamic,"【形】動的な、活動的な [2]",normal
+each,"【代】【形】それぞれの、各〜 [1], each other お互いに [1]",bold
+eager,"【形】熱心な、切望している [2]",normal
+ear,"【名】耳 [2]",bold
+earlier,"【副】もっと早く、以前に [2]",normal
+early,"【副】【形】早く、初期の、早い [1]",bold
+earn,"【動】（金を）稼ぐ、得る [2]",normal
+earphone,"【名】イヤホン [1]",bold
+earth,"【名】地球、大地 [1]",bold
+earthquake,"【名】地震 [2]",normal
+easily,"【副】簡単に、容易に [1]",bold
+east,"【名】【形】東（の） [1]",bold
+eastern,"【形】東の、東部の [2]",normal
+easy,"【形】簡単な、容易な [1], take it easy 気楽にいこう [1]",bold
+eat,"【動】（〜を）食べる [1]",bold
+eaten,"【動】eat の過去分詞 [2]",normal
+eco-friendly,"【形】環境に優しい [2]",normal
+ecology,"【名】生態系、環境学 [2]",normal
+economic,"【形】経済の [2]",normal
+economical,"【形】経済的な、節約になる [2]",normal
+economics,"【名】経済学 [2]",normal
+economy,"【名】経済 [2]",normal
+edge,"【名】端、縁 [2]",normal
+edit,"【動】〜を編集する [2]",normal
+edition,"【名】版、エディション [2]",normal
+editor,"【名】編集者 [2]",normal
+educate,"【動】〜を教育する [2]",normal
+educated,"【形】教養のある [2]",normal
+education,"【名】教育 [2]",normal
+educational,"【形】教育的な [2]",normal
+effect,"【名】効果、影響 [2], have an effect on ~ 〜に影響を与える [2]",normal
+effective,"【形】効果的な [2]",normal
+efficient,"【形】効率的な [2]",normal
+effort,"【名】努力 [2], make an effort 努力する [2]",normal
+egg,"【名】卵 [1]",bold
+eggplant,"【名】ナス [1]",bold
+Egypt,"【名】エジプト [1]",bold
+eight,"【名】【形】8（つの） [1]",bold
+eighteen,"【名】【形】18（の） [1]",normal
+eighth,"【名】【形】8日〔日付〕、8番目の [1]",normal
+eighty,"【名】【形】80（の） [1]",normal
+either,"【副】〜もまた（〜ない） [2], 【代】【形】どちらか（の） [2]",normal
+elder,"【形】年上の、先輩の [2]",normal
+elderly,"【形】年配の、高齢の [2]",normal
+elect,"【動】〜を選挙で選ぶ [2]",normal
+election,"【名】選挙 [2]",normal
+electric,"【形】電気の、電動の [2]",normal
+electrical,"【形】電気の [2]",normal
+electricity,"【名】電気 [2]",normal
+electronic,"【形】電子の [2]",normal
+element,"【名】要素、成分 [2]",normal
+elementary school,"【名】小学校 [1]",bold
+elephant,"【名】ゾウ [1]",bold
+elevator,"【名】エレベーター [2]",bold
+eleven,"【名】【形】11（の） [1]",normal
+eleventh,"【名】【形】11日〔日付〕、11番目の [1]",normal
+else,"【副】ほかに、そのほかに [1], or else さもないと [2]",normal
+email,"【名】Eメール、電子メール [1], 【動】Eメールを送る [1]",bold
+embarrassed,"【形】恥ずかしい、困惑した [2]",normal
+embrace,"【動】〜を受け入れる、抱き締める [2]",normal
+emerge,"【動】現れる、頭角を現す [2]",normal
+emergency,"【名】緊急事態 [2]",normal
+emotion,"【名】感情 [2]",normal
+emotional,"【形】感情的な [2]",normal
+emperor,"【名】皇帝 [2]",normal
+emphasis,"【名】強調 [2]",normal
+emphasize,"【動】〜を強調する [2]",normal
+empire,"【名】帝国 [2]",normal
+employ,"【動】〜を雇う [2]",normal
+employee,"【名】従業員、社員 [2]",normal
+employer,"【名】雇い主、使用者 [2]",normal
+employment,"【名】雇用 [2]",normal
+empty,"【形】空の、中身のない [2]",normal
+enable,"【動】〜を可能にする [2]",normal
+encounter,"【動】〜に遭遇する [2]",normal
+encourage,"【動】〜を励ます、奨励する [2]",normal
+end,"【名】終わり、端 [1], in the end ついに、結局 [2], 【動】終わる、〜を終わらせる [2]",bold
+ending,"【名】結末、エンディング [2]",normal
+endless,"【形】終わりのない、無限の [2]",normal
+endure,"【動】耐える、持ちこたえる [2]",normal
+enemy,"【名】敵 [2]",normal
+energy,"【名】エネルギー [2]",normal
+enforce,"【動】〜を施行する、強制する [2]",normal
+engage,"【動】従事する、惹きつける [2]",normal
+engine,"【名】エンジン、機関 [2]",normal
+engineer,"【名】エンジニア、技術者 [1]",bold
+engineering,"【名】工学 [2]",normal
+England,"【名】イングランド [1]",bold
+English,"【名】【形】英語（の）、イギリス人（の） [1]",bold
+enjoy,"【動】〜を楽しむ [1], enjoy oneself 楽しむ [1]",bold
+enjoyable,"【形】楽しい、愉快な [2]",normal
+enormous,"【形】巨大な、莫大な [2]",normal
+enough,"【形】十分な [2], 【副】十分に [2]",normal
+enquire,"【動】尋ねる [2]",normal
+enrich,"【動】〜を豊かにする [2]",normal
+enter,"【動】〜に入り、入学する [1], enter for ~ 〜に申し込む [2]",bold
+entertain,"【動】〜を楽しませる、もてなす [2]",normal
+entertainment,"【名】娯楽、エンターテインメント [2]",normal
+enthusiastic,"【形】熱心な、夢中の [2]",normal
+entire,"【形】全体の、全部の [2]",normal
+entrance,"【名】入口、玄関 [1]",bold
+entry,"【名】加入、入口、エントリー [2]",normal
+environment,"【名】環境 [2]",normal
+environmental,"【形】環境の [2]",normal
+episode,"【名】エピソード、挿話 [2]",normal
+equal,"【形】等しい、平等の [2]",normal
+equality,"【名】平等 [2]",normal
+equator,"【名】赤道 [2]",normal
+equipment,"【名】装備、備品、機器 [2]",normal
+equivalent,"【形】等しい、相当する [2]",normal
+era,"【名】時代、紀元 [2]",normal
+erased,"【動】消去された [2]",normal
+error,"【名】誤り、エラー [2]",normal
+escape,"【動】逃げる、脱出する [2]",normal
+especially,"【副】特に、とりわけ [2]",normal
+essay,"【名】エッセイ、小論文 [2]",normal
+essence,"【名】本質 [2]",normal
+essential,"【形】不可欠な、必須の [2]",normal
+establish,"【動】〜を設立する、確立する [2]",normal
+estate,"【名】財産、不動産 [2]",normal
+estimate,"【動】〜を推計する、見積もる [2]",normal
+et cetera,"【副】〜など〔etc.〕 [2]",normal
+ethnic,"【形】民族の [2]",normal
+Europe,"【名】ヨーロッパ、欧州 [2]",normal
+European,"【名】【形】ヨーロッパ人（の） [2]",normal
+evaluate,"【動】〜を評価する [2]",normal
+even,"【副】〜でさえ、さらに [1], even if ~ たとえ〜としても [2], even though ~ 〜にもかかわらず [2]",bold
+evening,"【名】夕方、晩 [1], this evening 今夕、今日の夕方 [1]",bold
+event,"【名】イベント、出来事 [1]",bold
+eventually,"【副】結局は、ついに [2]",normal
+ever,"【副】かつて、これまでに [1], if ever もしあるとしても [2]",normal
+every,"【形】毎〜、すべての [1], every day 毎日 [1], every one みな [1], every time 〜する時はいつも [2]",bold
+everybody,"【代】だれもが、みんな [1]",bold
+everyday,"【形】毎日の、日常の [1]",bold
+everyone,"【代】だれもが、みんな [1]",bold
+everything,"【代】何もかも、すべて [1]",bold
+everywhere,"【副】どこにでも、至る所で [1]",bold
+evidence,"【名】証拠 [2]",normal
+evident,"【形】明白な [2]",normal
+evil,"【形】邪悪な [2]",normal
+evolution,"【名】進化 [2]",normal
+evolve,"【動】進化する、発展する [2]",normal
+exact,"【形】正確な [2]",normal
+exactly,"【副】正確に、その通り [2]",normal
+exaggerate,"【動】〜を誇張する [2]",normal
+exam,"【名】試験、テスト [1]",bold
+examine,"【動】〜を調査する、診察する [2]",normal
+example,"【名】例、手本 [1], for example 例えば [1]",bold
+exceed,"【動】〜を超える [2]",normal
+excellent,"【形】優秀な、すばらしい [2]",normal
+except,"【前】〜を除いて [2]",normal
+exception,"【名】例外 [2]",normal
+exchange,"【動】〜を交換する [2], 【名】交換 [2]",normal
+excite,"【動】〜を興奮させる [2]",normal
+excited,"【形】興奮した、ワクワクした [1]",bold
+excitement,"【名】興奮 [2]",normal
+exciting,"【形】興奮させるような、ワクワクする [1]",bold
+excuse,"【動】〜を許す [1], Excuse me. すみません。 [1]",bold
+exercise,"【名】①運動 [1], ②練習問題 [1], 【動】運動する [1]",bold
+exhibition,"【名】展覧会、展示会 [2]",normal
+exist,"【動】存在する [2]",normal
+existence,"【名】存在 [2]",normal
+expand,"【動】〜を拡大する、広げる [2]",normal
+expansion,"【名】拡大、膨張 [2]",normal
+expect,"【動】〜を予期する、期待する [2]",normal
+expectation,"【名】期待 [2]",normal
+expedition,"【名】遠征、探検 [2]",normal
+expense,"【名】費用、経費 [2]",normal
+expensive,"【形】高価な、高い [1]",bold
+experience,"【名】経験 [1], 【動】〜を経験する [2]",bold
+experiment,"【名】実験 [1]",bold
+expert,"【名】専門家、エキスパート [2]",normal
+explain,"【動】〜を説明する [2]",normal
+explanation,"【名】説明 [2]",normal
+explode,"【動】爆発する [2]",normal
+explore,"【動】〜を探索する、探検する [2]",normal
+explosion,"【名】爆発 [2]",normal
+export,"【動】〜を輸出する [2]",normal
+expose,"【動】〜をさらす、露出する [2]",normal
+express,"【動】〜を表現する、言い表す [2]",normal
+expression,"【名】表現、表情 [2]",normal
+extend,"【動】〜を広げる、延長する [2]",normal
+extent,"【名】程度、範囲 [2]",normal
+external,"【形】外部の [2]",normal
+extra,"【形】余分な、追加の [2]",normal
+extraordinary,"【形】並外れた、非常な [2]",normal
+extreme,"【形】極端な [2]",normal
+extremely,"【副】極端に、非常に [2]",normal
+eye,"【名】目 [1]",bold
+eyebrow,"【名】まゆげ [2]",normal
+eyeglass,"【名】めがね [2]",normal
+eyesight,"【名】視力 [2]",normal
+fable,"【名】寓話 [2]",normal
+fabric,"【名】織物、生地 [2]",normal
+face,"【名】顔 [1], 【動】〜に直面する、向かう [2]",bold
+facility,"【名】施設、設備 [2]",normal
+fact,"【名】事実、現実 [2], in fact 実は [2]",normal
+factor,"【名】要素、要因 [2]",normal
+factory,"【名】工場 [1]",bold
+faculty,"【名】学部、能力 [2]",normal
+fade,"【動】色あせる、消えていく [2]",normal
+fail,"【動】失敗する、〜できない [2]",normal
+failure,"【名】失敗、不成功 [2]",normal
+fair,"【形】公平な、公正な [2], 【名】市、展覧会 [2]",normal
+fairly,"【副】かなり、公平に [2]",normal
+faith,"【名】信頼、信仰 [2]",normal
+fall,"【動】①落ちる、落下する [1], ②倒れる [2], fall down 倒れる [2], fall ill 病気になる [2], 【名】秋〔米国〕 [1]",bold
+FALSE,"【形】誤った、嘘の [2]",normal
+fame,"【名】名声 [2]",normal
+familiar,"【形】よく知られた、見覚えのある [2], be familiar with ~ 〜をよく知っている [2]",normal
+families,"【名】family の複数形 [1]",normal
+family,"【名】家族 [1]",bold
+famous,"【形】有名な [1], be famous for ~ 〜で有名である [1]",bold
+fan,"【名】①扇風機 [1], ②ファン、扇子 [1]",bold
+fancy,"【形】高級な、装飾された [2]",normal
+fantastic,"【形】すばらしい、空想的な [1]",bold
+fantasy,"【名】ファンタジー、空想 [2]",normal
+far,"【副】【形】遠くに［の］ [1], far from ~ 〜どころではない [2]",bold
+fare,"【名】運賃、料金 [2]",normal
+farewell,"【名】【形】別れ（の） [2]",normal
+farm,"【名】農場、牧場 [1]",bold
+farmer,"【名】農家、農夫 [1]",bold
+farming,"【名】農業 [2]",normal
+fascinating,"【形】魅惑的な、心を奪われる [2]",normal
+fashion,"【名】ファッション、流行 [2]",normal
+fashionable,"【形】流行の、おしゃれな [2]",normal
+fast,"【形】【副】速い［く］ [1]",bold
+fasten,"【動】〜を留める、しっかり結ぶ [2]",normal
+fat,"【形】太った [1], 【名】脂肪 [2]",bold
+fatal,"【形】致命的な [2]",normal
+fate,"【名】運命 [2]",normal
+father,"【名】父親、父 [1]",bold
+fatigue,"【名】疲労 [2]",normal
+fault,"【名】責任、欠点 [2]",normal
+favor,"【名】親切な行為、お願い [2], do ~ a favor 〜の頼みを聞くする [2]",normal
+favorable,"【形】好都合な、有利な [2]",normal
+favorite,"【形】【名】お気に入りの（もの） [1]",bold
+fax,"【名】ファックス [1]",bold
+fear,"【名】恐怖 [2], 【動】〜を恐れる [2]",normal
+feasible,"【形】実現可能な [2]",normal
+feast,"【名】祝宴、ごちそう [2]",normal
+feather,"【名】羽、羽毛 [2]",normal
+feature,"【名】特徴、特集記事 [2]",normal
+February,"【名】2月 [1]",bold
+federal,"【形】連邦の (106)",normal
+fee,"【名】料金、謝礼 [2]",normal
+feed,"【動】〜にエサをやる、食べ物を与える [1]",bold
+feel,"【動】①〜を感じる [1], ②気分がする [2], feel like ~ing 〜したい気がする [2], feel sick 気分が悪い [2]",bold
+feeling,"【名】感情、気持ち [2]",normal
+fellow,"【名】仲間、男 [2]",normal
+female,"【形】【名】女性（の）、雌（の） [2]",normal
+feminine,"【形】女性の [2]",normal
+fence,"【名】フェンス、垣根 [2]",normal
+ferry,"【名】フェリー [2]",normal
+festival,"【名】祭り、フェスティバル [1]",bold
+fever,"【名】熱、発熱 [1]",bold
+few,"【形】【代】少数の、ほとんど〜ない [1], a few いくつかの、少数の [1]",normal
+fewer,"【形】より少ない [2]",normal
+fiber,"【名】繊維 [2]",normal
+fiction,"【名】小説、虚構 [2]",normal
+field,"【名】①分野 [1], ②野原、畑 [1], ③競技場 [1]",bold
+fierce,"【形】激しい、凶暴な [2]",normal
+fifteen,"【名】【形】15（の） [1]",normal
+fifth,"【名】【形】5日〔日付〕、5番目の [1]",normal
+fifty,"【名】【形】50（の） [1]",normal
+fight,"【動】戦う、争う [2], 【名】戦い、喧嘩 [2]",normal
+fighter,"【名】戦闘員、ファイター [2]",normal
+figure,"【名】①数字、図形 [2], ②姿、人物 [2], figure out ~ 〜を理解する、解き明かす [2]",normal
+file,"【名】ファイル [1]",bold
+fill,"【動】〜を満たす、いっぱいにする [2], fill out ~ （書類など）に書き込む [2]",normal
+film,"【名】映画、フィルム [1]",bold
+final,"【形】最後の、最終的な [2], 【名】決勝戦、期末試験 [2]",normal
+finally,"【副】ついに、やっと [2]",normal
+finance,"【名】財政、金融 [2]",normal
+financial,"【形】財政の、金融の [2]",normal
+find,"【動】①〜を見つける [1], ②〔find + O + C で〕OがCだとわかる [2], find out ~ 〜を見つけ出す、知る [2]",bold
+fine,"【形】①元気な、すこぶる良い [1], ②素晴らしい [2], ③細かい [2], That's fine. それで結構です。 [1], 【名】罰金 [2]",bold
+finger,"【名】指 [1]",bold
+finish,"【動】〜を終える、終わる [1], 【名】終わり、ゴール [2]",bold
+fire,"【名】①火、火事 [1], ②射撃 [2], catch fire 火がつく [2], on fire 燃えて [2], 【動】〜を解雇する [2]",bold
+firefighter,"【名】消防士 [2]",normal
+fireplace,"【名】暖炉 [2]",normal
+fireworks,"【名】花火 [1]",bold
+firm,"【形】固い、確固とした [2], 【名】会社、企業 [2]",normal
+first,"【形】【副】第一の［に］、初めての［に］ [1], at first 最初は [1], for the first time 初めて [1], the first 〜 最初のエース［もの］ [1]",bold
+fish,"【名】魚 [1], 【動】魚釣りをする [1]",bold
+fisherman,"【名】漁師、釣り人 [1]",bold
+fishing,"【名】釣り、漁業 [1]",bold
+fit,"【動】適合する、ぴったり合う [2], 【形】健康な、適した [2]",normal
+fitness,"【名】フィットネス、健康 [2]",normal
+five,"【名】【形】5（つの） [1]",bold
+fix,"【動】〜を修理する、固定する [2]",normal
+flag,"【名】旗 [1]",bold
+flame,"【名】炎 [2]",normal
+flash,"【名】閃光、フラッシュ [1]",bold
+flashlight,"【名】懐中電灯 [2]",bold
+flat,"【形】平らな [2], 【名】アパート〔英国式〕 [2]",normal
+flee,"【動】逃げる [2]",normal
+fleet,"【名】艦隊、船隊 [2]",normal
+flesh,"【名】肉、果肉 [2]",normal
+flexibility,"【名】柔軟性 [2]",normal
+flexible,"【形】柔軟な [2]",normal
+flight,"【名】飛行、便 [1]",bold
+float,"【動】浮く、漂う [2]",normal
+flock,"【名】（鳥・羊などの）群れ [2]",normal
+flood,"【名】洪水 [2]",normal
+floor,"【名】床、階 [1]",bold
+flour,"【名】小麦粉 [1]",bold
+flow,"【動】流れる [2], 【名】流れ [2]",normal
+flower,"【名】花 [1]",bold
+flu,"【名】インフルエンザ [1]",bold
+fluid,"【名】流体、液体 [2]",normal
+fly,"【動】飛ぶ [1], 【名】ハエ [2]",bold
+focus,"【動】焦点を合わせる、集中する [2], 【名】焦点、中心 [2]",normal
+fold,"【動】〜を折りたたむ [1]",bold
+folk,"【形】民俗の、フォークの [2]",normal
+follow,"【動】①〜に従う [2], ②〜の後に続く [2], as follows 次のとおり [2]",normal
+following,"【形】次の、以下の [2]",normal
+fond,"【形】好んでいる [2], be fond of ~ 〜が好きである [2]",normal
+food,"【名】食べ物、食品 [1]",bold
+fool,"【名】ばか、愚者 [2]",normal
+foolish,"【形】愚かな [2]",normal
+foot,"【名】①足、足先 [1], ②フィート〔長さの単位〕 [2], on foot 歩いて [1]",bold
+football,"【名】アメリカンフットボール、サッカー [1]",bold
+for,"【前】①〔目的〕〜のために [1], ②〔期間〕〜の間 [1], ③〔方向〕〜に向かって [2], ④〔交換〕〜の代わりに [2], ⑤〔利益〕〜にとって [2], ⑥〔原因〕〜の理由で [2], 【接】なぜなら [2]",bold
+forbid,"【動】〜を禁じる [2]",normal
+force,"【名】力、武力 [2], 【動】〜に強制する [2]",normal
+forecast,"【名】予報、予測 [2]",normal
+foreign,"【形】外国の [1]",bold
+foreigner,"【名】外国人 [1]",bold
+forest,"【名】森林、森 [1]",bold
+forever,"【副】永遠に [1]",bold
+forget,"【動】〜を忘れる [1]",bold
+forgive,"【動】〜を許す [2]",normal
+fork,"【名】フォーク [1]",bold
+form,"【名】形、用紙 [2], 【動】〜を形成する [2]",normal
+formal,"【形】形式ばった、公式の [2]",normal
+formation,"【名】形成、構成 [2]",normal
+former,"【形】前者の、以前の [2]",normal
+formula,"【名】公式、方式 [2]",normal
+fortnight,"【名】2週間 [2]",normal
+fortunate,"【形】幸運な [2]",normal
+fortunately,"【副】幸いにも [2]",normal
+fortune,"【名】幸運、財産 [2]",normal
+forty,"【名】【形】40（の） [1]",normal
+forward,"【副】前へ [2], look forward to ~ 〜を楽しみに待つ [1]",normal
+fossil,"【名】化石 [2]",normal
+foster,"【動】〜を育成する、促進する [2]",normal
+found,"【動】find の過去形・過去分詞 [1], 【動】〜を設立する [2]",bold
+foundation,"【名】基礎、土台、財団 [2]",normal
+founder,"【名】創設者、創業者 [2]",normal
+fountain,"【名】噴水 [2]",normal
+four,"【名】【形】4（つの） [1]",bold
+fourteen,"【名】【形】14（の） [1]",normal
+fourth,"【名】【形】4日〔日付〕、4番目の [1]",normal
+fox,"【名】キツネ [1]",bold
+fragile,"【形】壊れやすい、もろい [2]",normal
+fragment,"【名】破片 [2]",normal
+frame,"【名】枠、フレーム [2]",normal
+framework,"【名】枠組み、骨組み [2]",normal
+france,"【名】フランス [1]",bold
+franchise,"【名】フランチャイズ [2]",normal
+free,"【形】①自由な [1], ②暇な [1], ③無料の [1]",bold
+freedom,"【名】自由 [2]",normal
+freely,"【副】自由に [2]",normal
+freeze,"【動】凍る、〜を凍らせる [2]",normal
+french,"【形】フランスの [1]",bold
+French fries,"【名】フライドポテト [1]",bold
+frequent,"【形】頻繁な [2]",normal
+frequently,"【副】頻繁に [2]",normal
+fresh,"【形】新鮮な、新しい [1]",bold
+freshman,"【名】（高校・大学の）1年生 [2]",normal
+friction,"【名】摩擦 [2]",normal
+fridge,"【名】冷蔵庫 [1]",bold
+friend,"【名】友達、友人 [1]",bold
+friendly,"【形】友好的な、親しみのある [1]",bold
+friendship,"【名】友情 [1]",bold
+frighten,"【動】〜をびびらせる、怖がらせる [2]",normal
+frightened,"【形】びびった、おびえた [2]",normal
+frog,"【名】カエル [1]",bold
+from,"【前】①〔起点〕〜から [1], ②〔材料〕〜から [2], ③〔原因〕〜のために [2]",bold
+front,"【名】前、正面 [1], in front of ~ 〜の前に [1]",bold
+frozen,"【形】冷凍した、凍った [2]",normal
+fruit,"【名】果物、フルーツ [1]",bold
+fry,"【動】〜を油で揚げる［炒める］ [1]",bold
+frying pan,"【名】フライパン [1]",bold
+fuel,"【名】燃料 [2]",normal
+fulfill,"【動】〜を満たす、果たす [2]",normal
+full,"【形】①いっぱいの [1], ②満腹の [2], be full of ~ 〜でいっぱいである [2]",bold
+fun,"【名】楽しみ、おもしろさ [1], have fun 楽しむ [1]",bold
+function,"【名】機能 [2], 【動】機能する [2]",normal
+fund,"【名】基金、資金 [2]",normal
+fundamental,"【形】基礎的な、基本的な [2]",normal
+funeral,"【名】葬式 [2]",normal
+funny,"【形】おかしな、滑稽な、面白い [1]",bold
+fur,"【名】毛皮 [2]",normal
+furnish,"【動】〜に家具を備え付ける [2]",normal
+furniture,"【名】家具 [2]",normal
+further,"【形】【副】さらに遠くへ、さらに [2]",normal
+future,"【名】未来、将来 [1], in the future 将来は [1]",bold
+gain,"【動】〜を得る、獲得する [2]",normal
+galaxy,"【名】銀河 [2]",normal
+gallery,"【名】画廊、ギャラリー [2]",normal
+game,"【名】ゲーム、試合 [1]",bold
+gang,"【名】一味、ギャング [2]",normal
+gap,"【名】隙間、隔たり [2]",normal
+garage,"【名】ガレージ、車庫 [2]",normal
+garbage,"【名】ごみ [1]",bold
+garden,"【名】庭、ガーデン [1]",bold
+garlic,"【名】ニンニク [2]",normal
+gas,"【名】ガス、気体 [1]",bold
+gasoline,"【名】ガソリン [2]",normal
+gate,"【名】門、ゲート [1]",bold
+gather,"【動】集まる、〜を集める [1]",bold
+gauge,"【名】測定器、ゲージ [2]",normal
+gave,"【動】give の過去形 [1]",bold
+gay,"【形】同性愛の [2]",normal
+gaze,"【動】見つめる [2]",normal
+gear,"【名】歯車、ギア、用具 [2]",normal
+gender,"【名】性別 [2]",normal
+gene,"【名】遺伝子 [2]",normal
+general,"【形】一般的な、全体の [2]",normal
+generally,"【副】一般に、たいてい [2]",normal
+generate,"【動】〜を生み出す、発生させる [2]",normal
+generation,"【名】世代 [2]",normal
+generous,"【形】気前のよい、寛大な [2]",normal
+genius,"【名】天才 [2]",normal
+genre,"【名】ジャンル [2]",normal
+gentle,"【形】優しい、穏やかな [1]",bold
+gentleman,"【名】紳士 [1]",bold
+gently,"【副】優しく、そっと [1]",bold
+geography,"【名】地理、地理学 [1]",bold
+geology,"【名】地質学 [2]",normal
+germ,"【名】細菌、バイ菌 [2]",normal
+German,"【名】【形】ドイツ人（の）、ドイツ語（の） [1]",bold
+Germany,"【名】ドイツ [1]",bold
+gesture,"【名】ジェスチャー、身振り [2]",normal
+get,"【動】①〜を手に入れる、受け取る [1], ②〜になる [1], ③（乗り物）に乗る [2], ④（ある状態）になる [2], get back 戻る [2], get off （乗り物から）降りる [2], get on （乗り物）に乗る [2], get out 外に出る [2], get up 起きる [1]",bold
+ghost,"【名】幽霊 [1]",bold
+giant,"【形】巨大な [1], 【名】巨人 [2]",bold
+gift,"【名】贈り物、才能 [1]",bold
+gifted,"【形】才能のある [2]",normal
+girl,"【名】女の子 [1]",bold
+girlfriend,"【名】ガールフレンド [1]",bold
+give,"【動】①〜を与える、あげる [1], ②〜を渡す [2], give back ~ 〜を返す [2], give in 屈する、参る [2], give up 〜を諦める [1]",bold
+given,"【動】give の過去分詞 [2]",normal
+glad,"【形】うれしい、喜んで [1], I'm glad to hear that. それを聞いてうれしく思います。 [1]",bold
+glance,"【動】ちらっと見る [2]",normal
+glare,"【動】にらみつける [2]",normal
+glass,"【名】①ガラス [1], ②〔〜es で〕めがね [1], ③コップ1杯の〜 [2]",bold
+glasses,"【名】めがね [1]",bold
+global,"【形】地球規模の、グローバルな [2]",normal
+globe,"【名】地球、世界 [2]",normal
+glove,"【名】手袋 [1]",bold
+glow,"【動】白熱光を放つ、輝く [2]",normal
+glue,"【名】のわ、接着剤 [1]",bold
+go,"【動】①行く [1], ②（ある状態）になる [2], go abroad 外国に行く [1], go for a walk 散歩に行く [1], go home 家に帰る [1], go on 続ける [1], go out 出かける [1], go shopping 買い物に行く [1], go to bed 就寝する [1], go to school 通学する [1]",bold
+goal,"【名】目標、ゴール [1]",bold
+goat,"【名】ヤギ [1]",bold
+god,"【名】神 [2]",normal
+gold,"【名】【形】金色（の）、金 [1]",bold
+golden,"【形】黄金の、金色の [1]",bold
+golf,"【名】ゴルフ [1]",bold
+gone,"【動】go の過去分詞 [2]",normal
+good,"【形】①よい、すぐれた [1], ②おいしい [1], ③上手な [1], Be good. いい子にしていなさい。 [1], Good afternoon. こんにちは。 [1], Good evening. こんばんは。 [1], Good job. よくやった。 [1], Good morning. おはようございます。 [1], Good night. おやすみなさい。 [1], Good to see you. お会いできてうれしいです。 [1], 【名】利益、善 [2]",bold
+goodbye,"【間】さようなら [1]",bold
+goodness,"【名】親切、よさ [2]",normal
+goods,"【名】商品、品物 [2]",normal
+goose,"【名】ガチョウ [2]",normal
+gossip,"【名】ゴシップ、うわさ話 [2]",normal
+got,"【動】get の過去形・過去分詞 [1]",bold
+govern,"【動】統治する、支配する [2]",normal
+government,"【名】政府 [2]",normal
+governor,"【名】知事 [2]",normal
+grab,"【動】〜をひっつかむ [2]",normal
+grace,"【名】優雅さ、気品 [2]",normal
+grade,"【名】①学年 [1], ②成績 [2]",bold
+gradual,"【形】徐々の、緩やかな [2]",normal
+gradually,"【副】徐々に、だんだんと [2]",normal
+graduate,"【動】卒業する [1]",bold
+graduation,"【名】卒業 [2]",normal
+grain,"【名】穀物 [2]",normal
+grammar,"【名】文法 [1]",bold
+grandchild,"【名】孫 [2]",normal
+granddaughter,"【名】孫娘 [2]",normal
+grandfather,"【名】祖父、おじいさん [1]",bold
+grandma,"【名】おばあちゃん [1]",bold
+grandmother,"【名】祖母、おばあちゃん [1]",bold
+grandpa,"【名】おじいちゃん [1]",bold
+grandparent,"【名】祖父母 [1]",bold
+grandson,"【名】孫息子 [2]",normal
+grant,"【動】〜を承認する、与える [2]",normal
+grape,"【名】ブドウ [1]",bold
+graphic,"【形】図表の、グラフィックの [2]",normal
+grasp,"【動】〜をしっかり握る、理解する [2]",normal
+grass,"【名】草、芝生 [1]",bold
+grateful,"【形】感謝している [2]",normal
+grave,"【名】墓 [2]",normal
+gravity,"【名】重力 [2]",normal
+gray,"【形】【名】灰色（の） [1]",bold
+great,"【形】①偉大な [1], ②素晴らしい、大変な [1], ③大きい [2]",bold
+greatly,"【副】大いに、非常に [2]",normal
+Greece,"【名】ギリシャ [1]",bold
+greedy,"【形】貪欲な、欲深い [2]",normal
+green,"【形】【名】緑（の） [1]",bold
+greenhouse,"【名】温室 [2]",normal
+greet,"【動】〜に挨拶する [2]",normal
+greeting,"【名】挨拶 [2]",normal
+grew,"【動】grow の過去形 [1]",bold
+grey,"【形】【名】灰色（の） [1]",bold
+grid,"【名】格子、グリッド [2]",normal
+grief,"【名】深い悲しみ [2]",normal
+grocery,"【名】食料品 [2]",normal
+groom,"【名】新郎 [2]",normal
+ground,"【名】地面、運動場 [1]",bold
+group,"【名】グループ、集団 [1]",bold
+grow,"【動】①育つ、成長する [1], ②〜を育てる [2], grow up 成長する、大人になる [2]",bold
+growth,"【名】成長、発展 [2]",normal
+guarantee,"【動】〜を保証する [2]",normal
+guard,"【動】〜を守る、警備する [2], 【名】警備員 [2]",normal
+guess,"【動】〜を推測する [1], I guess so. そう思います。 [1]",bold
+guest,"【名】ゲスト、客、宿泊客 [2]",normal
+guidance,"【名】指導、案内 [2]",normal
+guide,"【名】ガイド、案内人 [1], 【動】〜を案内する [1]",bold
+guilt,"【名】罪悪感 [2]",normal
+guilty,"【形】有罪の、気疚しい [2]",normal
+guitar,"【名】ギター [1]",bold
+gum,"【名】ガム [1]",bold
+gun,"【名】銃、拳銃 [2]",normal
+guy,"【名】男、やつ [1]",bold
+gym,"【名】体育館、ジム [1]",bold
+gymnastics,"【名】体操 [1]",bold

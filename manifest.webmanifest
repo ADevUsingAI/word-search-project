@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "単語検索 | Word Finder",
+  "short_name": "単語検索",
+  "description": "英単語・日本語の意味・品詞・ページから検索できる単語検索アプリ",
+  "lang": "ja",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f3f6fb",
+  "theme_color": "#2864d7",
+  "icons": [
+    { "src": "./icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
