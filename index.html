@@ -114,6 +114,12 @@
     .back-button { width: 36px; height: 36px; border: 1px solid var(--line); border-radius: 50%; color: var(--text); background: var(--surface); font-size: 20px; cursor: pointer; }
     .screen-heading h2 { margin: 0; font-size: 21px; font-weight: 500; }
     .screen-heading p { margin: 4px 0 0; color: var(--muted); font-size: 11px; }
+    .detail-page { width: 100%; max-width: 820px; margin: 0 auto; padding: 34px 0 40px; }
+    .detail-page .dialog-top { align-items: center; }
+    .detail-page .dialog h2, .detail-page h2 { font-size: clamp(25px, 5vw, 34px); line-height: 1.3; font-weight: 500; overflow-wrap: anywhere; }
+    .detail-page .definition { font-size: 16px; line-height: 1.9; }
+    .detail-page .detail-section { margin-top: 25px; padding-top: 20px; }
+    .detail-page .section-label { font-size: 12px; }
     .history-list { display: grid; }
     .history-item { display: flex; align-items: center; gap: 12px; width: 100%; padding: 13px 4px; border: 0; border-bottom: 1px solid var(--line-soft); color: var(--text); background: transparent; text-align: left; cursor: pointer; }
     .history-item:hover .history-label { color: var(--accent); }
@@ -210,26 +216,24 @@
     </section>
   </div>
 
-  <div class="overlay" id="detailOverlay" hidden>
-    <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+  <section id="detailScreen" class="hidden" aria-labelledby="detailTitle">
+    <div class="detail-page">
       <div class="dialog-top">
         <div><h2 id="detailTitle"></h2><p class="dialog-sub" id="detailPron"></p></div>
-        <button class="close-button" type="button" data-close="detailOverlay" aria-label="閉じる">×</button>
+        <button class="back-button" type="button" id="detailPageBack" aria-label="検索結果に戻る">‹</button>
       </div>
       <div class="detail-row" id="detailChips"></div>
       <div class="detail-section"><div class="section-label">日本語の意味</div><div id="detailMeanings"></div></div>
       <div class="detail-section"><div class="section-label">掲載ページ</div><div class="definition" id="detailPages"></div></div>
-      <div class="dialog-actions"><button class="tool-button" type="button" id="detailBackButton">戻る</button><button class="tool-button primary" type="button" id="detailCloseButton">閉じる</button></div>
-    </section>
-  </div>
+      <div class="dialog-actions"><button class="tool-button primary" type="button" id="detailCloseButton">検索結果に戻る</button></div>
+    </div>
+  </section>
 
   <div class="overlay" id="importOverlay" hidden>
     <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="importTitle">
       <div class="dialog-top"><div><h2 id="importTitle">CSVを読み込む</h2><p class="dialog-sub">複数のCSVをまとめて読み込めます</p></div><button class="close-button" type="button" data-close="importOverlay" aria-label="閉じる">×</button></div>
-      <p class="dialog-text">GitHub Pagesでは、同じフォルダに置いた <strong>1.csv・2.csv・3.csv</strong> を自動で読み込みます。ここから別のCSVを複数選択することもできます。</p>
       <div class="form-row"><label for="encodingSelect">文字コード</label><select id="encodingSelect"><option value="UTF-8">UTF-8</option><option value="Shift_JIS">Shift_JIS（Excel保存など）</option></select></div>
       <label class="file-pick" for="csvFileInput">CSVファイルを選択<input id="csvFileInput" type="file" accept=".csv,text/csv,.txt,text/plain" multiple></label>
-      <p class="dialog-text">各CSVの1行目は「word,meaning,weight」です。この見出し行は自動で読み飛ばします。weight列は現在、検索や表示順には使用しません。旧形式のCSVも読み込めます。</p>
     </section>
   </div>
 
@@ -418,7 +422,7 @@
         }
         return { records: out, warnings: warnings };
       }
-      function getGroupKey(word) { return normalise(word); }
+      function getGroupKey(word) { return String(word == null ? '' : word).trim(); }
       function buildGroups(inputRecords) {
         var byKey = {}, order = [], i, item, key, group, j, found;
         for (i = 0; i < inputRecords.length; i += 1) {
@@ -474,7 +478,7 @@
           $('dataStatus').textContent = groups.length + '語・' + records.length + '行を読み込み済み（' + dataSource + '）';
         } else {
           dot.className = 'status-dot warn';
-          $('dataStatus').textContent = '単語データなし（1.csv・2.csv・3.csv を確認してください）';
+          $('dataStatus').textContent = '単語データがありません';
         }
       }
       function parseCsvFileSet(fileTexts) {
@@ -604,7 +608,7 @@
             }
           } else if (!restoreCsvCache(cached)) {
             records = []; groups = []; updateDataStatus(); renderResults();
-            showToast('1.csv・2.csv・3.csvを読み込めません。ファイル名と配置を確認してください。');
+            showToast('単語データを読み込めませんでした。');
           }
           checkResumeState();
         }
@@ -716,7 +720,7 @@
         $('resultHeading').textContent = currentQuery ? '検索結果' : '単語データ';
 
         if (!records.length) {
-          list.innerHTML = '<div class="empty-state"><div class="empty-title">単語データがまだありません</div><div class="empty-text">1.csv・2.csv・3.csvを同じフォルダに置くか、CSVを読み込んでください。</div></div>';
+          list.innerHTML = '<div class="empty-state"><div class="empty-title">単語データがまだありません</div><div class="empty-text">単語データが読み込まれると、ここに検索結果が表示されます。</div></div>';
           return;
         }
         if (!currentQuery.trim()) {
@@ -823,7 +827,7 @@
         for (i = 0; i < groups.length; i += 1) if (groups[i].key === key) { group = groups[i]; break; }
         if (!group) return;
         currentGroupKey = key;
-        $('detailTitle').textContent = group.word.toUpperCase();
+        $('detailTitle').textContent = group.word;
         pron = group.pronunciation.length ? group.pronunciation.join(' · ') : '発音記号は登録されていません';
         $('detailPron').textContent = pron;
         for (i = 0; i < group.pos.length; i += 1) chips += '<span class="chip pos">' + escapeHtml(posLabel(group.pos[i])) + '</span>';
@@ -835,16 +839,23 @@
         $('detailMeanings').innerHTML = meanings;
         pageText = group.pages.length ? group.pages.join(' ／ ') : 'ページ情報は登録されていません。';
         $('detailPages').textContent = pageText;
-        showOverlay('detailOverlay');
+        $('searchScreen').className = 'hidden';
+        $('historyScreen').className = 'hidden';
+        $('detailScreen').className = '';
         if (recordAction) addHistory({ type: 'open', query: group.word, mode: currentMode, label: group.word });
         saveAppState();
       }
       function closeDetail() {
-        hideOverlay('detailOverlay');
+        $('detailScreen').className = 'hidden';
         currentGroupKey = '';
+        currentScreen = 'search';
+        $('searchScreen').className = '';
+        $('historyScreen').className = 'hidden';
+        renderResults();
         saveAppState();
       }
       function renderScreen() {
+        $('detailScreen').className = 'hidden';
         if (currentScreen === 'history') {
           $('searchScreen').className = 'hidden';
           $('historyScreen').className = '';
@@ -934,7 +945,7 @@
       });
       $('importButton').addEventListener('click', function () { showOverlay('importOverlay'); });
       $('csvFileInput').addEventListener('change', function (event) { loadUploadedFileList(event.target.files); });
-      $('detailBackButton').addEventListener('click', closeDetail);
+      $('detailPageBack').addEventListener('click', closeDetail);
       $('detailCloseButton').addEventListener('click', closeDetail);
       document.addEventListener('click', function (event) {
         var target = event.target;
@@ -947,7 +958,7 @@
       $('startFreshButton').addEventListener('click', startFresh);
       document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
-          if (!$('detailOverlay').hidden) closeDetail();
+          if (!$('detailScreen').classList.contains('hidden')) closeDetail();
           else if (!$('importOverlay').hidden) hideOverlay('importOverlay');
         }
       });
