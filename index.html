@@ -143,6 +143,11 @@
     .section-label { margin-bottom: 8px; color: var(--muted); font-size: 10px; font-weight: 600; }
     .definition { color: var(--text); font-size: 14px; line-height: 1.8; overflow-wrap: anywhere; }
     .definition + .definition { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--line-soft); }
+    .related-list { display: grid; grid-template-columns: 1fr; gap: 0; }
+    .related-word { display: flex; align-items: center; justify-content: space-between; width: 100%; min-height: 43px; padding: 9px 4px; border: 0; border-bottom: 1px solid var(--line-soft); color: var(--accent); background: transparent; text-align: left; font-size: 14px; cursor: pointer; }
+    .related-word::after { content: "›"; color: var(--subtle); font-size: 19px; }
+    .related-word:hover { background: var(--line-soft); }
+    .related-empty { color: var(--muted); font-size: 13px; line-height: 1.7; }
     .dialog-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 21px; }
     .dialog-actions .tool-button { min-width: 90px; }
     .dialog-text { margin: 13px 0 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
@@ -224,6 +229,7 @@
       </div>
       <div class="detail-row" id="detailChips"></div>
       <div class="detail-section"><div class="section-label">日本語の意味</div><div id="detailMeanings"></div></div>
+      <div class="detail-section"><div class="section-label">関連単語</div><div id="detailRelated" class="related-list"></div></div>
       <div class="detail-section"><div class="section-label">掲載ページ</div><div class="definition" id="detailPages"></div></div>
       <div class="dialog-actions"><button class="tool-button primary" type="button" id="detailCloseButton">検索結果に戻る</button></div>
     </div>
@@ -837,6 +843,30 @@
           for (j = 0; j < group.meanings.length; j += 1) meanings += '<div class="definition">' + escapeHtml(group.meanings[j]).replace(/\n/g, '<br>') + '</div>';
         } else { meanings = '<div class="definition">日本語の意味は登録されていません。</div>'; }
         $('detailMeanings').innerHTML = meanings;
+        // 関連単語：意味が共通する単語、または意味文中に英単語として登場する単語を抽出。
+        // 表示文字列はCSVの表記をそのまま使用し、リンク先は内部キーで管理する。
+        var related = [], relatedSeen = Object.create(null), relatedHtml = '', candidate, sharedMeaning, mentioned;
+        for (i = 0; i < groups.length; i += 1) {
+          candidate = groups[i];
+          if (candidate.key === group.key || relatedSeen[candidate.key]) continue;
+          sharedMeaning = false;
+          for (j = 0; j < candidate.meanings.length && !sharedMeaning; j += 1) {
+            if (group.meanings.indexOf(candidate.meanings[j]) >= 0) sharedMeaning = true;
+          }
+          mentioned = false;
+          if (!sharedMeaning && candidate.word.length >= 2) {
+            for (j = 0; j < group.meanings.length && !mentioned; j += 1) {
+              var escapedWord = candidate.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+              var wordPattern = new RegExp('(^|[^A-Za-z0-9])' + escapedWord + '([^A-Za-z0-9]|$)', 'i');
+              if (wordPattern.test(group.meanings[j])) mentioned = true;
+            }
+          }
+          if (sharedMeaning || mentioned) { relatedSeen[candidate.key] = true; related.push(candidate); }
+        }
+        for (i = 0; i < related.length; i += 1) {
+          relatedHtml += '<button type="button" class="related-word" data-related-key="' + escapeHtml(related[i].key) + '">' + escapeHtml(related[i].word) + '</button>';
+        }
+        $('detailRelated').innerHTML = relatedHtml || '<div class="related-empty">関連する単語は見つかりませんでした。</div>';
         pageText = group.pages.length ? group.pages.join(' ／ ') : 'ページ情報は登録されていません。';
         $('detailPages').textContent = pageText;
         $('searchScreen').className = 'hidden';
@@ -945,6 +975,14 @@
       });
       $('importButton').addEventListener('click', function () { showOverlay('importOverlay'); });
       $('csvFileInput').addEventListener('change', function (event) { loadUploadedFileList(event.target.files); });
+      $('detailRelated').addEventListener('click', function (event) {
+        var target = event.target;
+        while (target && target !== $('detailRelated') && !target.getAttribute('data-related-key')) target = target.parentNode;
+        if (target && target !== $('detailRelated')) {
+          var relatedKey = target.getAttribute('data-related-key');
+          if (relatedKey) openGroup(relatedKey, true);
+        }
+      });
       $('detailPageBack').addEventListener('click', closeDetail);
       $('detailCloseButton').addEventListener('click', closeDetail);
       document.addEventListener('click', function (event) {
