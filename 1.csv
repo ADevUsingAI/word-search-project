@@ -59,7 +59,7 @@ already,"【副】もう、すでに 23",normal
 also,"【副】〜もまた、さらに [1]",bold
 always,"【副】①いつも、常に [1], ②ずっと [2]",bold
 am,"【動】①〜である、〜だ [1], ②（〜に）いる [1], 【助】〔am + -ing で現在進行形の文をつくる〕〜している、〜するつもりでいる [1]",bold
-a.m.,"【副】午後 [1]",normal
+a.m.,"【副】午前 [1]",normal
 amazing,"【形】びっくりするような、驚くほど見事な [2]",normal
 ambition,"【名】野望 128",normal
 ambitious,"【形】大志を抱いた 97",normal
@@ -195,7 +195,6 @@ bedroom,"【名】寝室 [2]",normal
 bee,"【名】ハチ ([1])",normal
 beef,"【名】牛肉 [1]",bold
 been,"【動】be の過去分詞 [1]",normal
-beer,"【名】ビール [2]",normal
 before,"【前】①〔時間〕〜の前に [1], ②〔順序〕〜の前に、〜を前にして [2], 【副】以前に [1], 【接】〜する前に [2]",normal
 beg,"【動】懇願する 92",normal
 begin,"【動】始まる、〜を始める [1]",bold
@@ -752,7 +751,8 @@ development,"【名】発展、開発 [2]",normal
 device,"【名】装置、デバイス [2]",normal
 devote,"【動】〜をささげる [2]",normal
 diagram,"【名】図、図表 [2]",normal
-dial,"【動】ダイヤルを回す [2]",dialogue,"【名】対話、ダイアログ [1]",bold
+dial,"【動】ダイヤルを回す [2]",normal
+dialogue,"【名】対話、ダイアログ [1]",bold
 diamond,"【名】ダイヤモンド [1]",bold
 diary,"【名】日記 [1]",bold
 dictionary,"【名】辞書、国語辞典 [1]",bold
@@ -866,7 +866,7 @@ drug,"【名】薬、麻薬 [2]",normal
 drum,"【名】ドラム、太鼓 [1]",bold
 drunk,"【形】酔った [2]",normal
 dry,"【形】乾いた、乾燥した [1], 【動】〜を乾かす [1]",bold
- dryer,"【名】乾燥機、ドライヤー [2]",normal
+dryer,"【名】乾燥機、ドライヤー [2]",normal
 duck,"【名】アヒル [1]",bold
 due,"【形】予定された、期限の [2], due to ~ 〜が原因で、〜のために [2]",normal
 dull,"【形】退屈な、鈍い [2]",normal
@@ -1375,34 +1375,211 @@ grave,"【名】墓 [2]",normal
 gravity,"【名】重力 [2]",normal
 gray,"【形】【名】灰色（の） [1]",bold
 great,"【形】①偉大な [1], ②素晴らしい、大変な [1], ③大きい [2]",bold
+great-grandparent,"【名】曾祖父母、〔〜s で〕曾祖父母 [2]",normal
 greatly,"【副】大いに、非常に [2]",normal
 Greece,"【名】ギリシャ [1]",bold
-greedy,"【形】貪欲な、欲深い [2]",normal
-green,"【形】【名】緑（の） [1]",bold
+greedy,"【形】貪欲な、欲深い [2], 94",normal
+green,"【形】【名】緑色（の） [1]",bold
 greenhouse,"【名】温室 [2]",normal
-greet,"【動】〜に挨拶する [2]",normal
+greenhouse gas,"【名】温室効果ガス 127",normal
+green pepper,"【名】ピーマン [1]",bold
+greet,"【動】〜に挨拶する [2], 127",normal
 greeting,"【名】挨拶 [2]",normal
-grew,"【動】grow の過去形 [1]",bold
+greeting card,"【名】挨拶状 [1]",normal
+grew,"【動】grow の過去形 [1], 82",bold
 grey,"【形】【名】灰色（の） [1]",bold
 grid,"【名】格子、グリッド [2]",normal
 grief,"【名】深い悲しみ [2]",normal
-grocery,"【名】食料品 [2]",normal
+grilled,"【形】焼かれた、あぶった [2]",bold
+grocery,"【名】食料品、食料雑貨類 [2], 125",normal
 groom,"【名】新郎 [2]",normal
 ground,"【名】地面、運動場 [1]",bold
-group,"【名】グループ、集団 [1]",bold
-grow,"【動】①育つ、成長する [1], ②〜を育てる [2], grow up 成長する、大人になる [2]",bold
-growth,"【名】成長、発展 [2]",normal
+group,"【名】グループ、集団 [1], in a group グループで、集団の中で [2]",bold
+group work,"【名】共同作業 [2]",normal
+grow,"【動】①育つ、成長する [1], ②〜を育てる、〜を栽培する [2], 82, grow up 成長する、大人になる [2]",bold
+grown,"【動】grow の過去分詞 95",normal
+grown-up,"【名】大人 95",normal
+growth,"【名】成長、発展 [2], 127",normal
 guarantee,"【動】〜を保証する [2]",normal
 guard,"【動】〜を守る、警備する [2], 【名】警備員 [2]",normal
-guess,"【動】〜を推測する [1], I guess so. そう思います。 [1]",bold
-guest,"【名】ゲスト、客、宿泊客 [2]",normal
+guess,"【動】①（〜を）推測する、（答えなどを）言い当てる [1], ②〜だと思う [2], I guess so. そう思います。 [1], ~, I guess. 〜だと思います。 [2]",bold
+guest,"【名】ゲスト、客、招待客 [2]",normal
 guidance,"【名】指導、案内 [2]",normal
-guide,"【名】ガイド、案内人 [1], 【動】〜を案内する [1]",bold
+guide,"【名】ガイド、案内人 [1], 【動】〜を案内する [1], 10",bold
+guidebook,"【名】ガイドブック [2]",normal
+guide dog,"【名】盲導犬 [2]",normal
 guilt,"【名】罪悪感 [2]",normal
 guilty,"【形】有罪の、気疚しい [2]",normal
+Guinea,"【名】ギニア 69",normal
 guitar,"【名】ギター [1]",bold
 gum,"【名】ガム [1]",bold
 gun,"【名】銃、拳銃 [2]",normal
-guy,"【名】男、やつ [1]",bold
+guy,"【名】男、やつ、〔〜s で〕みんな、君たち [1]",bold
 gym,"【名】体育館、ジム [1]",bold
 gymnastics,"【名】体操 [1]",bold
+habitat,"【名】生息地 16",normal
+had,"【動】have の過去形、過去分詞 [1]",bold
+hair,"【名】髪の毛 [2]",bold
+haircut,"【名】散髪 [2]",normal
+half,"【形】半分の、2分の1の [2], half a year 半年 [2], 【名】半分 [2], in half 半分に [2]",bold
+hall,"【名】〔ふつう複合語で〕ホール、集会所、会館、事務所 [2]",normal
+hamburger,"【名】ハンバーガー [1]",bold
+hand,"【名】手 [2], by hand 手書きで 42, join hands 手を組む、手を取り合う 42, shake hands 握手する 127, 【動】〜を（手）渡す 42, hand ~ out 〜を配る、〜を手渡す 42",bold
+handkerchief,"【名】ハンカチ 123",normal
+handout,"【名】配布資料、プリント 23",normal
+hand-powered,"【形】手動の (46)",normal
+handy,"【形】使いやすい、便利な 49",normal
+hang,"【動】〜をつるす、〜を掛ける 124",normal
+happen,"【動】起こる、生じる [2]",bold
+happily,"【副】楽しそうに 58",normal
+happiness,"【名】幸せ、喜び 128",normal
+happy,"【形】①うれしい、幸せな [1], ②〔挨拶の中で〕〜おめでとう [1]",bold
+harbor,"【名】港 [2]",bold
+hard,"【副】熱心に、懸命に [1], work hard 懸命に働く［勉強する］ [1], 【形】①硬い [1], ②難しい、大変な、きつい [1], ③厳しい、つらい [2], be hard on ~ 〜に厳しく当たる [2]",bold
+harvest,"【名】収穫高、収穫物 82",normal
+has,"【動】have の3人称単数現在形 [1]",bold
+hasn't,"has not の短縮形 22",normal
+hat,"【名】（縁のある）帽子 [1]",bold
+hate,"【動】〜をひどく嫌う 54",normal
+have,"【動】①〜を受ける [1], ②〜を行う、〜をする [1], ③〜を持っている、〜がある [1], ④〜を食べる、〜を飲む [1], ⑤（病気）にかかっている [1], ⑥（友人・親類など）がいる、〜を飼う [1], ⑦〜を経験する [2], ⑧〜を産む ([2]), have to ~ 〜しなければならない [2], 【助】〔have + 過去分詞で現在完了形をつくる〕 20",bold
+haven't,"have not の短縮形 22",normal
+Hawaii,"【名】ハワイ 89",normal
+hay,"【名】干し草 [1]",normal
+hay fever,"【名】花粉症 [2]",normal
+he,"【代】彼は、彼が [1]",bold
+head,"【名】頭、頭部 [2]",bold
+headache,"【名】頭痛 [2]",normal
+heal,"【動】〜を治す、救う、癒やす 74",normal
+health,"【名】健康、健康状態 44",normal
+healthy,"【形】健康な、健康によい [2]",bold
+hear,"【動】〜を聞く、〜が聞こえる [1], hear of ~ 〜のことを耳にする 75",bold
+heard,"【動】hear の過去形、過去分詞 [1]",normal
+heart,"【名】心 (113)",bold
+heartwarming,"【形】心温まる 79",normal
+heavy,"【形】①重い [1], ②（程度・量・深刻さなどが）大きい [2]",bold
+held,"【動】hold の過去形、過去分詞 126",normal
+he'll,"he will の短縮形 [2]",normal
+hello,"【間】①やあ、こんにちは [1], ②（電話で）もしもし [1]",bold
+helmet,"【名】ヘルメット [2]",normal
+help,"【動】①（〜を）助ける、手伝う、救う [1], ②〜に役立つ、〜を促す 12, 【名】助け、援助、救助 [1]",bold
+helpful,"【形】役立つ、助けになる [2]",normal
+helpless,"【形】どうしようもない 58",normal
+her,"【代】彼女の［を、に］ [1]",normal
+herb,"【名】ハーブ 126",normal
+here,"【副】ここに、ここで、こちらへ [1], here and there あちこちに [2], Here's ~. ここに〜がある。 [1], Here we go! さあ、行こう［始めよう］。 [1], Here you are. さあどうぞ。 [2], 【間】ほら、さあ [2], 【名】ここ [2]",bold
+here's,"here is の短縮形 [1]",normal
+hero,"【名】ヒーロー、憧れの的 [1]",bold
+hers,"【代】彼女のもの [1]",normal
+herself,"【代】彼女自身 ([2])",normal
+he's,"①he is の短縮形 [1], ②he has の短縮形 24",normal
+hey,"【間】おい、ちょっと [2]",normal
+hi,"【間】やあ [1]",bold
+high,"【形】高い [2]",bold
+high school,"【名】高校 [1]",bold
+hiking,"【名】ハイキング [1]",bold
+hill,"【名】①丘、小山 [2], ②坂、坂道 20",bold
+him,"【代】彼を、彼に [1]",normal
+himself,"【代】彼自身 (111)",normal
+his,"【代】①彼の、彼のもの [1], ②〔a ~ of his [hers] で〕彼［彼女］の〜 31",normal
+history,"【名】歴史 [1]",bold
+hit,"【動】①（ボール）を打つ [1], ②（嵐などが）襲う [2]",bold
+hmm,"【間】うむ、ふーむ ([1])",normal
+hobby,"【名】趣味 [1]",bold
+hold,"【動】（〜を）しっかり持つ、抱く [2], hold on しがみつく、つかまる [2]",bold
+holder,"【名】入れもの 123",normal
+hole,"【名】穴 92",normal
+home,"【名】【副】家に［へ］ [1], go (straight) home （まっすぐ）家に帰る [2], I'm [We're] home. ただいま。 [1], on the way home 家に帰る途中で [2], 【名】家、自宅、住まい [2], at home 家で［に］ [2], 【形】家庭用の [2]",bold
+home economics,"【名】家庭科 [2]",normal
+homesick,"【形】ホームシックの 126",normal
+homestay,"【名】ホームステイ 125",normal
+hometown,"【名】故郷 [1]",bold
+homework,"【名】宿題 [1], do one's homework 宿題をする [1]",bold
+honest,"【形】正直な、誠実な [2], 105",normal
+honor,"【名】光栄なこと [1], What an honor! なんと光栄なことでしょう。 [1]",normal
+hoodie,"【名】フード付きトレーナー [2]",normal
+hope,"【動】（〜を）望む、（〜を）願う [1], I hope ~. 〜だとよいと思います。 [1], I hope you'll like it. 気に入ってくれたらうれしいです。 [1], 【名】希望、望み [1]",bold
+horn,"【名】角 14",normal
+horror,"【名】①恐ろしさ、恐怖さ [2], 30, ②〔しばしば複合語で〕ホラーもの 125, to one's horror ぞっとしたことには [2]",normal
+horse,"【名】馬 126",bold
+hospital,"【名】病院 [1]",bold
+hospitality,"【名】親切なもてなし 102",normal
+host,"【動】〜をもてなす [2]",normal
+hot,"【形】①暑い、熱い [1], ②辛い [1]",bold
+hotel,"【名】ホテル [1], 22",bold
+hot spring,"【名】温泉 [1]",bold
+hour,"【名】時間 [1]",bold
+house,"【名】家 [1]",bold
+housework,"【名】家事 68",normal
+how,"【副】①〔状態〕どんなふうに [1], ②〔程度〕どれほど、どれくらい [1], ③〔方法・手段〕どのようにして [1], ④〔感嘆〕なんと、いかに [1], Could you tell me how to ~? 〜のしかたを教えていただけますか。 60, How about ~? 〜はどうですか。 [1], How are you (doing)? お元気ですか。 [1], How's everything? 調子はどうですか。 [1], how to ~ 〜する方法 [2]",bold
+however,"【副】しかしながら 15",bold
+how's,"how is の短縮形 [1]",normal
+hug,"【動】抱きしめる 127",normal
+human,"【名】【形】人間［人類］（の） 14",normal
+human-like,"【形】人型の (56)",normal
+human rights,"【名】人権 127",normal
+hundred,"【名】100（の） [1]",bold
+hunger,"【名】飢え 127",normal
+hungry,"【形】空腹の、腹ぺこの [1]",bold
+hunt,"【動】狩り、捜索 (巻頭3)",normal
+hunter,"【名】猟師 [2]",normal
+hunting,"【名】①探求、捜索 [2], ②狩り 15",normal
+hurricane,"【名】ハリケーン (46)",normal
+hurry,"【動】急ぐ 22, Hurry up. 急いで。 22",normal
+hurt,"【動】①痛む、痛い [2], ②〜にけがをさせる、〜を傷める 74, hurt の過去形、過去分詞 74",normal
+husband,"【名】夫 122",normal
+hut,"【名】小屋 (106)",normal
+I,"【代】私は、私が [1]",bold
+ice,"【名】氷 (144)",bold
+ice cream,"【名】アイスクリーム [1]",bold
+ice hockey,"【名】アイスホッケー [1]",bold
+ice skating,"【名】アイススケート [1]",bold
+I'd,"I would の短縮形 [1]",normal
+idea,"【名】考え、思いつき [1], have no idea 全然わからない [2]",bold
+if,"【接】もし〜ならば [1], as if ~ まるで〜であるかのように 93, if necessary もし必要であれば ([2])",bold
+I'll,"I will の短縮形 [1]",normal
+illegal,"【形】違法の、不法の 14",normal
+illness,"【名】病気 57",normal
+illustrator,"【名】イラストレーター 125",normal
+I'm,"I am の短縮形 [1]",normal
+imagine,"【動】〜を想像する 54",normal
+imperfect,"【形】不完全な 55",normal
+importance,"【名】重要性 (46), 56",normal
+important,"【形】重要な、大切な [1]",bold
+impossible,"【形】不可能な 125",normal
+impress,"【動】〜に感動［感銘］を与える [1], I was impressed. 感動しました。 64",normal
+impressive,"【形】印象的な [2]",normal
+improve,"【動】〜を向上させる、〜を改善する [2]",normal
+in,"【前】①〔期間〕〜の間に、〜で [1], ②〔場所〕〜に、〜で、〜の中に［で］ [1], ③〔範囲・分野・限定〕〜に関して [1], ④〔手段・素材〕〜で、〜を使って [1], ⑤〔状態・状況〕〜の場合には [1], ⑥〔着用〕〜を身につけて [2], ⑦〔形状・配置〕〜になって [2], ⑧〔総数〕〜のうちの、〜の中で [2], ⑨〔時間の経過〕〜で、（今から）〜の後に [2], in ~ minute(s) あと〜分で [2], 【副】①中へ、中に [2], ②書き入れて [2]",bold
+include,"【動】〜を含む [2]",normal
+income,"【名】収入 82",normal
+increase,"【動】増える 15",normal
+indeed,"【副】本当に、確かに 105",normal
+India,"【名】インド [1]",bold
+indoors,"【副】屋内で、家の中で [1]",normal
+industrial arts,"【名】〔教科としての〕技術、工芸 [1]",normal
+industry,"【名】産業 127",normal
+inequality,"【名】不平等 127",normal
+infant,"【名】幼児 122",normal
+infection,"【名】感染症 [2]",normal
+information,"【名】情報 [1]",bold
+infrastructure,"【名】社会基盤、インフラ 127",normal
+injured,"【形】傷ついた (109)",normal
+injury,"【名】負傷、けが 55",normal
+ink,"【名】インク [1]",bold
+innocent,"【形】無実の、無罪の (110)",normal
+innovation,"【名】革新 ([2]), 127",normal
+insert,"【動】〜を差し込む、挿入する 49",normal
+inside,"【副】内側に、内部に [2]",normal
+inspiration,"【名】動機、刺激 35",normal
+inspire,"【動】①〜を感激させる、〜を奮い立たせる、〜を鼓舞する [2], ②〜の着想をもたらす [2]",normal
+inspiring,"【形】鼓舞［触発］する 126",normal
+instant,"【形】即席の、インスタントの 124",normal
+instead,"【副】その代わりに ([2]), 65, instead of ~ 〜の代わりに ([2]), 65",normal
+institution,"【名】制度 127",normal
+instrument,"【名】楽器 [1]",bold
+integrated study,"【名】総合的な学習（教科） [1]",normal
+interest,"【動】〜に興味をもたせる 64",normal
+interested,"【形】興味［関心］をもっている [1], be interested in ~ 〜に興味をもっている [1]",bold
+interesting,"【形】興味を引き起こす、おもしろい [1]",bold
+international,"【形】国際的な [2]",bold
+internet,"【名】インターネット 10",bold
