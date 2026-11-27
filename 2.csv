@@ -1,581 +1,860 @@
-word,meaning,weight
-i,"【代】私は、私が [1]",bold
-ice,"【名】氷 [1]",bold
-ice cream,"【名】アイスクリーム [1]",bold
-icicle,"【名】つらら [2]",normal
-icon,"【名】アイコン [2]",normal
-idea,"【名】考え、アイディア [1]",bold
-ideal,"【形】理想的な [2]",normal
-identical,"【形】同一の、そっくりの [2]",normal
-identification,"【名】身分証明書 [2]",normal
-identify,"【動】〜を特定する、確認する [2]",normal
-idiom,"【名】慣用句、熟語 [2]",normal
-if,"【接】もし〜なら、もし〜ならば [1], even if ~ たとえ〜でも [2]",bold
-ignorance,"【名】無知 [2]",normal
-ignore,"【動】〜を無視する [2]",normal
-ill,"【形】病気で、具合が悪くて [2]",normal
-illegal,"【形】違法の [2]",normal
-illness,"【名】病気 [2]",normal
-illustrate,"【動】〜をイラストで説明する、例証する [2]",normal
-illustration,"【名】イラスト、挿絵 [2]",normal
-image,"【名】画像、イメージ [2]",normal
-imagination,"【名】想像力 [2]",normal
-imagine,"【動】〜を想像する [2]",normal
-immediate,"【形】即座の、当面の [2]",normal
-immediately,"【副】すぐに、直ちに [2]",normal
-immigrant,"【名】移民 [2]",normal
-immigration,"【名】移民、入国管理局 [2]",normal
-impact,"【名】影響、衝撃 [2]",normal
-impatient,"【形】いら立った、待ちきれない [2]",normal
-imply,"【動】〜をほのめかす、暗示する [2]",normal
-import,"【動】〜を輸入する [2], 【名】輸入 [2]",normal
-importance,"【名】重要性 [2]",normal
-important,"【形】重要な [1], be important to ~ 〜にとって重要である [1]",bold
-impose,"【動】〜を課す、押しつける [2]",normal
-impossible,"【形】不可能な [2]",normal
-impress,"【動】〜に強い印象を与える [2]",normal
-impression,"【名】印象 [2]",normal
-impressive,"【形】印象的な、見事な [2]",normal
-improve,"【動】〜を改善する、向上させる [2]",normal
-improvement,"【名】改善、進歩 [2]",normal
-in,"【前】①〔空間〕〜の中に［で］ [1], ②〔時間〕〜に、〜の後に [1], ③〔状態〕〜の状態にある [2], ④〔言語・衣服〕〜で [2], 【副】中に、屋内に [1]",bold
-inch,"【名】インチ〔長さの単位〕 [2]",normal
-incident,"【名】出来事、事件 [2]",normal
-include,"【動】〜を含む [2]",normal
-including,"【前】〜を含めて [2]",normal
-income,"【名】収入、所得 [2]",normal
-incorrect,"【形】不正確な、間違った [2]",normal
-increase,"【動】増える、〜を増やす [2], 【名】増加 [2]",normal
-increasingly,"【副】ますます [2]",normal
-incredible,"【形】信じられないような、すばらしい [2]",normal
-indeed,"【副】本当に、実に [2]",normal
-independence,"【名】独立 [2]",normal
-independent,"【形】独立した [2]",normal
-index,"【名】索引、指標 [2]",normal
-india,"【名】インド [1]",bold
-indian,"【名】【形】インド人（の）、インディアン（の） [2]",normal
-indicate,"【動】〜を示す [2]",normal
-indication,"【名】しるし、兆候 [2]",normal
-indigenous,"【形】先住の、固有の [2]",normal
-individual,"【形】個人の、個別の [2], 【名】個人 [2]",normal
-Indonesia,"【名】インドネシア [1]",bold
-indoor,"【形】屋内の [2]",normal
-indoors,"【副】屋内で [2]",normal
-industrial,"【形】工業の、産業の [2]",normal
-industry,"【名】産業、工業 [2]",normal
-inevitable,"【形】避けられない、必然的な [2]",normal
-infant,"【名】乳幼児 [2]",normal
-infect,"【動】〜に感染させる [2]",normal
-infection,"【名】感染 [2]",normal
-infer,"【動】推論する [2]",normal
-inflation,"【名】インフレ、物価高 [2]",normal
-influence,"【名】影響（力） [2], 【動】〜に影響を与える [2]",normal
-influential,"【形】影響力のある [2]",normal
-info,"【名】情報 [1]",bold
-inform,"【動】〜に知らせる、通知する [2]",normal
-information,"【名】情報 [1]",bold
-infrastructure,"【名】インフラ、基盤 [2]",normal
-ingredient,"【名】材料、成分 [2]",normal
-initial,"【形】最初の、初めの [2]",normal
-initially,"【副】最初は、初めに [2]",normal
-initiative,"【名】主導権、イニシアチブ [2]",normal
-injure,"【動】〜を傷つける、負傷させる [2]",normal
-injured,"【形】負傷した [2]",normal
-injury,"【名】けが、負傷 [2]",normal
-ink,"【名】インク [1]",bold
-innocent,"【形】無邪気な、無実の [2]",normal
-input,"【名】【動】入力（する） [2]",normal
-inquire,"【動】尋ねる [2]",normal
-insect,"【名】昆虫、虫 [2]",normal
-inside,"【前】【副】〜の内側に［で］ [1], 【名】内側 [2]",bold
-insight,"【名】洞察力 [2]",normal
-insist,"【動】主張する [2]",normal
-inspect,"【動】〜を検査する [2]",normal
-inspire,"【動】〜を奮起させる、ひらめきを与える [2]",normal
-install,"【動】〜を設置する、インストールする [2]",normal
-instance,"【名】例、実例 [2], for instance 例えば [2]",normal
-instant,"【形】即座の、インスタントの [1]",bold
-instead,"【副】その代わりに [2], instead of ~ 〜の代わりに [2]",normal
-institute,"【名】研究所、機関 [2]",normal
-institution,"【名】機関、制度 [2]",normal
-instruct,"【動】〜を指導する、指示する [2]",normal
-instruction,"【名】指示、説明書 [2]",normal
-instructor,"【名】指導員、講師 [2]",normal
-instrument,"【名】楽器、器具 [1]",bold
-insult,"【動】〜を侮辱する [2]",normal
-insurance,"【名】保険 [2]",normal
-intake,"【名】摂取量 [2]",normal
-integral,"【形】不可欠な、完全な [2]",normal
-integrate,"【動】統合する [2]",normal
-integrated,"【形】統合された [2]",normal
-intellectual,"【形】知的な [2]",normal
-intelligence,"【名】知性、情報 [2]",normal
-intelligent,"【形】知的な、賢い [2]",normal
-intend,"【動】〜するつもりである、意図する [2]",normal
-intense,"【形】激しい、強烈な [2]",normal
-intensity,"【名】強烈さ、強度 [2]",normal
-intention,"【名】意図、意志 [2]",normal
-interaction,"【名】相互作用、交流 [2]",normal
-interest,"【名】興味、関心 [1], have an interest in ~ 〜に関心がある [1], 【動】〜に興味を起こさせる [2]",bold
-interested,"【形】興味を持った [1], be interested in ~ 〜に興味がある [1]",bold
-interesting,"【形】おもしろい、興味深い [1]",bold
-interface,"【名】インターフェース [2]",normal
-interfere,"【動】干渉する、邪魔をする [2]",normal
-interior,"【名】【形】内部（の）、インテリア [2]",normal
-intermediate,"【形】中級の、中間の [2]",normal
-internal,"【形】内部の、国内の [2]",normal
-international,"【形】国際的な [1]",bold
-internet,"【名】インターネット [1]",bold
-interpreter,"【名】通訳者 [2]",normal
-interrupt,"【動】〜を遮る、中断させる [2]",normal
-interval,"【名】間隔、休憩時間 [2]",normal
-interview,"【名】面接、インタビュー [1], 【動】インタビューする [1]",bold
-intimate,"【形】親密な [2]",normal
-into,"【前】①〜の中に［へ］ [1], ②〔変化〕〜に（なって） [2]",bold
-introduce,"【動】〜を紹介する [1], introduce ~ to ... 〜を…に紹介する [1]",bold
-introduction,"【名】紹介、序論 [2]",normal
-invade,"【動】〜に侵入する、侵略する [2]",normal
-invasion,"【名】侵略 [2]",normal
-invent,"【動】〜を発明する [1]",bold
-invention,"【名】発明、発明品 [1]",bold
-inventor,"【名】発明家 [1]",bold
-invest,"【動】投資する [2]",normal
-investigate,"【動】〜を調査する [2]",normal
-investment,"【名】投資 [2]",normal
-invitation,"【名】招待、招待状 [2]",normal
-invite,"【動】〜を招待する [1]",bold
-involve,"【動】〜を巻き込む、伴う [2]",normal
-involved,"【形】巻き込まれた、熱心な [2]",normal
-involvement,"【名】関与 [2]",normal
-iron,"【名】アイロン、鉄 [1]",bold
-island,"【名】島 [1]",bold
-isolate,"【動】〜を隔離する [2]",normal
-issue,"【名】問題、発行物 [2]",normal
-it,"【代】それは、それが [1]",bold
-italian,"【名】【形】イタリア語（の）、イタリア人（の） [1]",bold
-italy,"【名】イタリア [1]",bold
-item,"【名】項目、品目 [1]",bold
-its,"【代】その [1]",bold
-itself,"【代】それ自身 [1]",bold
-jacket,"【名】ジャケット、上着 [1]",bold
-jam,"【名】ジャム、渋滞 [1]",bold
-january,"【名】1月 [1]",bold
-japan,"【名】日本 [1]",bold
-japanese,"【名】【形】日本語（の）、日本人（の） [1]",bold
-jar,"【名】瓶、壺 [2]",normal
-jaw,"【名】あご [2]",normal
-jazz,"【名】ジャズ [1]",bold
-jeans,"【名】ジーンズ、ジーパン [1]",bold
-jelly,"【名】ゼリー [1]",bold
-jellyfish,"【名】クラゲ [1]",bold
-jet,"【名】ジェット機 [2]",normal
-jewel,"【名】宝石 [2]",normal
-job,"【名】仕事、職業 [1]",bold
-jog,"【動】ジョギングする [1]",bold
-join,"【動】①（クラブなど）に加わる、参加する [1], ②〜をつなぐ [2]",bold
-joint,"【名】関節 [2]",normal
-joke,"【名】冗談、ジョーク [1], 【動】冗談を言う [2]",bold
-journal,"【名】雑誌、日誌 [2]",normal
-journalist,"【名】ジャーナリスト、記者 [2]",normal
-journey,"【名】旅、旅行 [2]",normal
-joy,"【名】喜び、歓喜 [2]",normal
-judge,"【動】〜を判断する、審査する [2], 【名】裁判官、審査員 [2]",normal
-judgment,"【名】判断、判定 [2]",normal
-judo,"【名】柔道 [1]",bold
-juice,"【名】ジュース [1]",bold
-July,"【名】7月 [1]",bold
-jump,"【動】跳ぶ、ジャンプする [1], 【名】ジャンプ [2]",bold
-June,"【名】6月 [1]",bold
-jungle,"【名】ジャングル、密林 [1]",bold
-junior,"【形】後輩の、下級の、年下の [2]",normal
-junior high school,"【名】中学校 [1]",bold
-junk,"【名】ガラクタ、ジャンク [2]",normal
-jury,"【名】陪審員団 [2]",normal
-just,"【副】①ちょうど、まさに [1], ②たった、ほんの [1], ③〔現在完了とともに〕ちょうど〜したところだ [2], Just a minute. ちょっと待ってください。 [1], Just a second. ちょっと待って。 [2]",bold
-justice,"【名】正義、公正 [2]",normal
-justify,"【動】〜を正当化する [2]",normal
-kangaroo,"【名】カンガルー [1]",bold
-keen,"【形】熱心な、鋭い [2]",normal
-keep,"【動】①〜を保つ、〜の状態にしておく [1], ②（習慣など）を続ける [2], ③〜をとっておく [2], keep ~ from ...ing 〜が…するのを防ぐ [2], keep in touch 連絡を取り合う [2], keep on ~ing 〜し続ける [2], keep one's promise 約束を守る [1]",bold
-Kenya,"【名】ケニア [2]",normal
-keyboard,"【名】キーボード [1]",bold
-kick,"【動】〜を蹴る [1], 【名】キック [2]",bold
-kid,"【名】子供、子ども [1]",bold
-kill,"【動】〜を殺す [2]",normal
-kilo,"【名】キログラム、キロ [1]",bold
-kilometer,"【名】キロメートル [1]",bold
-kind,"【名】種類 [1], a kind of ~ 一種の〜 [1], 【形】親切な、優しい [1]",bold
-kindergarten,"【名】幼稚園 [2]",normal
-kindness,"【名】親切、優しさ [2]",normal
-king,"【名】王、国王 [1]",bold
-kingdom,"【名】王国 [2]",normal
-kiss,"【動】【名】キス（する） [1]",bold
-kitchen,"【名】台所、キッチン [1]",bold
-kite,"【名】凧 [1]",bold
-kitten,"【名】子猫 [1]",bold
-knee,"【名】ひざ [1]",bold
-knew,"【動】know の過去形 [1]",bold
-knife,"【名】ナイフ [1]",bold
-knight,"【名】騎士、ナイト [2]",normal
-knit,"【動】〜を編む [2]",normal
-knock,"【動】（ドアなどを）ノックする、叩く [1], 【名】ノック [2]",bold
-knot,"【名】結び目 [2]",normal
-know,"【動】（〜を）知っている、わかる [1], As you know. ご存知のように。 [2]",bold
-knowledge,"【名】知識 [2]",normal
-korean,"【名】【形】韓国語（の）、韓国人（の） [1]",bold
-label,"【名】ラベル、札 [2]",normal
-laboratory,"【名】実験室、研究室 [2]",normal
-laborer,"【名】労働者 [2]",normal
-lack,"【名】【動】不足（している） [2]",normal
-lad,"【名】少年、若者 [2]",normal
-ladder,"【名】はしご [2]",normal
-lady,"【名】婦人、レディ [1]",bold
-lake,"【名】湖 [1]",bold
-lamb,"【名】子羊の肉、子羊 [2]",normal
-lamp,"【名】ランプ、照明器具 [1]",bold
-land,"【名】陸、土地、国 [1], 【動】着陸する [2]",bold
-landscape,"【名】風景、景色 [2]",normal
-language,"【名】言語、言葉 [1]",bold
-lantern,"【名】ランタン、提灯 [2]",normal
-large,"【形】大きい、広い [1]",bold
-largely,"【副】主に、大部分は [2]",normal
-laser,"【名】レーザー [2]",normal
-last,"【形】①最後の、この前の [1], ②昨夜の、去年の [1], 【副】最後に、この前に [2], 【動】続く、持続する [2]",bold
-late,"【形】【副】遅い［く］ [1], be late for ~ 〜に遅れる [1]",bold
-lately,"【副】最近、近頃 [2]",normal
-later,"【副】あとで、もっと後に [1], See you later. またね。 [2]",bold
-latin,"【形】【名】ラテン語（の） [2]",normal
-latter,"【形】後半の、後者の [2]",normal
-laugh,"【動】笑う [1], 【名】笑い声 [2]",bold
-laughter,"【名】笑い [2]",normal
-launch,"【動】（事業など）を始める、打ち上げる [2], 【名】開始、打ち上げ [2]",normal
-laundry,"【名】洗濯、洗濯物 [1]",bold
-lavatory,"【名】化粧室、トイレ [2]",normal
-law,"【名】法律 [2]",normal
-lawn,"【名】芝生 [2]",normal
-lawyer,"【名】弁護士 [2]",normal
-lay,"【動】（卵）を産む、〜を置く [2]",normal
-layout,"【名】レイアウト、配置 [2]",normal
-lazy,"【形】怠け者の、けだるい [2]",normal
-lead,"【動】①導く、案内する [2], ②（生活など）を送る [2], lead to ~ 〜につながる [2], 【名】リード、先頭 [2]",normal
-leader,"【名】指導者、リーダー [1]",bold
-leadership,"【名】指導力、リーダーシップ [2]",normal
-leading,"【形】主要な、リードしている [2]",normal
-leaf,"【名】葉 [1]",bold
-league,"【名】同盟、リーグ [2]",normal
-lean,"【動】傾く、寄りかかる [2]",normal
-leap,"【動】跳ぶ、跳ねる [2]",normal
-learn,"【動】（〜を）学ぶ、習得する [1]",bold
-learned,"【形】学識のある [2]",normal
-learning,"【名】学習、学問 [2]",normal
-least,"【形】【副】最も少ない［少なく］ [2], at least 少なくとも [2]",normal
-leather,"【名】【形】革、レザー（製） [2]",normal
-leave,"【動】①出発する [1], ②〜を去る [2], ③〜をそのままにしておく [2], ④〜を置き忘れる [2], leave ~ behind 〜を置き忘れる [2], leave for ~ 〜に向けて出発する [2]",bold
-lecture,"【名】講義、講演 [2]",normal
-left,"【形】【名】左の［に］ [1], 【動】leave の過去形・過去分詞 [1]",bold
-leg,"【名】脚、足 [1]",bold
-legal,"【形】法律の、適法の [2]",normal
-legend,"【名】伝説、言い伝え [2]",normal
-leisure,"【名】余暇、レジャー [2]",normal
-lemon,"【名】レモン [1]",bold
-lemonade,"【名】レモネード [1]",normal
-lend,"【動】〜を貸す [1]",bold
-length,"【名】長さ [2]",normal
-lens,"【名】レンズ [2]",normal
-lent,"【動】lend の過去形・過去分詞 [2]",normal
-leopard,"【名】ヒョウ [2]",normal
-less,"【形】【副】より少ない［少なく］ [2], less than ~ 〜未満で [2]",normal
-lesson,"【名】レッスン、授業、教訓 [1]",bold
-let,"【動】①〔let ~ do で〕〜に…させてやる [1], ②〔Let's ~ で〕〜しよう [1], let out ~ 〜をもらす [2]",bold
-letter,"【名】①手紙 [1], ②文字 [1]",bold
-lettuce,"【名】レタス [1]",bold
-level,"【名】レベル、水準 [1]",bold
-liar,"【名】嘘つき [2]",normal
-liberal,"【形】自由主義の、寛大な (106)",normal
-liberation,"【名】解放 [2]",normal
-liberty,"【名】自由 [2]",normal
-librarian,"【名】司書、図書館員 [2]",normal
-library,"【名】図書館 [1]",bold
-license,"【名】免許証、ライセンス [2]",normal
-lick,"【動】〜をなめる [2]",normal
-lid,"【名】蓋、ふた [2]",normal
-lie,"【動】①横たわる、ある [2], ②嘘をつく [2], 【名】嘘 [2]",normal
-life,"【名】①生命、命 [1], ②人生、生活 [1]",bold
-lifestyle,"【名】ライフスタイル、生活様式 [2]",normal
-lifetime,"【名】一生、生涯 [2]",normal
-lift,"【動】〜を持ち上げる [2], 【名】エレベーター〔英国式〕 [2]",normal
-light,"【名】光、明かり、信号機 [1], 【形】①軽い [1], ②明るい [2], 【動】〜に火をつける、明るくする [2]",bold
-lightning,"【名】稲妻、雷 [2]",normal
-like,"【動】〜が好きである [1], 【前】〜のような [1], 【接】〜のように [2]",bold
-likely,"【形】ありそうな、〜しそうである [2]",normal
-limit,"【名】制限、限界 [2], 【動】〜を制限する [2]",normal
-limited,"【形】限られた、有限の [2]",normal
-line,"【名】①線、行 [1], ②電話回線 [2], ③列 [2]",bold
-linear,"【形】直線状の [2]",normal
-linen,"【名】亜麻布、リネン [2]",normal
-liner,"【名】定期船 [2]",normal
-lining,"【名】裏地 [2]",normal
-link,"【名】リンク、つながり [1], 【動】〜をつなぐ、リンクさせる [1]",bold
-lion,"【名】ライオン [1]",bold
-lip,"【名】唇 [2]",normal
-liquid,"【名】【形】液体（の） [2]",normal
-list,"【名】リスト、一覧表 [1], 【動】〜をリストに載せる [1]",bold
-listen,"【動】（耳を傾けて）聞く [1], listen to ~ 〜を聴く、聞く [1]",bold
-liter,"【名】リットル [1]",normal
-literacy,"【名】読み書きの能力 [2]",normal
-literature,"【名】文学 [1]",bold
-little,"【形】小さい [1], 【副】【代】少し（は） [1], a little 少し [1]",bold
-live,"【動】住む、生きる [1], 【形】生放送の、生の [1]",bold
-lively,"【形】活気のある、生き生きとした [2]",normal
-liver,"【名】肝臓 [2]",normal
-livestock,"【名】家畜 [2]",normal
-living,"【名】生計、暮らし [2], 【形】生きている [2]",normal
-load,"【名】荷物、負担 [2], 【動】〜を積み込む [2]",normal
-loaf,"【名】（パンの）一塊 [2]",normal
-loan,"【名】ローン、借入金 [2]",normal
-local,"【形】地元の、現地の [1]",bold
-locate,"【動】〜の位置を探し出す、置く [2]",normal
-located,"【形】位置して [2], be located in ~ 〜に位置している [2]",normal
-location,"【名】場所、位置 [2]",normal
-lock,"【動】〜に鍵をかける [2], 【名】錠 [2]",normal
-locust,"【名】バッタ [2]",normal
-lodge,"【名】ロッジ、宿泊所 [2]",normal
-log,"【名】丸太 [2]",normal
-logic,"【名】論理、ロジック [2]",normal
-logical,"【形】論理的な [2]",normal
-lonely,"【形】孤独な、寂しい [1]",normal
-long,"【形】長い [1], for a long time 長い間 [1], 【副】長く [2]",bold
-look,"【動】①見る [1], ②〜のように見える [1], look after ~ 〜の世話をする [2], look at ~ 〜を見る [1], look for ~ 〜を探す [1], look forward to ~ 〜を楽しみに待つ [1], look like ~ 〜のように見える [1], look up ~ （辞書などで）〜を調べる [1], 【名】見る事、表情 [2]",bold
-loose,"【形】緩い、ほどけた [2]",normal
-lord,"【名】主、貴族 [2]",normal
-lorry,"【名】トラック〔英国式〕 [2]",normal
-lose,"【動】①〜を失う [1], ②（試合などに）負ける [2], lose one's way 道に迷う [1]",bold
-loss,"【名】損失、喪失 [2]",normal
-lost,"【動】lose の過去形・過去分詞 [1], get lost 道に迷う [1]",bold
-lot,"【名】たくさん [1], a lot 多くのこと、とても [1], a lot of ~ たくさんの〜 [1]",bold
-lotion,"【名】ローション [2]",normal
-loud,"【形】【副】大声の［で］ [1]",bold
-loudly,"【副】大声で、うるさく [1]",normal
-lounge,"【名】ラウンジ、休憩室 [2]",normal
-love,"【動】〜を愛する、大好む [1], 【名】愛、愛情 [1]",bold
-lovely,"【形】すばらしい、愛らしい [1]",bold
-low,"【形】低い [2]",normal
-lower,"【動】〜を下げる [2]",normal
-luck,"【名】運、幸運 [1], Good luck! がんばって！ [1]",bold
-lucky,"【形】幸運な [1], be lucky to ~ 幸運にも〜である [1]",bold
-luggage,"【名】手荷物 [1]",bold
-lumber,"【名】木材 [2]",normal
-lunar,"【形】月の [1]",normal
-lunch,"【名】昼食、ランチ [1], have lunch 昼食をとる [1]",bold
-lunchbox,"【名】弁当箱 [1]",bold
-lung,"【名】肺 [2]",normal
-luxury,"【形】【名】ぜいたく（な） [2]",normal
-machine,"【名】機械 [1]",bold
-mad,"【形】怒った、狂った [2]",normal
-madam,"【名】奥様、マダム [2]",normal
-magazine,"【名】雑誌 [1]",bold
-magic,"【名】【形】魔法（の）、マジック [1]",bold
-magical,"【形】魔法の、魔術的な [1]",bold
-magnet,"【名】磁石 [2]",normal
-magnificent,"【形】壮大な、素晴らしい [2]",normal
-maid,"【名】メイド、召使い [2]",normal
-mail,"【名】郵便（物）、メール [1], 【動】郵便で送る [1]",bold
-mailbox,"【名】郵便受け [1]",bold
-main,"【形】主な、主要な [2]",normal
-mainly,"【副】主に [2]",normal
-maintain,"【動】〜を維持する [2]",normal
-major,"【形】主要な、重大な [2], 【名】専攻 [2]",normal
-majority,"【名】大半、大多数 [2]",normal
-make,"【動】①〜を作る [1], ②〔make + O + C で〕OをCの状態にする [2], ③〔make + 人 + 動詞の原形で〕人に〜させる [2], make a cake ケーキを作る [1], make a choice 選択する [2], make a mistake 間違う [1], make a plan 計画を立てる [2], make friends with ~ 〜と友達になる [1], make sure ~ 確かめる、必ず〜するようにする [2]",bold
-makeup,"【名】化粧、メイク [2]",normal
-malaria,"【名】マラリア [2]",normal
-Malaysia,"【名】マレーシア [1]",bold
-male,"【形】【名】男性の、雄の [2]",normal
-mall,"【名】モール、ショッピングモール [1]",bold
-man,"【名】男、男性、人間 [1]",bold
-manage,"【動】どうにかやりくりする、管理する [2]",normal
-management,"【名】経営、管理 [2]",normal
-manager,"【名】マネージャー、経営者 [2]",normal
-mandarin,"【名】標準中国語、マンダリン [2]",normal
-manner,"【名】マナー、礼儀、方法 [2]",normal
-manual,"【形】【名】手動の、説明書 [2]",normal
-manufacture,"【動】〜を製造する [2]",normal
-manufacturer,"【名】製造業者 [2]",normal
-many,"【形】【代】多くの、多数の [1], a great many 非常に多くの [2], as many as ~ 〜もの数の [2], how many ~ いくつの〜 [1]",bold
-map,"【名】地図 [1]",bold
-marathon,"【名】マラソン [1]",bold
-marble,"【名】大理石、ビー玉 [2]",normal
-march,"【名】3月 [1], 【動】行進する [2]",bold
-margin,"【名】余白、端 [2]",normal
-marine,"【形】海の、海洋の [2]",normal
-mark,"【名】印、記号、点数 [1], 【動】〜に印をつける [1]",bold
-market,"【名】市場、マーケット [1]",bold
-marketing,"【名】マーケティング [2]",normal
-marriage,"【名】結婚 [2]",normal
-marry,"【動】結婚する [1]",bold
-mask,"【名】マスク、仮面 [1]",bold
-mass,"【名】かたまり、大衆 [2]",normal
-massive,"【形】巨大な、大規模な [2]",normal
-master,"【名】主人、名人、修士 [2], 【動】〜を習得する [2]",normal
-mat,"【名】マット、敷物 [2]",normal
-match,"【名】試合、マッチ [1], 【動】調和する、匹敵する [2]",bold
-mate,"【名】仲間、連れ [1]",bold
-material,"【名】材料、生地、資料 [1]",bold
-math,"【名】数学 [1]",bold
-mathematics,"【名】数学 [1]",bold
-matter,"【名】事柄、問題 [2], What's the matter? どうしたのですか。 [1], 【動】重要である [2]",bold
-mature,"【形】成熟した [2]",normal
-maximum,"【形】【名】最大の（もの）、最高 [2]",normal
-may,"【助】①〜かもしれない [1], ②〜してもよい〔許可〕 [2]",bold
-maybe,"【副】もしかすると、たぶん [1]",bold
-mayor,"【名】市長 [2]",normal
-me,"【代】私を、私に [1]",bold
-meal,"【名】食事 [1]",bold
-mean,"【動】〜を意味する、意図する [1], What do you mean? どういう意味ですか。 [1], 【形】意地悪な [2]",bold
-meaning,"【名】意味 [1]",bold
-means,"【名】手段、方法 [2]",normal
-meanwhile,"【副】その間に [2]",normal
-measles,"【名】はしか [2]",normal
-measure,"【動】〜を測定する、測る [2], 【名】測定、手段 [2]",normal
-measurement,"【名】測定、寸法 [2]",normal
-meat,"【名】肉 [1]",bold
-mechanic,"【名】整備士、メカニック [2]",normal
-mechanical,"【形】機械の [2]",normal
-mechanism,"【名】仕組み、メカニズム [2]",normal
-medal,"【名】メダル [1]",bold
-media,"【名】メディア、媒体 [2]",normal
-medical,"【形】医療の、医学の [2]",normal
-medication,"【名】薬、薬剤 [2]",normal
-medicine,"【名】薬、医学 [1]",bold
-medium,"【形】【名】中間の、媒体 [2]",normal
-meet,"【動】①（〜に）会う [1], ②〜を出迎える [2], ③（要求など）を満たす [2], Nice to meet you. はじめまして。 [1]",bold
-meeting,"【名】会議、集まり [1]",bold
-melon,"【名】メロン [1]",bold
-melt,"【動】溶ける、〜を溶かす [2]",normal
-member,"【名】メンバー、一員 [1]",bold
-membership,"【名】会員資格 [2]",normal
-memorial,"【名】【形】記念碑（の）、追悼の [2]",normal
-memory,"【名】記憶、思い出 [1]",bold
-mental,"【形】精神の、知的な [2]",normal
-mention,"【動】〜に言及する、述べる [2]",normal
-menu,"【名】メニュー [1]",bold
-merchant,"【名】商人 [2]",normal
-mercy,"【名】慈悲、情け [2]",normal
-mere,"【形】単なる、ほんの [2]",normal
-merely,"【副】単に、ただ [2]",normal
-merit,"【名】長所、功績 [2]",normal
-merry,"【形】陽気な、楽しい [1], Merry Christmas! メリークリスマス！ [1]",bold
-mess,"【名】散らかった状態、混乱 [2]",message,"【名】メッセージ、伝言 [1]",bold
-messenger,"【名】使者、メッセンジャー [2]",normal
-metal,"【名】【形】金属（製） [2]",normal
-method,"【名】方法、方式 [2]",normal
-mexico,"【名】メキシコ [1]",bold
-microscope,"【名】顕微鏡 [2]",normal
-microwave,"【名】電子レンジ [1]",bold
-midday,"【名】正午、昼 [2]",normal
-middle,"【名】【形】真ん中、中間の [1], in the middle of ~ 〜の真ん中に [1]",bold
-midnight,"【名】真夜中、夜の12時 [1]",bold
-might,"【助】may の過去形、〜かもしれない [2]",normal
-mild,"【形】穏やかな、軽い [2]",normal
-mile,"【名】マイル〔長さの単位〕 [2]",normal
-military,"【形】【名】軍事の、軍隊 [2]",normal
-milk,"【名】牛乳、ミルク [1]",bold
-millennium,"【名】ミレニアム、1000年間 [2]",normal
-million,"【名】【形】100万（の） [1]",bold
-mind,"【名】心、精神、頭脳 [1], Never mind. 気にしないで。 [1], 【動】〜を気にする、嫌がる [2]",bold
-mine,"【代】私のもの [1], 【名】鉱山 [2]",bold
-mineral,"【名】【形】ミネラル、鉱物（の） [2]",normal
-mingle,"【動】混ぜる、交わる [2]",normal
-miniature,"【形】【名】ミニチュアの、ミニチュア [2]",normal
- міні,"【形】ミニの、小型の [2]",normal
-minimum,"【形】【名】最小の（もの）、最低 [2]",normal
-minister,"【名】大臣、聖職者 [2]",normal
-minor,"【形】重要でない、少数の [2]",normal
-minority,"【名】少数派 [2]",normal
-minute,"【名】①分 [1], ②ちょっとの間 [2], Wait a minute. ちょっと待ってください。 [1]",bold
-miracle,"【名】奇跡 [2]",normal
-mirror,"【名】鏡 [1]",bold
-miserable,"【形】惨めな、不幸な [2]",normal
-misery,"【名】惨めさ、不幸 [2]",normal
-misfortune,"【名】不運、不幸 [2]",normal
-miss,"【動】①〜を逃す、乗り遅れる [2], ②〜がいないのを寂しく思う [1], Miss ~ 〜（未婚女性の苗字など） [1]",bold
-missile,"【名】ミサイル [2]",normal
-missing,"【形】行方不明の、見当たらない [2]",normal
-mission,"【名】任務、使命 [2]",normal
-mistake,"【名】間違い、誤り [1], make a mistake 間違う [1], 【動】〜を誤解する [2]",bold
-mix,"【動】〜を混ぜる、混ざる [1]",bold
-mixture,"【名】混合（物） [2]",normal
-mobile,"【形】移動式の、携帯の [1]",bold
-mobile phone,"【名】携帯電話 [1]",bold
-mode,"【名】方式、モード [2]",normal
-model,"【名】モデル、型、模範 [1]",bold
-moderate,"【形】適度な、穏健な [2]",normal
-modern,"【形】現代の、近代的な [1]",bold
-modest,"【形】謙虚な、控えめな [2]",normal
-modification,"【名】修正、変更 [2]",normal
-modify,"【動】〜を修正する、変更する [2]",normal
-moist,"【形】湿った、潤った [2]",normal
-moisture,"【名】水分、湿気 [2]",normal
-molecule,"【名】分子 [2]",normal
-moment,"【名】瞬間、ちょっとの間 [1], for a moment ちょっとの間 [2]",bold
-mom,"【名】お母さん [1]",bold
-moments,"【名】moment の複数形 [2]",normal
-monarch,"【名】君主、国王 [2]",normal
-monastery,"【名】修道院 [2]",normal
-monday,"【名】月曜日 [1]",bold
-money,"【名】お金、金銭 [1]",bold
-monitor,"【名】モニター、監視装置 [2]",normal
-monkey,"【名】サル [1]",bold
-monopoly,"【名】独占 [2]",normal
-monster,"【名】怪物、モンスター [1]",bold
-month,"【名】月、カレンダーの月 [1]",bold
-monument,"【名】記念碑、遺跡 [2]",normal
-mood,"【名】気分、機嫌 [2]",normal
-moon,"【名】月 [1]",bold
-moral,"【形】【名】道徳的な（もの）、教訓 [2]",normal
-morality,"【名】道徳、倫理 [2]",normal
-more,"【代】【副】もっと多くのもの、さらに [1], more than ~ 〜以上 [2], what is more さらに [2]",bold
-moreover,"【副】その上、さらに [2]",normal
-morning,"【名】朝、午前 [1], in the morning 朝に [1]",bold
-mosquito,"【名】蚊 [2]",normal
-most,"【形】【代】【副】最も、大半の [1], most of ~ 〜の大部分 [2]",bold
-mostly,"【副】主に、たいてい [2]",normal
-mother,"【名】母親、母 [1]",bold
-motion,"【名】動き、運動 [2]",normal
-motive,"【名】動機、目的 [2]",normal
-motor,"【名】モーター、発動機 [2]",normal
-motorcycle,"【名】オートバイ、バイク [1]",bold
-mount,"【動】〜を据え付ける、乗る [2]",normal
-mountain,"【名】山 [1]",bold
-mouse,"【名】ネズミ、マウス [1]",bold
-mouth,"【名】口 [1]",bold
-move,"【動】①動く、〜を動かす [1], ②引っ越す [2], ③（人の心）を感動させる [2], 【名】引っ越し、移動 [2]",bold
-movement,"【名】動き、運動 [2]",normal
-movie,"【名】映画 [1]",bold
-movie theater,"【名】映画館 [1]",bold
-moving,"【形】感動的な [1]",bold
-much,"【代】【形】【副】たくさんの、大いに [1], very much とても [1], how much ~ いくらの〜、どれくらいの量 [1]",bold
-mud,"【名】泥 [2]",normal
-muddy,"【形】泥だらけの [2]",normal
-multi-,"複〜、多数の [2]",normal
-multiple,"【形】多様な、複数の [2]",normal
-multiply,"【動】掛ける、増やす [2]",normal
-municipal,"【形】市町村の、自治体の [2]",normal
-murder,"【名】【動】殺人（する） [2]",normal
-muscle,"【名】筋肉 [2]",normal
-museum,"【名】博物館、美術館 [1]",bold
-mushroom,"【名】キノコ [1]",bold
-music,"【名】音楽 [1]",bold
-musical,"【形】音楽の [1], 【名】ミュージカル [1]",bold
-musician,"【名】音楽家、ミュージシャン [1]",bold
-must,"【助】①〜しなければならない [1], ②にちがいない [2], must not ~ 〜してはならない [1]",bold
-mutant,"【名】突然変異体 [2]",normal
-mute,"【形】声が出ない、ミュートの [2]",normal
-mutter,"【動】つぶやく [2]",normal
-mutton,"【名】羊肉 [2]",normal
-mutual,"【形】相互の、共通の [2]",normal
-my,"【代】私の [1]",bold
-myself,"【代】私自身 [1]",bold
-mysterious,"【形】神秘的な、不可解な [2]",normal
-mystery,"【名】神秘、ミステリー [1]",bold
-myth,"【名】神話 [2]",normal
+word,meaning,page,is_bold
+habitat,【名】生息地 16,16,0
+had,【動】haveの過去形、過去分詞 ①,①,0
+hair,【名】髪の毛 ②,②,0
+haircut,【名】散髪 ②,②,0
+half,【形】半分の、2分の1の ② / 【名】半分 ②,② / ②,0
+half a year,半年 ②,②,0
+in half,半分に ②,②,0
+hall,【名】〔ふつう複合語で〕ホール、集会所、会館、事務所 ②,②,0
+★hamburger,【名】ハンバーガー ①,①,1
+★hand,【名】手 ②,②,1
+by hand,手書きで 42,42,0
+join hands,手を組む、手を取り合う 42,42,0
+shake hands,握手する 127,127,0
+hand,【動】～を（手）渡す 42,42,0
+hand ～ out,～を配る、～を手渡す 42,42,0
+handkerchief,【名】ハンカチ 123,123,0
+handout,【名】配布資料、プリント 23,23,0
+hand-powered,【形】手動の (46),(46),0
+handy,【形】使いやすい、便利な 49,49,0
+hang,【動】～をつるす、～を掛ける 124,124,0
+happen,【動】起こる、生じる ②,②,0
+happily,【副】楽しそうに 58,58,0
+happiness,【名】幸せ、喜び 128,128,0
+★happy,【形】①うれしい、幸せな ① / ②〔挨拶の中で〕～おめでとう ①,① / ①,1
+★harbor,【名】港 ②,②,1
+★hard,【副】熱心に、懸命に ① / 【形】①硬い ① / ②難しい、大変な、きつい ① / ③厳しい、つらい ②,① / ① / ① / ②,1
+work hard,懸命に働く［勉強する］ ①,①,0
+be hard on ～,～に厳しく当たる ②,②,0
+harvest,【名】収穫高、収穫物 82,82,0
+has,【動】haveの3人称単数現在形 ①,①,0
+hasn't,has notの短縮形 22,22,0
+★hat,【名】（縁のある）帽子 ①,①,1
+hate,【動】～をひどく嫌う 54,54,0
+★have,【動】①～を受ける ① / ②～を行う、～をする ① / ③～を持っている、～がある ① / ④～を食べる、～を飲む ① / ⑤（病気）にかかっている ① / ⑥（友人・親類など）がいる、～を飼う ① / ⑦～を経験する ② / ⑧～を産む (②),① / ① / ① / ① / ① / ① / ② / (②),1
+have to ～,～しなければならない ②,②,0
+have,【助】〔have + 過去分詞で現在完了形をつくる〕 20,20,0
+haven't,have notの短縮形 22,22,0
+Hawaii,【名】ハワイ 89,89,0
+hay,【名】干し草 ②,②,0
+hay fever,【名】花粉症 ②,②,0
+★he,【代】彼は、彼が ①,①,1
+★head,【名】頭、頭部 ②,②,1
+headache,【名】頭痛 ②,②,0
+heal,【動】～を治す、救う、癒やす 74,74,0
+health,【名】健康、健康状態 44,44,0
+★healthy,【形】健康な、健康によい ②,②,1
+hear,【動】～を聞く、～が聞こえる ①,①,0
+hear of ～,～のことを耳にする 75,75,0
+heard,【動】hearの過去形、過去分詞 ①,①,0
+★heart,【名】心 (113),(113),1
+heartwarming,【形】心温まる 79,79,0
+heavy,【形】①重い ① / ②（程度・量・深刻さなどが）大きい ②,① / ②,0
+held,【動】holdの過去形、過去分詞 126,126,0
+he'll,he willの短縮形 ②,②,0
+★hello,【間】①やあ、こんにちは ① / ②（電話で）もしもし ①,① / ①,1
+helmet,【名】ヘルメット ②,②,0
+★help,【動】①（～を）助ける、手伝う、救う ① / ②～に役立つ、～を促す 12 / 【名】助け、援助、救助 ①,① / 12 / ①,1
+helpful,【形】役立つ、助けになる ②,②,0
+helpless,【形】どうしようもない 58,58,0
+her,【代】彼女の［を、に］ ①,①,0
+herb,【名】ハーブ 126,126,0
+here,【副】ここに、ここで、こちらへ ①,①,0
+here and there,あちこちに ②,②,0
+Here's ～.,ここに～がある。 ①,①,0
+Here we go!,さあ、行こう［始めよう］。 ①,①,0
+Here you are.,さあどうぞ。 ②,②,0
+here,【間】ほら、さあ ① / 【名】ここ ①,① / ①,0
+here's,here isの短縮形 ①,①,0
+★hero,【名】ヒーロー、憧れの的 ①,①,1
+hers,【代】彼女のもの ①,①,0
+herself,【代】彼女自身 (②),(②),0
+he's,①he isの短縮形 ① / ②he hasの短縮形 24,① / 24,0
+hey,【間】おい、ちょっと ②,②,0
+★hi,【間】やあ ①,①,1
+★high,【形】高い ①,①,1
+high school,【名】高校 ②,②,0
+hiking,【名】ハイキング ①,①,0
+hill,【名】①丘、小山 ② / ②坂、坂道 20,② / 20,0
+him,【代】彼を、彼に ①,①,0
+himself,【代】彼自身 (111),(111),0
+his,【代】①彼の、彼のもの ① / ②〔a ～ of his [hers]で〕彼［彼女］の～ 31,① / 31,0
+history,【名】歴史 ①,①,0
+hit,【動】①（ボール）を打つ ① / ②（嵐などが）襲う ②,① / ②,0
+hmm,【間】うむ、ふーむ (①),(①),0
+hobby,【名】趣味 ②,②,0
+hold,【動】（～を）しっかり持つ、抱く ②,②,0
+hold on,しがみつく、つかまる ②,②,0
+holder,【名】入れもの 123,123,0
+hole,【名】穴 92,92,0
+★home,【副】家に［へ］ ①,①,1
+go (straight) home,（まっすぐ）家に帰る ②,②,0
+I'm [We're] home.,ただいま。 ①,①,0
+on the way home,家に帰る途中で ②,②,0
+home,【名】家、自宅、住まい ①,①,0
+at home,家で［に］ ①,①,0
+home,【形】家庭用の ②,②,0
+★home economics,【名】家庭科 ②,②,1
+homesick,【形】ホームシックの 126,126,0
+homestay,【名】ホームステイ 126,126,0
+hometown,【名】故郷 ①,①,0
+★homework,【名】宿題 ①,①,1
+do one's homework,宿題をする ①,①,0
+honest,【形】正直な、誠実な ②、105,②、105,0
+honor,【名】光栄なこと ②,②,0
+What an honor!,なんと光栄なことでしょう。 ②,②,0
+hoodie,【名】フード付きトレーナー ②,②,0
+hope,【動】（～を）望む、（～を）願う ①,①,0
+I hope ～.,～だとよいと思います。 ①,①,0
+I hope you'll like it.,気に入ってくれたらうれしいです。 ②,②,0
+hope,【名】希望、望み 16,16,0
+horn,【名】角 14,14,0
+horror,【名】①恐ろしさ、悲惨さ ②、30 / ②〔しばしば複合語で〕ホラーもの 126,②、30 / 126,0
+to one's horror,ぞっとしたことには ②,②,0
+★horse,【名】馬 126,126,1
+★hospital,【名】病院 ①,①,1
+hospitality,【名】親切なもてなし 102,102,0
+host,【動】～をもてなす ②,②,0
+★hot,【形】①暑い、熱い ① / ②辛い ②,① / ②,1
+hotel,【名】ホテル ②、22,②、22,0
+hot spring,【名】温泉 ②,②,0
+hour,【名】時間 ②,②,0
+★house,【名】家 ①,①,1
+housework,【名】家事 68,68,0
+★how,【副】①〔状態〕どんなふうに ① / ②〔程度〕どれほど、どれくらい ① / ③〔方法・手段〕どのようにして ① / ④〔感嘆〕なんと、いかに ①,① / ① / ① / ①,1
+Could you tell me how to ～?,～のしかたを教えていただけますか。 60,60,0
+How about ～?,～はどうですか。 ①,①,0
+How are you (doing)?,お元気ですか。 ①,①,0
+How's everything?,調子はどうですか。 ①,①,0
+how to ～,～する方法 ②,②,0
+however,【副】しかしながら 16,16,0
+how's,how isの短縮形 ①,①,0
+hug,【動】抱きしめる 127,127,0
+human,【名】【形】人間［人類］（の） 14,14,0
+human-like,【形】人型の (56),(56),0
+human rights,【名】人権 127,127,0
+★hundred,【名】【形】100（の） ①,①,1
+hunger,【名】飢餓 127,127,0
+★hungry,【形】空腹の、腹ぺこの ①,①,1
+hunt,【名】狩り、捜索 (巻頭3),(巻頭3),0
+hunter,【名】猟師 ①,①,0
+hunting,【名】①探求、捜索 ② / ②狩り 16,② / 16,0
+hurricane,【名】ハリケーン (46),(46),0
+hurry,【動】急ぐ 22,22,0
+Hurry up.,急いで。 22,22,0
+hurt,【動】①痛む、痛い ② / ②～にけがをさせる、～を痛める 74,② / 74,0
+hurt,【動】hurtの過去形、過去分詞 74,74,0
+husband,【名】夫 122,122,0
+hut,【名】小屋 (106),(106),0
+★I,【代】私は、私が ①,①,1
+★ice,【名】氷 (144),(144),1
+★ice cream,【名】アイスクリーム ①,①,1
+★ice hockey,【名】アイスホッケー ②,②,1
+★ice skating,【名】アイススケート ②,②,1
+I'd,I wouldの短縮形 ①,①,0
+idea,【名】考え、思いつき ①,①,0
+have no idea,全然わからない ①,①,0
+if,【接】もし～ならば ②,②,0
+as if ～,まるで～であるかのように 93,93,0
+if necessary,もし必要であれば (②),(②),0
+I'll,I willの短縮形 ②,②,0
+illegal,【形】違法の、不法の 14,14,0
+illness,【名】病気 57,57,0
+illustrator,【名】イラストレーター 125,125,0
+I'm,I amの短縮形 ①,①,0
+imagine,【動】～を想像する 56,56,0
+imperfect,【形】不完全な 58,58,0
+importance,【名】重要性 (46)、58,(46)、58,0
+important,【形】重要な、大切な ②,②,0
+impossible,【形】不可能な 128,128,0
+impress,【動】～に感動［感銘］を与える ②,②,0
+I was impressed.,感動しました。 64,64,0
+impressive,【形】印象的な ②,②,0
+improve,【動】～を向上させる、～を改善する ②,②,0
+★in,【前】①〔期間〕～の間に、～で ① / ②〔場所〕～に、～で、～の中に［で］ ① / ③〔範囲・分野・限定〕～に関して ① / ④〔手段・素材〕～で、～を使って ① / ⑤〔状態・状況〕～の場合には ① / ⑥〔着用〕～を身につけて ① / ⑦〔形状・配置〕～になって ② / ⑧〔部類〕～のうちの、～の中で ② / ⑨〔期間の終点〕～で、（今から）～の後に ②,① / ① / ① / ① / ① / ① / ② / ② / ②,1
+in ～ minute(s),あと～分で ②,②,0
+in,【副】①中へ、中に ① / ②書き入れて ①,① / ①,0
+include,【動】～を含む ②,②,0
+income,【名】収入 62,62,0
+increase,【動】増える 15,15,0
+indeed,【副】本当に、確かに 105,105,0
+★India,【名】インド ①,①,1
+indoors,【副】屋内で、家の中で ①,①,0
+industrial arts,【名】〔教科としての〕技術、工芸 ②,②,0
+industry,【名】産業 127,127,0
+inequality,【名】不平等 127,127,0
+infant,【名】幼児 122,122,0
+infection,【名】感染症 ②,②,0
+information,【名】情報 ①,①,0
+infrastructure,【名】社会基盤、インフラ 127,127,0
+injured,【形】傷ついた (139),(139),0
+injury,【名】負傷、けが 56,56,0
+★ink,【名】インク ①,①,1
+innocent,【形】無実の、無罪の (110),(110),0
+innovation,【名】革新 (②)、127,(②)、127,0
+insert,【動】～を差し込む、挿入する 60,60,0
+inside,【副】内側に、内部に ①,①,0
+inspiration,【名】鼓舞、刺激 36,36,0
+inspire,【動】①～を感激させる、～を奮い立たせる、～を鼓舞する ② / ②～の着想をもたらす ②,② / ②,0
+inspiring,【形】鼓舞［触発］する 128,128,0
+instant,【形】即席の、インスタントの 124,124,0
+instead,【副】その代わりに (②)、68,(②)、68,0
+instead of ～,～の代わりに (②)、68,(②)、68,0
+institution,【名】制度 127,127,0
+instrument,【名】楽器 ①,①,0
+★integrated study,【名】総合的な学習〔教科〕 ②,②,1
+interest,【動】～に興味をもたせる 66,66,0
+★interested,【形】興味［関心］をもっている ①,①,1
+be interested in ～,～に興味をもっている ①,①,0
+★interesting,【形】興味を引き起こす、おもしろい ①,①,1
+international,【形】国際的な ②,②,0
+internet,【名】インターネット 10,10,0
+interpreter,【名】通訳 ②,②,0
+interruption,【名】停止 ②,②,0
+interviewer,【名】インタビュアー 125,125,0
+into,【前】～の中へ［に］ ②,②,0
+introduce,【動】①～を紹介する ① / ②～を導入する ②,① / ②,0
+introduce ～ to ...,①～を…に導入する ② / ②～を…に紹介する 10,② / 10,0
+invent,【動】～を創り出す、発明する ②,②,0
+invite,【動】～を招く ②,②,0
+iron,【動】～にアイロンをかける ②,②,0
+★is,【動】①～である、～だ ① / ②（～に）ある［いる］ ① / 【助】①〔is + -ingで現在進行形の文をつくる〕～している、～するつもりである ① / ②〔is + 過去分詞で受け身の文をつくる〕～される、～されている ②,① / ① / ① / ②,1
+★island,【名】島 ②,②,1
+isn't,is notの短縮形 ①,①,0
+Israeli,【形】イスラエルの (43),(43),0
+issue,【動】～を発行する 41 / 【名】（社会的な）問題 82,41 / 82,0
+★it,【代】①それは［が］ ① / ②それを［に］ ① / ③〔天候・時間・距離・寒暖などを表す文の主語として〕 ① / ④〔電話で名乗ったりするときなど〕 ① / ⑤〔漠然と状況・事情を示して〕 ② / ⑥〔形式上の主語として〕〔実質上の主語が後ろにくる〕 ②,① / ① / ① / ① / ② / ②,1
+★Italy,【名】イタリア ①,①,1
+itch,【動】かゆい ②,②,0
+item,【名】品物、品目 ②,②,0
+it'll,it willの短縮形 ②,②,0
+its,【代】その、それの ①,①,0
+it's,①it isの短縮形 ① / ②it hasの短縮形 38,① / 38,0
+itself,【代】それ自身 56,56,0
+I've,I haveの短縮形 21,21,0
+jacket,【名】上着 123,123,0
+jail,【名】刑務所、監獄 (110),(110),0
+★jam,【名】ジャム ①,①,1
+★January,【名】1月 ①,①,1
+★Japan,【名】日本 ①,①,1
+★Japanese,【名】【形】①国語（の）、日本語（の） ① / ②日本（の）、日本人（の） ①,① / ①,1
+どのような～ですか。,①,①,0
+★kind,【形】親切な、思いやりのある ①,①,1
+kindergarten,【名】幼稚園 94,94,0
+kindness,【名】思いやり 128,128,0
+★king,【名】王、国王 ①,①,1
+kit,【名】用具一式、セット ②,②,0
+kitchen,【名】台所、キッチン ①,①,0
+kite,【名】たこ ①,①,0
+knee,【名】ひざ ②,②,0
+knew,【動】knowの過去形 (②)、41,(②)、41,0
+knife,【名】ナイフ ①,①,0
+knit,【動】～を編む、編み物をする ②,②,0
+knock,【動】（ドアなどを）ノックする 127,127,0
+know,【動】①（～を）知る、わかっている ① / ②～と知り合いである ②,① / ②,0
+get to know ～,～と知り合いになる 66,66,0
+I didn't know that.,それは知りませんでした。 ①,①,0
+I don't know.,わかりません。 ①,①,0
+I know.,そうですよね。 ②,②,0
+you know,ほらあの、ねえ ②,②,0
+knowledge,【名】知識 128,128,0
+known,【動】knowの過去分詞 31,31,0
+koala,【名】コアラ 126,126,0
+★Korea,【名】韓国 ①,①,1
+Korean,【形】韓国の 63,63,0
+lab,【名】実験室〔= laboratory〕 ①,①,0
+ladder,【名】はしご ①,①,0
+★lake,【名】湖 ①,①,1
+lamp,【名】ランプ (46)、123,(46)、123,0
+land,【名】土地、国土、陸地 (②)、82 / 【動】到着する 99,(②)、82 / 99,0
+language,【名】言語 ②,②,0
+lantern,【名】ちょうちん ①,①,0
+large,【形】①大きい、広い ② / ②多い、多数の、多量の 68,② / 68,0
+last,【形】①この前の、昨～、先～ ① / ②最後の ② / 【副】最後に、最近 (121),① / ② / (121),0
+late,【副】（平常・定刻より）遅く ① / 【形】遅れた、遅い ①,① / ①,0
+lately,【副】最近、近頃 48,48,0
+later,【副】後で、のちほど ①,①,0
+laugh,【動】笑う 102,102,0
+laughter,【名】笑い（声） 128,128,0
+laundry,【名】洗濯（物） ②,②,0
+law,【名】法則 (113),(113),0
+lawyer,【名】弁護士、法律家 ①,①,0
+lazy,【形】怠惰な、だらしない ①,①,0
+lead,【動】～を導く ②,②,0
+lead to ～,～につながる (②)、66,(②)、66,0
+leader,【名】リーダー、指導者 (②、106),(②、106),0
+learn,【動】（～を）習う、学ぶ ②,②,0
+learn to ～,～できるようになる ②,②,0
+learner,【名】学習者 122,122,0
+★leave,【動】①（～を）去る、離れる ① / ②～をあとに残す、～を置き忘れる ② / ③出発する (②)、22,① / ② / (②)、22,1
+leave out ～,～を省く、入れない (132),(132),0
+led,【動】leadの過去形、過去分詞 (110),(110),0
+leek,【名】長ネギ ②,②,0
+★left,【名】左 ①,①,1
+★left,【動】leaveの過去形、過去分詞 ①、22,①、22,1
+★leg,【名】脚 ①,①,1
+★lemon,【名】レモン ①,①,1
+lend,【動】～を貸す ②,②,0
+lent,【動】lendの過去形、過去分詞 ②,②,0
+less,【副】（～より）少なく 15,15,0
+less than ～,～より少ない 15,15,0
+lesson,【名】授業 ①,①,0
+take a lesson,授業を受ける、教わる ①,①,0
+★let,【動】～させる ①,①,1
+Let me see.,〔Let's see.〕ええっと。 ①,①,0
+★let's,let usの短縮形 ①,①,1
+Let's ～.,～しよう。 ①,①,0
+letter,【名】①文字 ② / ②手紙 98,② / 98,0
+liberty,【名】自由 ②,②,0
+librarian,【名】司書 ②,②,0
+★library,【名】図書館 ①,①,1
+lie,【動】横になる、横たわる ②,②,0
+lie down,横になる ②,②,0
+life,【名】①生活 ① / ②一生、生涯、人生 ① / ③命、生きている状態 ②,① / ① / ②,0
+light,【形】軽い ①,①,0
+light,【名】①照明、明かり ② / ②光 (111) / 【形】明るい、（色が）薄い、淡い ②,② / (111) / ②,0
+lightning,【名】雷の光、稲妻 ②,②,0
+★like,【動】～が好きである、～を好む ①,①,1
+I'd like ～(, please).,～がほしいです。 ①,①,0
+I'd like to ～.,～したいです。 ②,②,0
+like,【前】①～に似た、～のような ① / ②～と同じように 52,① / 52,0
+like that,あんなふうな［に］ 24,24,0
+What is ～ like?,～はどういう様子か。 ①,①,0
+lime,【名】ライム ②,②,0
+limit,【名】限界 ②,②,0
+line,【名】①（鉄道の）線路、路線 ② / ②せりふ ② / ③列、行列 33,② / ② / 33,0
+blow one's lines,せりふを忘れる ②,②,0
+in line,列になって、並んで 33,33,0
+★lion,【名】ライオン ①,①,1
+list,【名】リスト、一覧表 ②,②,0
+★listen,【動】聞く、耳を傾ける ①,①,1
+listen to ～,～を聞く ①,①,0
+Lithuania,【名】リトアニア 40,40,0
+litter,【動】ごみ［くず］を散らかす ②,②,0
+little,【副】〔a littleで〕少しは、多少 ① / 【形】①〔a little ～で〕少しの～ ① / ②小さい、年少の、若い ② / ③ほとんどない 62 / 【代】〔否定的に〕わずかしかないもの (②),① / ① / ② / 62 / (②),0
+★live,【動】①住む、住んでいる ① / ②暮らす、生活する ② / ③生きる 14,① / ② / 14,1
+live,【形】生の、ライブの 57,57,0
+lives,【名】lifeの複数形 ②,②,0
+living room,【名】居間 ②,②,0
+living thing,【名】生物 14,14,0
+local,【形】その土地の、地元の ②,②,0
+locally,【副】地元で、近所で 82,82,0
+location,【名】場所、位置 ②,②,0
+lock,【動】～に鍵をかける ①,①,0
+locker,【名】ロッカー 123,123,0
+London,【名】ロンドン〔英国の首都〕 76,76,0
+lonely,【形】ひとりぼっちの、孤独な 88,88,0
+★long,【形】（時間・物・距離が）長い ①,①,1
+How long ～?,どれくらいの（時間［期間］）～ですか。 ①、30,①、30,0
+★look,【動】①見る ① / ②～に見える ①,① / ①,1
+look at ～,～を見る ①,①,0
+look for ～,～をさがす ①,①,0
+look like ～,～のように見える (②),(②),0
+look up ～,～を調べる ②,②,0
+look,【名】見ること、一目 (①),(①),0
+lose,【動】①～を失う、～をなくす ② / ②～で負ける ②,② / ②,0
+lost,【形】①道に迷った ① / ②途方に暮れた、不安な 99 / 【動】loseの過去形、過去分詞 ②,① / 99 / ②,0
+★lot,【名】①〔a lotで〕たくさんのこと［もの］ ① / ②〔a lotで副詞的に〕よく、大いに ①,① / ①,1
+a lot of ～ [lots of ～],たくさんの～ ①,①,0
+lot,【名】（小さな）土地、敷地 ②,②,0
+loud,【形】（音が）大きい、うるさい ①,①,0
+loudly,【副】大声で 127,127,0
+★love,【動】①～が大好きである ① / ②～を大切に思っている (②) / 【名】①〔親しい人への手紙などの結び〕 ① / ②愛情、いつくしみ ②,① / (②) / ① / ②,1
+lovely,【形】すてきな、すばらしい 128,128,0
+low,【形】低い ②、62,②、62,0
+★luck,【名】幸運、つき ①,①,1
+Good luck!,成功を祈ります。 ①,①,0
+lucky,【形】運のよい、幸運な ①,①,0
+Lucky you!,ついてるね。運がいいね。 ①,①,0
+★lunch,【名】昼食、ランチ ①,①,1
+machine,【名】機械 35,35,0
+★made,【動】makeの過去形、過去分詞 ②,②,1
+magazine,【名】雑誌 ①,①,0
+magic,【形】魔法の 53,53,0
+magician,【名】手品師 73,73,0
+magic trick,【名】手品 73,73,0
+magnet,【名】磁石、マグネット ②,②,0
+main,【形】主な、主要な ①,①,0
+mainly,【副】主に 62,62,0
+maintain,【動】～を保つ 57,57,0
+majority,【名】多数派 127,127,0
+★make,【動】①（物）を作る ① / ②～を得る、（友達など）を作る ① / ③～をする、～を行う ② / ④～になる ② / ⑤～を…にする ② / ⑥〔make+人・もの+動詞の原形で〕（人・ものに）～させる 53,① / ① / ② / ② / ② / 53,1
+make ～ from ...,…から～を作る〔材料が元の形状をとどめない場合〕 11,11,0
+make ～ of ...,…で～を作る〔見た目に元の材料がすぐわかる場合〕 ②,②,0
+make up,仲直りする ②,②,0
+Malay,【形】マレー半島［人］の ②,②,0
+Mali,【名】マリ 69,69,0
+man,【名】①男性 ② / ②人 (113),② / (113),0
+manage,【動】～を運営する ②,②,0
+manual,【名】マニュアル、手引書 82,82,0
+★many,【形】たくさんの、多数の ①,①,1
+How many ～?,いくつの～ですか。 ①,①,0
+map,【名】地図 ①,①,0
+marathon,【名】マラソン ①,①,0
+★March,【名】3月 ①,①,1
+marker,【名】マーカー、フェルトペン ①,①,0
+★market,【名】市場 ①,①,1
+marriage,【名】結婚 68,68,0
+marry,【動】結婚する 68,68,0
+mask,【名】マスク 123,123,0
+mat,【名】（体操などの）マット 13,13,0
+match,【名】試合 ①,①,0
+★math,【名】数学 ①,①,1
+matter,【名】事柄、問題、事件 ②,②,0
+What's the matter?,どうしましたか。 ②,②,0
+★May,【名】5月 ①,①,1
+may,【助】①～してよい ① / ②～かもしれない ②,① / ②,0
+May I ～?,～してもよろしいですか。 ②,②,0
+maybe,【副】もしかしたら、～かな ①,①,0
+★me,【代】私を［に］ ①,①,1
+meal,【名】食事 128,128,0
+mean,【動】①～を意味する ② / ②～を言おうとする、～するつもり ②,② / ②,0
+I didn't mean it.,そういうつもりではなかったんだ。 ②,②,0
+meaning,【名】意味 ②,②,0
+★meat,【名】肉 ①,①,1
+medicine,【名】薬 94,94,0
+★meet,【動】（～に）会う、（～と）知り合う ①,①,1
+Nice to meet you.,初めまして。よろしく。 ①,①,0
+★melon,【名】メロン ①,①,1
+melt,【動】溶ける (②),(②),0
+member,【名】メンバー、一員 ①,①,0
+memo,【名】メモ (①),(①),0
+memo pad,【名】メモ帳 123,123,0
+memorable,【形】記憶すべき、記憶に残る、忘れられない 66,66,0
+★memory,【名】思い出 ②,②,1
+men,【名】manの複数形 122,122,0
+menu,【名】メニュー、献立表 ②,②,0
+merry,【形】楽しい 128,128,0
+mess,【名】散らかしたもの［状態］ 94,94,0
+message,【名】メッセージ ①,①,0
+message board,【名】伝言板 ②,②,0
+met,【動】meetの過去形、過去分詞 ②,②,0
+microphone,【名】マイク 57,57,0
+microwave,【名】電子レンジ 124,124,0
+middle,【名】中頃、中間 (113),(113),0
+by the middle of ～,～の半ばまでに (113),(113),0
+midterm,【形】中間の ②,②,0
+might,【助】～かもしれない ②,②,0
+★milk,【名】牛乳、ミルク ①,①,1
+mill,【名】（製糸）工場 ②,②,0
+million,【名】【形】100万（の） 69,69,0
+min.,【略】～分〔minute(s)の略〕 ①,①,0
+mind,【動】～を気にする ② / 【名】心、精神 (②),② / (②),0
+keep ～ in mind,～を心に留めておく (②),(②),0
+mine,【代】私のもの ①,①,0
+minority,【名】少数派 127,127,0
+minute,【名】①（時間の）分 ① / ②〔ふつうa ～で〕ちょっとの間 22,① / 22,0
+mirror,【名】鏡 123,123,0
+miss,【動】①～を逃す、～を見落とす ① / ②～がいないのを寂しく思う ①,① / ①,0
+mission,【名】任務、使命 30,30,0
+mistake,【名】間違い (①)、128,(①)、128,0
+mix,【動】～を混ぜる ①,①,0
+mixture,【名】入り混じったもの ②,②,0
+mm,【間】うむ、ええと ②,②,0
+mobile phone,【名】携帯電話 ②,②,0
+model,【名】モデル ①,①,0
+modern,【形】現代の ②,②,0
+mom,【名】お母さん、ママ ①,①,0
+moment,【名】瞬間 (②、111)、128,(②、111)、128,0
+at that moment,ちょうどそのとき (111),(111),0
+Mon.,【略】月曜日〔Mondayの略〕 ①,①,0
+★Monday,【名】月曜日 ①,①,1
+money,【名】お金 ②、36,②、36,0
+monitor,【動】～を監視する 14,14,0
+month,【名】（暦の）月 ①,①,0
+monument,【名】記念碑 29,29,0
+moon,【名】月 ②,②,0
+mop,【名】モップ ①,①,0
+moral,【形】道徳の、道徳的な ②,②,0
+★moral education,【名】〔教科としての〕道徳 ②,②,1
+more,【形】より多い、より多量の ① / 【副】①もっと、さらに ② / ②〔比較級をつくる〕（～より）もっと ②,① / ② / ②,0
+more and more,ますます多くの 56,56,0
+more than ～,～よりも多い ②,②,0
+★morning,【名】朝、午前（中） ①,①,1
+mosque,【名】モスク、イスラム教寺院 ②,②,0
+most,【形】①〔最上級をつくる〕最も ② / ②最も多く、いちばん 37,② / 37,0
+★mother,【名】母親 ①,①,1
+★mountain,【名】山 ①,①,1
+★mouse,【名】ネズミ ①,①,1
+★mouth,【名】口 ②,②,1
+move,【動】①動く、移動する、引っ越す ② / ②～を感動させる (②) / ③～を動かす 57,② / (②) / 57,0
+move to ～,～に引っ越す 44,44,0
+movement,【名】①動き 57 / ②（政治的・社会的）運動 (110),57 / (110),0
+movie,【名】映画 ①,①,0
+★Mr.,【名】〔男性の姓・姓名の前で〕～さん、～先生 ①,①,1
+Mrs.,【名】〔既婚女性の姓・姓名の前で〕～さん、～先生 ①,①,0
+★Ms.,【名】〔女性の姓・姓名の前で〕～さん、～先生 ①,①,1
+Mt.,【略】～山〔Mountの略〕 ②,②,0
+★much,【副】非常に、とても ①,①,1
+so much,とても、すごく、本当に ①,①,0
+much,【代】たくさん、多量、多額 ①,①,0
+How much ～?,～はいくらですか。どのくらい～ですか。 ①,①,0
+much,【形】たくさんの、多くの、多量の ②,②,0
+mud,【名】泥、ぬかるみ 12,12,0
+mug,【名】マグカップ ②,②,0
+★museum,【名】博物館 ①,①,1
+★mushroom,【名】キノコ ①,①,1
+★music,【名】音楽 ①,①,1
+musical,【名】ミュージカル ②,②,0
+musician,【名】ミュージシャン ①,①,0
+Muslim,【名】【形】イスラム教徒（の） ②,②,0
+must,【助】①～しなければならない、すべきである ② / ②〔must not ～で〕～してはいけない ②,② / ②,0
+mustn't,must notの短縮形 ②,②,0
+★my,【代】私の ①,①,1
+myself,【代】私自身 ②,②,0
+mysterious,【形】謎めいた ①,①,0
+mystery,【名】推理もの（の） 124,124,0
+nail,【名】爪 ②,②,0
+★name,【名】名前 ①,①,1
+nap,【名】昼寝、うたた寝 ①,①,0
+narrator,【名】語り手 ②,②,0
+narrow,【形】幅が狭い 128,128,0
+nation,【名】国、国家 10,10,0
+national,【形】国立の 10,10,0
+native,【形】①その土地に生まれた (②) / ②原産の、自生の 82,(②) / 82,0
+natural,【形】自然の ②,②,0
+★nature,【名】自然 ②,②,1
+nature reserve,【名】自然保護区 82,82,0
+near,【前】～の近くに ①,①,0
+near here,この近くに［で］ 12,12,0
+near there,その近くに［で］ ②,②,0
+near,【形】近い 48 / 【副】近くに、接近して (112),48 / (112),0
+necessary,【形】必要な ②,②,0
+neck,【名】首 ②,②,0
+necklace,【名】ネックレス 123,123,0
+need,【動】①～を必要とする ① / ②〔need to ～で〕～する必要がある ②,① / ②,0
+need,【名】必要、必要性 ②,②,0
+in need,困って、必要で 105,105,0
+needy,【形】①非常に貧しい 94 / ②〔the ～で〕貧しい人々 94,94 / 94,0
+negative,【形】後ろ向きな ②,②,0
+neighbor,【名】近所の人、隣人 ①,①,0
+neither,【副】～もまた…（し）ない 93,93,0
+Me、 neither.,〔否定の後で〕私も。 98,98,0
+nephew,【名】おい 122,122,0
+nerve,【名】ずうずうしさ ②,②,0
+nervous,【形】不安で、緊張して ①,①,0
+★net,【名】網、ネット ①,①,1
+★never,【副】決して［一度も］～しない ①,①,1
+★new,【形】新しい、新入りの ①,①,1
+news,【名】①ニュース、報道 16 / ②（個人的な）知らせ、情報 76,16 / 76,0
+newsletter,【名】ニュースレター (①),(①),0
+★newspaper,【名】新聞 ①,①,1
+New Year,【名】新年、正月 ①,①,0
+Happy New Year.,新年おめでとう。 ①,①,0
+New Year's Day,【名】元日 ①,①,0
+New Year's Eve,【名】大みそか ①,①,0
+New York,【名】ニューヨーク ①,①,0
+★New Zealand,【名】ニュージーランド 82,82,1
+next,【形】①（場所が）隣の ① / ②（時間・順序などが）次の、来～ ①,① / ①,0
+next to ～,～の隣に［の］ ①,①,0
+★nice,【形】すばらしい、すてきな、よい ①,①,1
+niece,【名】めい 122,122,0
+Niger,【名】ニジェール 69,69,0
+★night,【名】夜 ①,①,1
+last night,昨夜 ①,①,0
+★nine,【名】【形】9（つの） ①,①,1
+★nineteen,【名】【形】19（の） ①,①,1
+★ninety,【名】【形】90（の） ①,①,1
+ninth,【名】【形】9日（日付）、9番目の ①,①,0
+★no,【間】①いいえ、いや ① / ②〔驚きなどを表して〕まさか ①,① / ①,1
+no longer,もはや～ない 16,16,0
+Oh、 no.,まさか。ひどい。 ①,①,0
+no,【形】①〔文否定〕少しの～もない ① / ②〔語否定〕～のない ② / ③決して～ではない、～どころではない 24,① / ② / 24,0
+No. / no.,【略】～番〔numberの略〕 ①,①,0
+nobody,【代】誰も～ない (②)、107,(②)、107,0
+noisy,【形】騒がしい ②,②,0
+non-,非～ (84),(84),0
+nonfiction,【名】【形】ノンフィクション（作品）（の） 126,126,0
+★noodle,【名】〔ふつう～sで〕麺類 ①,①,1
+noon,【名】正午 ①,①,0
+at noon,正午に ①,①,0
+normal,【形】標準の、ふつうの ②,②,0
+north,【名】【形】北（の） ②,②,0
+northern,【形】北の、北部の ②、94,②、94,0
+Norway,【名】ノルウェー (106),(106),0
+★nose,【名】鼻 ②,②,1
+★not,【副】～（で）ない、～（し）ない ①,①,1
+not ～ very much,そんなに～でない ①,①,0
+★notebook,【名】ノート ①,①,1
+nothing,【代】何も～ない ①,①,0
+notice,【動】～に気づく 58,58,0
+novel,【名】小説 ②,②,0
+★November,【名】11月 ①,①,1
+★now,【副】①今（では）、現在（では） ① / ②さて、さあ ① / ③今度は ② / ④今すぐ、今から ②,① / ① / ② / ②,1
+right now,①ちょうど今 ① / ②すぐに ②,① / ②,0
+now,【名】今、目下 ②,②,0
+for now,今のところ ②,②,0
+★number,【名】番号、～番 ①,①,1
+★nurse,【名】看護師 ①,①,1
+nurse's office,保健室 ①,①,0
+nursery school,【名】保育園 ②,②,0
+nursery school teacher,保育士 ②,②,0
+★nut,【名】木の実、ナッツ ①,①,1
+NY,【略】ニューヨーク〔New Yorkの略〕 ①,①,0
+occur,【動】起こる、生じる ②,②,0
+Oceania,【名】オセアニア (84),(84),0
+o'clock,【副】～時 ①,①,0
+★October,【名】10月 ①,①,1
+★octopus,【名】タコ ①,①,1
+★of,【前】①〔限定〕～の ① / ②〔種類・分量〕～の種類［量］の… ① / ③〔所属・所有〕～の ① / ④〔関連〕～について (①) / ⑤〔目的語〕～を ② / ⑥〔部分〕～の中の ② / ⑦〔材料・構成要素〕～でできている ② / ⑧〔同格〕～という 20,① / ① / ① / (①) / ② / ② / ② / 20,1
+off,【副】①割り引いて、差し引いて ① / ②外れて、取れて、降りて ② / 【前】～から 22,① / ② / 22,0
+offer,【名】申し入れ、提案 ②,②,0
+★office,【名】仕事部屋、オフィス、会社 ①,①,1
+office worker,【名】会社員 ②,②,0
+official,【形】公式の、公の 10,10,0
+officially,【副】公式に、正式に (110),(110),0
+often,【副】よく、たびたび、しばしば ①,①,0
+★oh,【間】ああ、まあ ①,①,1
+★OK,【間】①〔会話の切り出し・話題転換〕それでは、じゃあ ① / ②〔同意・許可〕はい、いいですよ ① / ③〔理解を確かめて〕いいですか ① / ④〔一応の理解を示して〕わかったよ ① / 【形】①健康な、元気な、無事な ① / ②大丈夫な、よろしい ②,① / ① / ① / ① / ① / ②,1
+Are you OK?,大丈夫ですか。 ①,①,0
+okay,【形】【間】よい、大丈夫な〔= OK〕 ②、59,②、59,0
+★old,【形】①（年齢が）～歳の ① / ②古い ① / ③年をとった 34,① / ① / 34,1
+get older,年を取る 34,34,0
+～ year(s) old,～歳 ①,①,0
+★omelet,【名】オムレツ ①,①,1
+★on,【前】①〔日・時〕～に ① / ②〔表面に接して〕～の上に［の］ ① / ③〔器具・交通〕～で、～を使って ① / ④〔位置・場所〕～で、～に、～の側に ① / ⑤〔状態〕～の状態で、～して、～中 ② / ⑥〔目的・用件〕～で、～に従事して ② / ⑦〔根拠・依存〕～に基づいて ② / ⑧〔対象〕～に対して ② / ⑨〔付着〕～に（くっついて） ② / ⑩〔関連〕～に関して、～について 82 / 【副】①（電気が）ついて、通じて ① / ②〔継続〕続けて、ずっと (①) / ③〔付着〕離れずに、くっついて ② / ④〔所持・着用〕身につけて 35 / 【形】（俳優が）舞台に出ていて ②,① / ① / ① / ① / ② / ② / ② / ② / ② / 82 / ① / (①) / ② / 35 / ②,1
+We're on in five minutes.,あと5分で出番だ。 ②,②,0
+once,【副】①一度、1回 25 / ②かつて、以前 93,25 / 93,0
+★one,【名】【形】1（つの［人の］） ① / 【代】（～な）もの、（～な）1つ［1人］ ①,① / ①,1
+one of ～,～のうちの1つ、1人 ②,②,0
+one,【形】（未来または過去の）ある～ ②,②,0
+★onion,【名】タマネギ ①,①,1
+online,【形】【副】オンラインの［で］ ②,②,0
+only,【副】ただ～だけ、ほんの ①,①,0
+not only ～、 but also ...,～ばかりでなく…も、～どころか… 102,102,0
+oops,【間】あっ、しまった (①),(①),0
+open,【形】①開いた、公開の ① / ②広々とした ② / ③進んで受け入れる 66 / 【動】～を開く ②,① / ② / 66 / ②,0
+opening,【形】開始の、最初の ① / 【名】①冒頭部分、導入 ② / ②開けること (107),① / ② / (107),0
+opinion,【名】意見、考え ①,①,0
+in my opinion,私の考えでは 50,50,0
+opportunity,【名】好機、機会 128,128,0
+or,【接】～か… ①,①,0
+★orange,【名】【形】オレンジ色（の） ① / 【名】オレンジ〔果物〕 ①,① / ①,1
+order,【動】①（～を）注文する ② / ②（～を）命令する、指示する (109) / 【名】注文 ②,② / (109) / ②,0
+organizer,【名】組織の設立者、主催者 93,93,0
+original,【形】独創的な、独自の ②,②,0
+other,【形】①別の、他の ② / ②〔ふつうthe ～で〕（2つのうち）もう一方の、〔the ～sで〕（3つ以上のうち）その他全ての 52,② / 52,0
+on the other hand,一方で、他方では 52,52,0
+other,【代】①他のもの［人］ ② / ②〔ふつうthe ～で〕もう一方のもの［人］、〔the ～sで〕その他全てのもの［人］ ②,② / ②,0
+★our,【代】私たちの ①,①,1
+ours,【代】私たちのもの ①,①,0
+ourselves,【代】私たち自身 ②,②,0
+★out,【副】①外へ（出て） ① / ②最後まですっかり、完全に ② / ③大声で、はっきりと (110),① / ② / (110),1
+outage,【名】供給停止期間 ②,②,0
+outdoors,【副】戸外で ②,②,0
+outside,【前】～の外で ② / 【副】外に ②、40,② / ②、40,0
+over,【副】越えて、向こう側へ ①,①,0
+over here,こちらに ①,①,0
+over there,あそこに、あちらに ②,②,0
+over,【前】①～より多く、～より上で ① / ②～じゅうを、～の方々に ② / ③～しながら、～を飲み［食べ］ながら (106),① / ② / (106),0
+all over ～,～じゅうで ②,②,0
+overworked,【形】働きすぎの ②,②,0
+own,【形】①自分自身の ① / ②〔代名詞的に〕自分自身のもの 36 / 【動】～を所有する、～の所有権をもつ (109),① / 36 / (109),0
+owner,【名】所有者、オーナー ②,②,0
+ozone layer,【名】〔theを付けて〕オゾン層 (92),(92),0
+pack,【動】（～を）詰める、荷造りする ②,②,0
+paid,【動】payの過去形、過去分詞 (113),(113),0
+pain,【名】苦痛、苦しみ、痛み 36,36,0
+paint,【動】①～に（ペンキなどを）塗る (②) / ②（絵の具で・筆などで）（絵）を描く ②、33 / 【名】ペンキ (111),(②) / ②、33 / (111),0
+painting,【名】絵、絵画 126,126,0
+palace,【名】宮殿 126,126,0
+pale,【形】青白い、青ざめた ②,②,0
+pamphlet,【名】パンフレット ②,②,0
+pan,【名】平なべ、フライパン ①,①,0
+pancake,【名】パンケーキ ②,②,0
+★panda,【名】パンダ 16,16,1
+pandemic,【名】パンデミック ②,②,0
+panic,【名】パニックになること 86,86,0
+in a panic,あわてふためいて 86,86,0
+★pants,【名】ズボン 123,123,1
+paper,【名】【形】紙（の） ①、35,①、35,0
+parade,【名】パレード ①,①,0
+parasport,【名】パラスポーツ ②,②,0
+pardon,【動】〔Pardon (me)?で〕すみません。何と言いましたか。 (①),(①),0
+parent,【名】親、〔～sで〕両親 ①,①,0
+★park,【名】公園 ①,①,1
+parking lot,【名】駐車場 ②,②,0
+part,【名】部分 ①,①,0
+a part of ～,～の一部 48,48,0
+take part in ～,～に参加する ①,①,0
+particular,【形】ある特定の (②)、66,(②)、66,0
+in particular,特に、とりわけ 66,66,0
+particularly,【副】特に (②),(②),0
+partnership,【名】パートナーシップ、協力関係 127,127,0
+party,【名】①パーティー ① / ②党 (106),① / (106),0
+pass,【動】①（ボール）をパスする ② / ②～を（…に）渡す ② / ③（試験）に合格する、～を通過する ② / ④通り過ぎる、通る 41,② / ② / ② / 41,0
+pass down ～,（知識などを）渡す 36,36,0
+pass ～ on (to ...),～を（…に）伝える 34,34,0
+pass through ～,～を通り抜ける 41,41,0
+pass,【名】①パス ② / ②通行証、乗車券 ②,② / ②,0
+passenger,【名】乗客 (109),(109),0
+past,【名】〔ふつうthe ～で〕過去 34 / 【形】過ぎたばかりの、この～ 66,34 / 66,0
+pastry chef,【名】パティシエ ②,②,0
+patience,【名】忍耐強さ 128,128,0
+patient,【形】我慢強い、忍耐強い ②,②,0
+pay,【動】（注意など）を払う ②,②,0
+★P.E.,【略】〔教科としての〕体育〔physical educationの略〕 ①,①,1
+peace,【名】平和 30,30,0
+★peach,【名】モモ ①,①,1
+★pen,【名】ペン ①,①,1
+★pencil,【名】鉛筆 ①,①,1
+pension,【名】年金 (107),(107),0
+★people,【名】人々 ①,①,1
+percent,【名】パーセント（%） ①,①,0
+percentage,【名】百分率、割合 68,68,0
+perfect,【形】完全な、完璧な ②,②,0
+perform,【動】～を上演する ②,②,0
+performance,【名】公演、上演 ②,②,0
+★performer,【名】演者、選手 ②,②,1
+★period,【名】①時間、時限 ② / ②時代 87,② / 87,1
+period for integrated study,総合的な学習の時間 ②,②,0
+permission,【名】許可 41,41,0
+person,【名】人、人間、一個人 ①,①,0
+personal,【形】個人の、個人的な 36,36,0
+pet,【名】ペット ② / 【動】（動物）を優しくなでる ②,② / ②,0
+pharmacist,【名】薬剤師 ②,②,0
+phone,【名】電話、電話機 ①,①,0
+photo,【名】写真 ①,①,0
+take a photo,写真を撮る ①,①,0
+photographer,【名】写真家 ①,①,0
+photo shoot,【名】写真撮影 26,26,0
+phrase,【名】言い回し、表現 (①、20),(①、20),0
+physical,【形】身体の 57,57,0
+pianist,【名】ピアニスト ②,②,0
+★piano,【名】ピアノ ①,①,1
+pick,【動】～を選ぶ、つむ、つまみ取る ②,②,0
+pick up ～,①～を拾い上げる ② / ②～を迎えに行く［来る］ (110),② / (110),0
+pickle,【名】漬物、ピクルス 35,35,0
+picnic,【名】ピクニック ②,②,0
+have a picnic,ピクニックをする ②,②,0
+pictogram,【名】ピクトグラム ②,②,0
+★picture,【名】①絵 ① / ②写真 ① / ③画像、画面 62,① / ① / 62,1
+take a picture,写真を撮る ①,①,0
+pie,【名】パイ ①,①,0
+piece,【名】1つ、1切れ、1枚 ①,①,0
+a piece of ～,1枚の～ 43,43,0
+★pig,【名】ブタ ①,①,1
+pillow,【名】枕 ②,②,0
+pilot,【名】パイロット ②,②,0
+pin,【名】ピン ②,②,0
+★pineapple,【名】パイナップル ①,①,1
+pink,【名】【形】ピンク色（の） ①,①,0
+pirate,【名】海賊 65,65,0
+★pizza,【名】ピザ ①,①,1
+★place,【名】場所 ①,①,1
+in ～'s place,～の立場に（あったら） 86,86,0
+take place,起こる、行われる ②,②,0
+plain,【形】明白な、はっきりした 101,101,0
+be plain to see,一目瞭然である 101,101,0
+plan,【名】①見取り図、フロアガイド ① / ②計画、予定 ②,① / ②,0
+make a plan,計画を立てる ②,②,0
+plan,【動】～の計画を立てる ②,②,0
+plane,【名】飛行機 ②,②,0
+★planet,【名】惑星、〔the ～で〕地球 92,92,1
+plant,【動】（植物）を植える ② / 【名】植物 ②、92,② / ②、92,0
+plastic,【形】プラスチック（製の） (②)、70, (②)、70,0
+plastic resin,【名】プラスチック樹脂 (②),(②),0
+plate,【名】皿 127,127,0
+platform,【名】プラットホーム 42,42,0
+★play,【動】①（～を）演奏する、弾く ① / ②（球技・遊びなど）をする ① / ③遊ぶ ② / ④～の役を演じる ② / 【名】劇、芝居 ②,① / ① / ② / ② / ②,1
+★player,【名】選手、競技者 ①,①,1
+plaything,【名】おもちゃ (113),(113),0
+pleasant,【形】心地よい、楽しい 128,128,0
+★please,【副】どうか、どうぞ ①,①,1
+pleasure,【名】楽しさ、喜び 128,128,0
+plus,【接】そしてその上、しかも 69,69,0
+p.m.,【副】午後 ①,①,0
+pocket,【名】【形】ポケット（型の） 123,123,0
+poem,【名】詩 126,126,0
+point,【動】指さす (①) / 【名】①（成績・競技などの）点数 ② / ②論点、意見 ② / ③点、小数点 (②),(①) / ② / ② / (②),0
+～ has a good point、 but ....,～はいいところをついていると思うけれど…。 50,50,0
+Poland,【名】ポーランド 40,40,0
+★police,【名】警察 ②,②,1
+police box,【名】交番 ②,②,0
+police officer,【名】警察官 ②,②,0
+police station,【名】警察署 ②,②,0
+policy,【名】政策 (106),(106),0
+polite,【形】礼儀正しい、丁寧な ②,②,0
+political,【形】政治の (106),(106),0
+political party,【名】政党 (106),(106),0
+politician,【名】政治家 ②、93,②、93,0
+pollution,【名】汚染 127,127,0
+pond,【名】池 ②,②,0
+poor,【形】哀れな、かわいそうな ①,①,0
+Poor ～.,かわいそうな～。 ①,①,0
+★popcorn,【名】ポップコーン ①,①,1
+pop music,【名】ポピュラー音楽 124,124,0
+★popular,【形】①人気のある ① / ②一般的な、広く普及した ②,① / ②,1
+population,【名】人口、個体数 ②,②,0
+★pork,【名】豚肉 ①,①,1
+port,【名】港 ②,②,0
+position,【名】位置 ②,②,0
+positive,【形】前向きの、積極的な ②,②,0
+possibility,【名】可能性 57,57,0
+possible,【形】可能な、ありうる 86,86,0
+★post,【名】郵便、郵便物 ②,②,1
+postcard,【名】郵便はがき 123,123,0
+poster,【名】ポスター ①,①,0
+★post office,【名】郵便局 ②,②,1
+pot,【名】鍋 ②,②,0
+★potato,【名】ジャガイモ ①,①,1
+potato chip,【名】〔～sで〕ポテトチップス (②),(②),0
+pour,【動】～を注ぐ 127,127,0
+poverty,【名】貧乏、貧困 68,68,0
+powerful,【形】力強い ①,①,0
+★practice,【動】（～を）練習する ① / 【名】練習 ①,① / ①,1
+pray,【動】祈る 42,42,0
+prayer,【名】祈り ②,②,0
+precious,【形】貴重な、大切な 128,128,0
+prefer,【動】～を好む ②,②,0
+preparation,【名】準備 ②,②,0
+prepare,【動】（～を）用意する、準備する ②,②,0
+prepared,【形】用意のできた ②,②,0
+present,【名】贈り物、プレゼント ①,①,0
+presentation,【名】プレゼンテーション、発表 62,62,0
+preserve,【動】～を保護する (②),(②),0
+president,【名】大統領 (46),(46),0
+pressure,【名】重圧、プレッシャー ②,②,0
+pretty,【形】かわいい ①,①,0
+price,【名】価格、値段 ②,②,0
+pride,【名】誇り、プライド 128,128,0
+Prime Minister,【名】〔theを付けて〕総理大臣 とじ込み6,とじ込み6,0
+pro,【名】プロ、熟練者 ①,①,0
+probably,【副】たぶん (②),(②),0
+problem,【名】問題、課題 ②,②,0
+No problem.,問題ありません。 ②,②,0
+produce,【動】～を生産する ②,②,0
+producer,【名】生産者 64,64,0
+product,【名】製品 62,62,0
+production,【名】製造、生産 62,62,0
+professional,【形】プロの ②,②,0
+program,【名】番組 ①,①,0
+programmer,【名】プログラマー ②,②,0
+progress,【名】進歩、前進 ②,②,0
+make progress,上達する、進歩する ②,②,0
+project,【名】プロジェクト (46),(46),0
+promise,【動】（～を）約束する ① / 【名】約束 ①,① / ①,0
+keep one's promise,約束を守る ①,①,0
+promote,【動】～を促進する 32,32,0
+propose,【動】～を提案する ②,②,0
+protect,【動】～を保護する、守る ②,②,0
+proud,【形】誇りにしている ②,②,0
+be proud of ～,～を誇りに思っている ②,②,0
+public,【形】公的な、公務の ② / 【名】〔the ～で〕一般の人々 (106),② / (106),0
+public worker,【名】公務員 ②,②,0
+★pudding,【名】プリン ①,①,1
+Puerto Rico,【名】プエルトリコ ①,①,0
+pull,【動】～を引く ②,②,0
+pull up ～,～を引き抜く ②,②,0
+pumpkin,【名】カボチャ ①,①,0
+puppy,【名】子犬 ②,②,0
+★purple,【名】【形】紫色（の） ①,①,1
+purpose,【名】目的 128,128,0
+push,【動】～を押す ②,②,0
+put,【動】～を置く、～を取り付ける ①,①,0
+put away ～,～をしまう ②,②,0
+put on ～,～を着る、～を身につける 35,35,0
+put up ～,～を取り付ける ②,②,0
+put,【動】putの過去形、過去分詞 ②,②,0
+puzzle,【名】パズル (②),(②),0
