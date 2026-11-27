@@ -280,6 +280,27 @@
       .page-pill { min-width: 42px; min-height: 36px; }
     }
     @media (prefers-reduced-motion: reduce) { .word-card, .related-word { transition: none; } }
+  
+    /* CSVの意味データを、品詞ごと・意味ごとに読みやすく整える */
+    .word-title.is-bold { font-weight: 850; }
+    .definition-groups { display: grid; gap: 18px; }
+    .definition-group { min-width: 0; }
+    .definition-group-heading { display: flex; align-items: center; gap: 9px; margin: 0 0 10px; }
+    .definition-group-heading::after { content: ""; height: 1px; flex: 1; background: var(--line-soft); }
+    .definition-group-heading span { color: var(--accent); font-size: 12px; font-weight: 750; letter-spacing: .02em; }
+    .definition-group .meaning-list { display: grid; gap: 9px; }
+    .definition-group .meaning-item { min-width: 0; align-items: flex-start; padding: 15px 16px; border-radius: 13px; }
+    .definition-group .meaning-marker { width: 34px; height: 34px; min-height: 34px; flex-basis: 34px; border-radius: 10px; font-size: 14px; }
+    .definition-group .meaning-text { min-width: 0; padding-top: 4px; font-size: 15px; line-height: 1.8; overflow-wrap: anywhere; }
+    .definition-group .meaning-item.no-marker { padding-left: 17px; }
+    .definition-group .meaning-item.no-marker .meaning-text { padding-left: 1px; }
+    .meaning-page-note { flex: 0 0 auto; margin: 3px 0 0 auto; color: var(--subtle); font-size: 10px; line-height: 1.5; white-space: nowrap; }
+    .page-pill { max-width: 100%; overflow-wrap: anywhere; }
+    @media (max-width: 600px) {
+      .definition-group .meaning-item { gap: 11px; padding: 14px 13px; }
+      .definition-group .meaning-text { font-size: 15px; line-height: 1.8; }
+    }
+
   </style>
 </head>
 <body>
@@ -436,20 +457,23 @@
       function hideOverlay(id) { $(id).hidden = true; }
 
       function detectDelimiter(firstLine) {
-        var comma = 0, tab = 0, quoted = false, i, ch;
+        var counts = { ',': 0, '\t': 0, ';': 0 }, quoted = false, i, ch;
         for (i = 0; i < firstLine.length; i += 1) {
           ch = firstLine.charAt(i);
           if (ch === '"') {
-            if (quoted && firstLine.charAt(i + 1) === '"') { i += 1; }
-            else { quoted = !quoted; }
-          } else if (!quoted && ch === ',') { comma += 1; }
-          else if (!quoted && ch === '\t') { tab += 1; }
+            if (quoted && firstLine.charAt(i + 1) === '"') i += 1;
+            else quoted = !quoted;
+          } else if (!quoted && Object.prototype.hasOwnProperty.call(counts, ch)) {
+            counts[ch] += 1;
+          }
         }
-        return tab > comma ? '\t' : ',';
+        if (counts['\t'] > counts[','] && counts['\t'] >= counts[';']) return '\t';
+        if (counts[';'] > counts[','] && counts[';'] > counts['\t']) return ';';
+        return ',';
       }
       function parseCsv(text) {
         text = String(text == null ? '' : text).replace(/^\uFEFF/, '');
-        var firstBreak = text.indexOf('\n');
+        var firstBreak = text.search(/[\r\n]/);
         var firstLine = firstBreak >= 0 ? text.substring(0, firstBreak) : text;
         var delimiter = detectDelimiter(firstLine);
         var rows = [], row = [], cell = '', quoted = false, i, ch, next;
@@ -478,15 +502,16 @@
       }
       var headerAliases = {
         id: ['id', 'no', 'number', '番号', '識別子', '管理番号', '単語id'],
-        word: ['word', 'english', '英単語', '単語', '見出し語', '見出し', 'headword', 'term', '英語'],
+        word: ['word', 'english', 'englishword', 'englishterm', '英単語', '単語', '見出し語', '見出し', 'headword', 'term', '英語'],
         pronunciation: ['pronunciation', 'phonetic', 'phonetics', 'ipa', '発音記号', '発音', '音声記号'],
         pos: ['pos', 'partofspeech', '品詞', '品詞記号', '品詞表記', '語品'],
-        meaning: ['meaning', 'japanese', 'translation', 'definition', '日本語', '日本語訳', '意味', '訳', '和訳', '語義'],
+        meaning: ['meaning', 'japanese', 'japanesemeaning', 'translation', 'definition', '日本語', '日本語訳', '日本語の意味', '意味', '訳', '和訳', '語義'],
         page: ['page', 'pages', 'pageno', 'pagenumber', 'pagecount', 'numberofpages', 'totalpages', 'ページ', '頁', 'ページ番号', 'ページ数', '掲載ページ', '掲載ページ数', '出典ページ'],
-        weight: ['weight', 'importance', 'priority', '重み', '重要度']
+        weight: ['weight', 'importance', 'priority', '重み', '重要度'],
+        isBold: ['isbold', 'bold', 'boldflag', 'is_bold', '太字', '太字フラグ', '重要語']
       };
       function findHeaderMap(headerRow) {
-        var map = { id: -1, word: -1, pronunciation: -1, pos: -1, meaning: -1, page: -1, weight: -1 };
+        var map = { id: -1, word: -1, pronunciation: -1, pos: -1, meaning: -1, page: -1, weight: -1, isBold: -1 };
         var normalHeaders = [], i, field, aliases, j;
         for (i = 0; i < headerRow.length; i += 1) normalHeaders.push(headerKey(headerRow[i]));
         for (field in headerAliases) {
@@ -502,28 +527,50 @@
         }
         return map;
       }
-      function isWordMeaningWeightHeader(headerRow) {
-        // 1.csv・2.csv・3.csvで共通して使う「word,meaning,weight」を明示的に認識する。
-        // BOM・大文字小文字・前後の空白があっても headerKey() で正規化して判定する。
-        if (!headerRow || headerRow.length < 3) return false;
-        var normalized = headerRow.map(headerKey);
-        return normalized.indexOf('word') >= 0 &&
-          normalized.indexOf('meaning') >= 0 &&
-          normalized.indexOf('weight') >= 0;
+      function cleanWord(value) {
+        return String(value == null ? '' : value).trim().replace(/^★\s*/, '');
+      }
+      function parseBoolean(value) {
+        return /^(?:1|true|yes|y|on|bold|○|〇|✓)$/i.test(String(value == null ? '' : value).trim());
+      }
+      function containsJapanese(value) {
+        return /[ぁ-ゖァ-ヺ一-龯々〆ヶ【】]/.test(String(value == null ? '' : value));
+      }
+      function repairOverflowRow(row, expectedColumns, map, lineNumber, warnings) {
+        if (row.length <= expectedColumns) return row;
+        // このアプリの4列形式で、引用符を付けずに英単語・意味中へカンマを含めた行を救済する。
+        // 最後の2列は「ページ」「is_bold」とし、日本語が最初に現れる位置を意味欄の開始位置と判断する。
+        if (expectedColumns === 4 && map.word === 0 && map.meaning === 1 && map.page === 2 && map.isBold === 3) {
+          var contentEnd = row.length - 2;
+          var meaningStart = -1;
+          for (var i = 1; i < contentEnd; i += 1) {
+            if (containsJapanese(row[i])) { meaningStart = i; break; }
+          }
+          if (meaningStart < 0) meaningStart = 1;
+          var fixed = [row.slice(0, meaningStart).join(','), row.slice(meaningStart, contentEnd).join(','), row[row.length - 2], row[row.length - 1]];
+          // 補正は自動で行い、正常に読み込めた行を警告扱いにはしない。
+          return fixed;
+        }
+        return row;
+      }
+      function extractPosTags(value) {
+        var matches = String(value == null ? '' : value).match(/【[^】]+】/g) || [];
+        var out = [];
+        matches.forEach(function (tag) { if (out.indexOf(tag) < 0) out.push(tag); });
+        return out;
       }
       function parseDatabase(csvText) {
         var rows = parseCsv(csvText);
         if (!rows.length) return { records: [], warnings: ['CSVにデータがありません。'] };
         var detected = findHeaderMap(rows[0]);
-        // word,meaning,weight は各CSVの見出し行なので、必ず1行目をデータから除外する。
-        var hasHeader = isWordMeaningWeightHeader(rows[0]) || detected.word >= 0;
+        var hasHeader = detected.word >= 0;
         var map, start, warnings = [], out = [], usedIds = Object.create(null), i, row, record, originalId, baseId, suffix;
         if (hasHeader) {
           map = detected;
           start = 1;
         } else {
           // 見出し行がない場合の旧形式：ID, 英単語, 品詞, 意味, ページ, 重み
-          map = { id: 0, word: 1, pronunciation: -1, pos: 2, meaning: 3, page: 4, weight: 5 };
+          map = { id: 0, word: 1, pronunciation: -1, pos: 2, meaning: 3, page: 4, weight: 5, isBold: -1 };
           start = 0;
           warnings.push('見出し行を検出できなかったため、標準の6列順として読み込みました。');
         }
@@ -531,16 +578,19 @@
         for (i = start; i < rows.length; i += 1) {
           row = rows[i];
           if (!row || !row.length) continue;
+          if (hasHeader) row = repairOverflowRow(row, rows[0].length, map, i + 1, warnings);
           record = {
             id: map.id >= 0 ? String(row[map.id] || '').trim() : '',
-            word: map.word >= 0 ? String(row[map.word] || '').trim() : '',
+            word: cleanWord(map.word >= 0 ? row[map.word] : ''),
             pronunciation: map.pronunciation >= 0 ? String(row[map.pronunciation] || '').trim() : '',
             pos: map.pos >= 0 ? String(row[map.pos] || '').trim() : '',
             meaning: map.meaning >= 0 ? String(row[map.meaning] || '').trim() : '',
             page: map.page >= 0 ? String(row[map.page] || '').trim() : '',
             weight: map.weight >= 0 ? String(row[map.weight] || '').trim() : '',
+            isBold: (map.isBold >= 0 && parseBoolean(row[map.isBold])) || /^★/.test(String(rows[i][map.word] || '').trim()),
             rowNumber: i + 1
           };
+          if (!record.pos) record.pos = extractPosTags(record.meaning).join(' ');
           if (!record.word && !record.pronunciation && !record.meaning && !record.pos && !record.page && !record.weight) continue;
           if (!record.word) { warnings.push((i + 1) + '行目：英単語が空のためスキップしました。'); continue; }
           originalId = record.id;
@@ -563,6 +613,9 @@
       function splitMetadataValues(value) {
         return String(value == null ? '' : value).split(/[;；、，,]/).map(function (part) { return part.trim(); }).filter(Boolean);
       }
+      function splitSlashValues(value) {
+        return String(value == null ? '' : value).trim().split(/\s+[\/／]\s+/).map(function (part) { return part.trim(); }).filter(Boolean);
+      }
       function mergeMetadataValues(first, second) {
         var values = splitMetadataValues(first).concat(splitMetadataValues(second));
         var seen = Object.create(null), merged = [];
@@ -574,11 +627,26 @@
         });
         return merged.join('、');
       }
+      function mergeAlignedPages(first, second) {
+        var a = splitSlashValues(first), b = splitSlashValues(second);
+        if (a.length && a.length === b.length) {
+          return a.map(function (value, index) {
+            if (!b[index] || duplicateNormalise(value) === duplicateNormalise(b[index])) return value;
+            return value + '、' + b[index];
+          }).join(' / ');
+        }
+        var values = a.concat(b), seen = Object.create(null), merged = [];
+        values.forEach(function (value) {
+          var key = duplicateNormalise(value);
+          if (!key || seen[key]) return;
+          seen[key] = true;
+          merged.push(value);
+        });
+        return merged.join(' / ');
+      }
       function duplicateRecordKey(record) {
-        // 同じ単語・品詞・意味なら、ページや重みが違っても同一項目として統合する。
-        // 意味や品詞が異なるものは別データとして残す。
         return JSON.stringify([
-          duplicateNormalise(record.word),
+          duplicateNormalise(cleanWord(record.word)),
           duplicateNormalise(record.pos),
           duplicateNormalise(record.meaning)
         ]);
@@ -592,8 +660,9 @@
             duplicates += 1;
             var existing = output[byKey[key]];
             existing.pronunciation = mergeMetadataValues(existing.pronunciation, record.pronunciation);
-            existing.page = mergeMetadataValues(existing.page, record.page);
+            existing.page = mergeAlignedPages(existing.page, record.page);
             existing.weight = mergeMetadataValues(existing.weight, record.weight);
+            existing.isBold = existing.isBold || record.isBold;
             continue;
           }
           byKey[key] = output.length;
@@ -601,24 +670,29 @@
         }
         return { records: output, duplicates: duplicates };
       }
-      function getGroupKey(word) { return duplicateNormalise(word); }
+      function getGroupKey(word) { return duplicateNormalise(cleanWord(word)); }
       function buildGroups(inputRecords) {
         var byKey = Object.create(null), order = [], i, item, key, group;
         for (i = 0; i < inputRecords.length; i += 1) {
           item = inputRecords[i];
           key = getGroupKey(item.word);
           if (!Object.prototype.hasOwnProperty.call(byKey, key)) {
-            byKey[key] = { key: key, word: item.word, pronunciations: [], pos: [], meanings: [], pages: [], weights: [], rows: [] };
+            byKey[key] = { key: key, word: cleanWord(item.word), isBold: false, pronunciations: [], pos: [], meanings: [], pages: [], weights: [], rows: [] };
             order.push(key);
           }
           group = byKey[key];
           group.rows.push(item);
+          group.isBold = group.isBold || !!item.isBold;
           splitMetadataValues(item.pronunciation).forEach(function (pronunciation) {
             if (!group.pronunciations.some(function (existing) { return duplicateNormalise(existing) === duplicateNormalise(pronunciation); })) group.pronunciations.push(pronunciation);
           });
-          if (item.pos && group.pos.indexOf(item.pos) < 0) group.pos.push(item.pos);
+          var posValues = extractPosTags(item.pos);
+          if (!posValues.length && item.pos) posValues = [item.pos];
+          posValues.forEach(function (posValue) {
+            if (!group.pos.some(function (existing) { return duplicateNormalise(existing) === duplicateNormalise(posValue); })) group.pos.push(posValue);
+          });
           if (item.meaning && group.meanings.indexOf(item.meaning) < 0) group.meanings.push(item.meaning);
-          splitMetadataValues(item.page).forEach(function (pageText) {
+          splitSlashValues(item.page).forEach(function (pageText) {
             if (!group.pages.some(function (existing) { return duplicateNormalise(existing) === duplicateNormalise(pageText); })) group.pages.push(pageText);
           });
           splitMetadataValues(item.weight).forEach(function (weightText) {
@@ -928,12 +1002,15 @@
           for (var j = 0; j < g.pos.length && j < 4; j += 1) metadata += '<span class="result-tag pos">' + escapeHtml(posLabel(g.pos[j])) + '</span>';
           if (g.pages.length) metadata += '<span class="result-tag page">掲載ページ ' + g.pages.length + '件</span>'; 
           if (g.weights.length) metadata += '<span class="result-tag">重み ' + escapeHtml(g.weights.join('・')) + '</span>';
-          var preview = g.meanings.length ? g.meanings.slice(0, 2).join(' ／ ') : '意味は登録されていません';
+          var previewDefinitions = getGroupDefinitions(g);
+          var preview = previewDefinitions.length ? previewDefinitions.slice(0, 2).map(function (definition) {
+            return (definition.pos ? definition.pos + ' ' : '') + definition.text;
+          }).join(' ／ ') : '意味は登録されていません';
           html += '<button class="word-card" type="button" data-word-key="' + escapeHtml(g.key) + '">' +
-            '<span class="word-title">' + escapeHtml(g.word) + '</span>' +
+            '<span class="word-title' + (g.isBold ? ' is-bold' : '') + '">' + escapeHtml(g.word) + '</span>' +
             '<span class="meaning-preview">' + escapeHtml(preview).replace(/\n/g, '<br>') + '</span>' +
             (metadata ? '<span class="result-meta">' + metadata + '</span>' : '') +
-            (g.meanings.length > 2 ? '<span class="meaning-more">ほか ' + (g.meanings.length - 2) + ' 件の意味</span>' : '') +
+            (previewDefinitions.length > 2 ? '<span class="meaning-more">ほか ' + (previewDefinitions.length - 2) + ' 件の意味</span>' : '') +
           '</button>';
         }
         list.innerHTML = html;
@@ -1012,24 +1089,55 @@
         saveAppState();
       }
 
-      function splitMeaningEntries(value) {
-        var text = String(value == null ? '' : value).replace(/\r\n?/g, '\n').trim();
-        if (!text) return [];
-        // ①②③、(1)(2)、1. などの番号が始まる位置で分割し、番号自体は残す。
-        var marker = /(?=(?:[①-⑳❶-❿]|\(\s*\d+\s*\)|\d+[.．、](?=\s|$)))/g;
-        var parts = text.split(marker).map(function (part) { return part.trim(); }).filter(Boolean);
-        var out = [];
-        // CSV内で意味の間に単独の「/」「／」が置かれている場合は、
-        // それを意味項目として表示しない。意味本文中のスラッシュは保持する。
-        var separatorOnly = /^[\/／|｜・、,，;；\s]+$/;
-        parts.forEach(function (part) {
-          part.split(/\n+/).forEach(function (line) {
-            var cleaned = line.trim();
-            if (!cleaned || separatorOnly.test(cleaned)) return;
-            out.push(cleaned);
+      function stripPageSuffix(meaningPart, pagePart) {
+        var text = String(meaningPart == null ? '' : meaningPart).trim();
+        var page = String(pagePart == null ? '' : pagePart).trim();
+        if (!page || text.length <= page.length || text.slice(-page.length) !== page) return text;
+        var before = text.slice(0, -page.length);
+        return /\s$/.test(before) ? before.trim() : text;
+      }
+      function parseRecordDefinitions(record) {
+        var meaningParts = splitSlashValues(record.meaning);
+        var pageParts = splitSlashValues(record.page);
+        var activePos = String(record.pos || '').trim();
+        var definitions = [];
+        meaningParts.forEach(function (rawPart, index) {
+          var text = stripPageSuffix(rawPart, pageParts[index] || '');
+          var posMatch = text.match(/^(?:【[^】]+】\s*)+/);
+          if (posMatch) {
+            activePos = posMatch[0].match(/【[^】]+】/g).join('');
+            text = text.slice(posMatch[0].length).trim();
+          }
+          var marker = '';
+          var markerMatch = text.match(/^([①-⑳❶-❿]|\(\s*\d+\s*\)|\d+[.．、])\s*(.*)$/);
+          if (markerMatch) {
+            marker = markerMatch[1];
+            text = markerMatch[2].trim();
+          }
+          text = text.replace(/^[\/／|｜・、,，;；\s]+|[\/／|｜・、,，;；\s]+$/g, '').trim();
+          if (!text || /^[\/／|｜・、,，;；\s]+$/.test(text)) return;
+          definitions.push({ pos: activePos, marker: marker, text: text, page: pageParts[index] || '' });
+        });
+        return definitions;
+      }
+      function getGroupDefinitions(group) {
+        if (group._definitionCache) return group._definitionCache;
+        var definitions = [], byKey = Object.create(null);
+        (group.rows || []).forEach(function (record) {
+          parseRecordDefinitions(record).forEach(function (definition) {
+            var key = JSON.stringify([duplicateNormalise(definition.pos), definition.marker, duplicateNormalise(definition.text)]);
+            if (Object.prototype.hasOwnProperty.call(byKey, key)) {
+              var existing = definitions[byKey[key]];
+              if (definition.page && !existing.pages.some(function (page) { return duplicateNormalise(page) === duplicateNormalise(definition.page); })) existing.pages.push(definition.page);
+            } else {
+              definition.pages = definition.page ? [definition.page] : [];
+              byKey[key] = definitions.length;
+              definitions.push(definition);
+            }
           });
         });
-        return out;
+        group._definitionCache = definitions;
+        return definitions;
       }
       function relatedNormalise(value) {
         return String(value == null ? '' : value).toLowerCase()
@@ -1093,25 +1201,36 @@
         }
 
         var chips = '';
-        for (i = 0; i < group.pos.length; i += 1) chips += '<span class="chip pos">' + escapeHtml(posLabel(group.pos[i])) + '</span>';
         if (group.weights.length) chips += '<span class="chip weight">重み ' + escapeHtml(group.weights.join('・')) + '</span>';
         $('detailChips').innerHTML = chips;
 
-        var meanings = [], meaningHtml = '';
-        group.meanings.forEach(function (meaningValue) {
-          splitMeaningEntries(meaningValue).forEach(function (part) { meanings.push(part); });
+        var definitions = getGroupDefinitions(group);
+        var definitionGroups = [], definitionGroupMap = Object.create(null);
+        definitions.forEach(function (definition) {
+          var groupKey = definition.pos || '__no_pos__';
+          if (!Object.prototype.hasOwnProperty.call(definitionGroupMap, groupKey)) {
+            definitionGroupMap[groupKey] = { pos: definition.pos, definitions: [] };
+            definitionGroups.push(definitionGroupMap[groupKey]);
+          }
+          definitionGroupMap[groupKey].definitions.push(definition);
         });
-        meanings.forEach(function (part) {
-          var match = part.match(/^([①-⑳❶-❿]|\(\s*\d+\s*\)|\d+[.．、])\s*(.*)$/);
-          var marker = match ? match[1] : '';
-          var text = match ? match[2] : part;
-          meaningHtml += '<div class="meaning-item">' +
-            (marker ? '<span class="meaning-marker">' + escapeHtml(marker) + '</span>' : '<span class="meaning-marker empty" aria-hidden="true"></span>') +
-            '<div class="meaning-text">' + escapeHtml(text).replace(/\n/g, '<br>') + '</div>' +
-          '</div>';
+        var meaningHtml = '';
+        definitionGroups.forEach(function (definitionGroup) {
+          meaningHtml += '<section class="definition-group">';
+          if (definitionGroup.pos) meaningHtml += '<div class="definition-group-heading"><span>' + escapeHtml(posLabel(definitionGroup.pos)) + '</span></div>';
+          meaningHtml += '<div class="meaning-list">';
+          definitionGroup.definitions.forEach(function (definition) {
+            var hasMarker = !!definition.marker;
+            meaningHtml += '<div class="meaning-item' + (hasMarker ? '' : ' no-marker') + '">' +
+              (hasMarker ? '<span class="meaning-marker">' + escapeHtml(definition.marker) + '</span>' : '') +
+              '<div class="meaning-text">' + escapeHtml(definition.text).replace(/\n/g, '<br>') + '</div>' +
+              (definition.pages && definition.pages.length ? '<span class="meaning-page-note">' + escapeHtml(pageLabel(definition.pages.join('・'))) + '</span>' : '') +
+            '</div>';
+          });
+          meaningHtml += '</div></section>';
         });
         $('detailMeanings').innerHTML = meaningHtml || '<div class="related-empty">意味データは登録されていません。</div>';
-        $('detailMeaningsCount').textContent = meanings.length ? meanings.length + '項目' : '';
+        $('detailMeaningsCount').textContent = definitions.length ? definitions.length + '件' : '';
 
         // ページ情報はデータベースにある値だけを、ページ単位のチップとして表示する。
         var pages = group.pages || [];
@@ -1129,11 +1248,14 @@
 
         // 関連単語は複数の根拠を点数化して順位付けする。重複した単語はグループ化済み。
         var related = [], relatedHtml = '', candidate, score, scored = [];
-        var currentMeaningText = group.meanings.join(' ');
+        var currentMeaningText = definitions.map(function (definition) { return definition.text; }).join(' ');
+        var relatedSource = { word: group.word, meanings: definitions.map(function (definition) { return definition.text; }) };
         for (i = 0; i < groups.length; i += 1) {
           candidate = groups[i];
           if (candidate.key === group.key) continue;
-          score = getRelatedScore(group, candidate, currentMeaningText);
+          var candidateDefinitions = getGroupDefinitions(candidate);
+          var relatedTarget = { word: candidate.word, meanings: candidateDefinitions.map(function (definition) { return definition.text; }) };
+          score = getRelatedScore(relatedSource, relatedTarget, currentMeaningText);
           if (score > 0) scored.push({ group: candidate, score: score });
         }
         scored.sort(function (a, b) { return b.score - a.score || a.group.word.localeCompare(b.group.word); });
