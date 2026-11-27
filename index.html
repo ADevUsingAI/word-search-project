@@ -235,7 +235,8 @@
     .word-hero { padding: clamp(23px, 5vw, 38px); border: 1px solid var(--line); border-radius: 20px; background: var(--surface); box-shadow: var(--shadow); }
     .word-eyebrow, .section-kicker { display: block; color: var(--accent); font-size: 10px; font-weight: 750; letter-spacing: .13em; line-height: 1.4; }
     .detail-page h1 { margin: 10px 0 0; color: var(--text); font-size: clamp(34px, 7vw, 54px); line-height: 1.16; font-weight: 720; letter-spacing: -.055em; overflow-wrap: anywhere; }
-    .detail-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 20px; }
+    .word-pronunciation { margin: 10px 0 0; color: var(--muted); font-size: clamp(16px, 3vw, 20px); line-height: 1.5; letter-spacing: .015em; font-family: ui-serif, Georgia, "Times New Roman", serif; }
+    .detail-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 17px; }
     .chip { min-height: 29px; padding: 5px 11px; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); background: var(--page); font-size: 11px; font-weight: 600; }
     .chip.pos { color: var(--accent); border-color: transparent; background: var(--accent-soft); }
     .chip.weight { color: var(--muted); }
@@ -338,6 +339,7 @@
       <header class="word-hero">
         <div class="word-eyebrow">WORD DETAILS</div>
         <h1 id="detailTitle"></h1>
+        <div class="word-pronunciation hidden" id="detailPronunciation" lang="en"></div>
         <div class="detail-row" id="detailChips"></div>
       </header>
       <section class="page-panel hidden" id="detailPageSection" aria-labelledby="detailPageHeading">
@@ -477,13 +479,14 @@
       var headerAliases = {
         id: ['id', 'no', 'number', '番号', '識別子', '管理番号', '単語id'],
         word: ['word', 'english', '英単語', '単語', '見出し語', '見出し', 'headword', 'term', '英語'],
+        pronunciation: ['pronunciation', 'phonetic', 'phonetics', 'ipa', '発音記号', '発音', '音声記号'],
         pos: ['pos', 'partofspeech', '品詞', '品詞記号', '品詞表記', '語品'],
         meaning: ['meaning', 'japanese', 'translation', 'definition', '日本語', '日本語訳', '意味', '訳', '和訳', '語義'],
         page: ['page', 'pages', 'pageno', 'pagenumber', 'pagecount', 'numberofpages', 'totalpages', 'ページ', '頁', 'ページ番号', 'ページ数', '掲載ページ', '掲載ページ数', '出典ページ'],
         weight: ['weight', 'importance', 'priority', '重み', '重要度']
       };
       function findHeaderMap(headerRow) {
-        var map = { id: -1, word: -1, pos: -1, meaning: -1, page: -1, weight: -1 };
+        var map = { id: -1, word: -1, pronunciation: -1, pos: -1, meaning: -1, page: -1, weight: -1 };
         var normalHeaders = [], i, field, aliases, j;
         for (i = 0; i < headerRow.length; i += 1) normalHeaders.push(headerKey(headerRow[i]));
         for (field in headerAliases) {
@@ -520,7 +523,7 @@
           start = 1;
         } else {
           // 見出し行がない場合の旧形式：ID, 英単語, 品詞, 意味, ページ, 重み
-          map = { id: 0, word: 1, pos: 2, meaning: 3, page: 4, weight: 5 };
+          map = { id: 0, word: 1, pronunciation: -1, pos: 2, meaning: 3, page: 4, weight: 5 };
           start = 0;
           warnings.push('見出し行を検出できなかったため、標準の6列順として読み込みました。');
         }
@@ -531,13 +534,14 @@
           record = {
             id: map.id >= 0 ? String(row[map.id] || '').trim() : '',
             word: map.word >= 0 ? String(row[map.word] || '').trim() : '',
+            pronunciation: map.pronunciation >= 0 ? String(row[map.pronunciation] || '').trim() : '',
             pos: map.pos >= 0 ? String(row[map.pos] || '').trim() : '',
             meaning: map.meaning >= 0 ? String(row[map.meaning] || '').trim() : '',
             page: map.page >= 0 ? String(row[map.page] || '').trim() : '',
             weight: map.weight >= 0 ? String(row[map.weight] || '').trim() : '',
             rowNumber: i + 1
           };
-          if (!record.word && !record.meaning && !record.pos && !record.page && !record.weight) continue;
+          if (!record.word && !record.pronunciation && !record.meaning && !record.pos && !record.page && !record.weight) continue;
           if (!record.word) { warnings.push((i + 1) + '行目：英単語が空のためスキップしました。'); continue; }
           originalId = record.id;
           baseId = originalId || 'row-' + (i + 1);
@@ -587,6 +591,7 @@
           if (Object.prototype.hasOwnProperty.call(byKey, key)) {
             duplicates += 1;
             var existing = output[byKey[key]];
+            existing.pronunciation = mergeMetadataValues(existing.pronunciation, record.pronunciation);
             existing.page = mergeMetadataValues(existing.page, record.page);
             existing.weight = mergeMetadataValues(existing.weight, record.weight);
             continue;
@@ -603,11 +608,14 @@
           item = inputRecords[i];
           key = getGroupKey(item.word);
           if (!Object.prototype.hasOwnProperty.call(byKey, key)) {
-            byKey[key] = { key: key, word: item.word, pos: [], meanings: [], pages: [], weights: [], rows: [] };
+            byKey[key] = { key: key, word: item.word, pronunciations: [], pos: [], meanings: [], pages: [], weights: [], rows: [] };
             order.push(key);
           }
           group = byKey[key];
           group.rows.push(item);
+          splitMetadataValues(item.pronunciation).forEach(function (pronunciation) {
+            if (!group.pronunciations.some(function (existing) { return duplicateNormalise(existing) === duplicateNormalise(pronunciation); })) group.pronunciations.push(pronunciation);
+          });
           if (item.pos && group.pos.indexOf(item.pos) < 0) group.pos.push(item.pos);
           if (item.meaning && group.meanings.indexOf(item.meaning) < 0) group.meanings.push(item.meaning);
           splitMetadataValues(item.page).forEach(function (pageText) {
@@ -869,7 +877,7 @@
         if (mode === 'en') return normalise(record.word).indexOf(q) >= 0;
         if (mode === 'pos') return normalise(record.pos).indexOf(q) >= 0;
         if (mode === 'page') return /^\d+$/.test(q) && pageMatches(record.page, q);
-        return normalise(record.word).indexOf(q) >= 0 || normalise(record.meaning).indexOf(q) >= 0 || normalise(record.pos).indexOf(q) >= 0 || pageMatches(record.page, q);
+        return normalise(record.word).indexOf(q) >= 0 || normalise(record.pronunciation).indexOf(q) >= 0 || normalise(record.meaning).indexOf(q) >= 0 || normalise(record.pos).indexOf(q) >= 0 || pageMatches(record.page, q);
       }
       function groupMatches(group, query, mode) {
         var i;
@@ -1068,6 +1076,14 @@
         if (!group) return;
         currentGroupKey = key;
         $('detailTitle').textContent = group.word;
+        var pronunciationEl = $('detailPronunciation');
+        if (group.pronunciations && group.pronunciations.length) {
+          pronunciationEl.textContent = group.pronunciations.join(' ・ ');
+          pronunciationEl.classList.remove('hidden');
+        } else {
+          pronunciationEl.textContent = '';
+          pronunciationEl.classList.add('hidden');
+        }
 
         var chips = '';
         for (i = 0; i < group.pos.length; i += 1) chips += '<span class="chip pos">' + escapeHtml(posLabel(group.pos[i])) + '</span>';
