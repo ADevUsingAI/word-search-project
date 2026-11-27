@@ -7,7 +7,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="単語検索">
-  <meta name="description" content="英単語・日本語の意味・品詞・ページをまとめて検索できる、シンプルな単語検索アプリ。">
+  <meta name="description" content="英単語と日本語の意味を、すばやく検索できる、シンプルな単語検索アプリ。">
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="apple-touch-icon" sizes="192x192" href="./icon-192.png">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231a73e8'/%3E%3Cpath d='M15 18h34M15 29h25M15 40h30' stroke='white' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
@@ -92,8 +92,6 @@
     .word-card { display: block; width: 100%; padding: 17px 3px 18px; border: 0; border-bottom: 1px solid var(--line-soft); border-radius: 0; text-align: left; color: var(--text); background: transparent; cursor: pointer; }
     .word-card:hover .word-title { text-decoration: underline; }
     .word-title { display: block; color: var(--accent); font-size: 18px; line-height: 1.4; font-weight: 500; overflow-wrap: anywhere; }
-    .word-pron-line { display: block; margin-top: 2px; }
-    .word-pron { color: var(--muted); font-size: 12px; }
     .meaning-preview { display: block; margin-top: 6px; color: var(--text); font-size: 14px; line-height: 1.7; overflow-wrap: anywhere; }
     .result-meta { display: block; margin-top: 5px; color: var(--muted); font-size: 11px; line-height: 1.55; }
     .meaning-more { display: block; margin-top: 4px; color: var(--subtle); font-size: 11px; }
@@ -172,6 +170,115 @@
       .dialog { padding: 19px; border-radius: 16px; }
     }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; scroll-behavior: auto !important; } }
+
+    /* Refined, word-first visual system */
+    :root {
+      --page: #f8f9fb;
+      --surface: #ffffff;
+      --text: #202124;
+      --muted: #626b76;
+      --subtle: #8a929d;
+      --line: #e4e8ee;
+      --line-soft: #edf0f4;
+      --accent: #1769e0;
+      --accent-soft: #edf4ff;
+      --shadow: 0 8px 24px rgba(26, 39, 61, .055);
+      --overlay: rgba(24, 32, 45, .46);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --page: #17191d;
+        --surface: #22252b;
+        --text: #f1f3f5;
+        --muted: #b0b8c3;
+        --subtle: #89929e;
+        --line: #3b414b;
+        --line-soft: #303640;
+        --accent: #8ab4f8;
+        --accent-soft: #26364e;
+        --shadow: 0 8px 24px rgba(0,0,0,.2);
+        --overlay: rgba(0,0,0,.66);
+      }
+    }
+    body { background: var(--page); }
+    .app-shell { max-width: 900px; }
+    .topbar { border-bottom-color: var(--line); }
+    .brand { font-size: 16px; font-weight: 650; letter-spacing: -.025em; }
+    .search-area { padding-top: clamp(52px, 8vw, 82px); }
+    .hero-title { font-size: clamp(32px, 5.2vw, 43px); font-weight: 650; letter-spacing: -.055em; }
+    .hero-caption { color: var(--muted); }
+    .search-field { min-height: 58px; padding: 0 20px; border-color: var(--line); border-radius: 18px; box-shadow: 0 2px 10px rgba(26,39,61,.035); }
+    .search-field:hover, .search-field:focus-within { border-color: var(--accent); box-shadow: 0 3px 16px rgba(23,105,224,.10); }
+    .search-field input { font-size: 16px; }
+    .toolbar { border-bottom-color: var(--line); margin-top: 18px; }
+    .result-title { font-size: 13px; font-weight: 700; }
+    .result-count { font-variant-numeric: tabular-nums; }
+    .result-list { max-width: 820px; padding-top: 8px; }
+    .word-card { position: relative; padding: 19px 18px 18px; margin: 7px 0; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease; }
+    .word-card:hover { border-color: #b8cff4; box-shadow: var(--shadow); transform: translateY(-1px); }
+    .word-card:hover .word-title { text-decoration: none; }
+    .word-title { color: var(--text); font-size: 20px; font-weight: 650; letter-spacing: -.025em; }
+    .meaning-preview { margin-top: 8px; color: var(--muted); font-size: 14px; line-height: 1.75; }
+    .result-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+    .result-tag { display: inline-flex; align-items: center; min-height: 24px; padding: 3px 9px; border: 1px solid var(--line-soft); border-radius: 7px; color: var(--muted); background: var(--page); font-size: 11px; line-height: 1.4; }
+    .result-tag.pos { color: var(--accent); border-color: transparent; background: var(--accent-soft); }
+    .result-tag.page { color: var(--text); background: var(--surface); }
+    .meaning-more { margin-top: 8px; }
+    .empty-state { padding: 52px 14px 58px; }
+    .empty-title { font-size: 16px; font-weight: 650; }
+    .status-line { margin-top: 18px; }
+    .footer-note { margin: 28px auto 0; max-width: 620px; }
+    .detail-page { max-width: 780px; padding: 16px 0 56px; }
+    .detail-nav { display: grid; grid-template-columns: 40px 1fr 40px; align-items: center; gap: 12px; min-height: 54px; margin-bottom: 18px; color: var(--muted); font-size: 13px; font-weight: 600; }
+    .detail-nav .back-button { width: 38px; height: 38px; border-color: var(--line); background: var(--surface); font-size: 25px; }
+    .detail-nav-spacer { width: 40px; height: 1px; }
+    .word-hero { padding: clamp(23px, 5vw, 38px); border: 1px solid var(--line); border-radius: 20px; background: var(--surface); box-shadow: var(--shadow); }
+    .word-eyebrow, .section-kicker { display: block; color: var(--accent); font-size: 10px; font-weight: 750; letter-spacing: .13em; line-height: 1.4; }
+    .detail-page h1 { margin: 10px 0 0; color: var(--text); font-size: clamp(34px, 7vw, 54px); line-height: 1.16; font-weight: 720; letter-spacing: -.055em; overflow-wrap: anywhere; }
+    .detail-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 20px; }
+    .chip { min-height: 29px; padding: 5px 11px; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); background: var(--page); font-size: 11px; font-weight: 600; }
+    .chip.pos { color: var(--accent); border-color: transparent; background: var(--accent-soft); }
+    .chip.weight { color: var(--muted); }
+    .page-panel { margin-top: 14px; padding: 20px 22px 22px; border: 1px solid #dce8fb; border-radius: 16px; background: var(--accent-soft); }
+    .page-panel-heading, .section-heading { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+    .page-panel-heading h2, .section-heading h2 { margin: 5px 0 0; color: var(--text); font-size: 19px; line-height: 1.35; font-weight: 700; letter-spacing: -.025em; }
+    .page-total, .section-count { flex: 0 0 auto; color: var(--muted); font-size: 11px; font-weight: 600; font-variant-numeric: tabular-nums; }
+    .page-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .page-pill { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 38px; padding: 7px 13px; border: 1px solid rgba(23,105,224,.15); border-radius: 9px; color: var(--accent); background: var(--surface); font-size: 14px; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .detail-section { margin-top: 30px; padding: 0; border: 0; }
+    .section-heading { margin-bottom: 14px; }
+    .meaning-list { display: grid; gap: 9px; }
+    .meaning-item { display: flex; align-items: flex-start; gap: 14px; padding: 17px 18px; border: 1px solid var(--line); border-radius: 13px; background: var(--surface); }
+    .meaning-marker { display: inline-flex; flex: 0 0 32px; align-items: center; justify-content: center; min-height: 32px; border-radius: 9px; color: var(--accent); background: var(--accent-soft); font-size: 13px; font-weight: 750; font-variant-numeric: tabular-nums; }
+    .meaning-marker.empty { width: 7px; height: 7px; min-height: 7px; flex-basis: 7px; margin: 11px 12px 0 5px; border-radius: 50%; background: var(--subtle); }
+    .meaning-text { min-width: 0; padding-top: 3px; color: var(--text); font-size: 16px; line-height: 1.85; overflow-wrap: anywhere; }
+    .related-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+    .related-word { min-height: 52px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 11px; color: var(--text); background: var(--surface); font-size: 14px; font-weight: 600; transition: border-color .15s ease, background .15s ease; }
+    .related-word::after { content: "›"; margin-left: 12px; color: var(--subtle); font-size: 20px; }
+    .related-word:hover { border-color: #b8cff4; background: var(--accent-soft); }
+    .related-empty { grid-column: 1 / -1; padding: 19px; border: 1px dashed var(--line); border-radius: 12px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+    .detail-bottom { display: flex; justify-content: center; padding-top: 35px; }
+    .detail-bottom .tool-button { min-width: 190px; min-height: 44px; border-color: var(--line); border-radius: 11px; font-size: 13px; font-weight: 650; }
+    .history-item { border-bottom-color: var(--line); }
+    .tool-button { border-radius: 10px; }
+    .dialog { border-radius: 18px; }
+    @media (max-width: 600px) {
+      body { padding-left: 16px; padding-right: 16px; }
+      .search-area { padding-top: 51px; }
+      .search-field { min-height: 55px; border-radius: 16px; }
+      .word-card { padding: 17px 15px; border-radius: 12px; }
+      .word-title { font-size: 19px; }
+      .detail-page { padding-top: 8px; }
+      .detail-nav { margin-bottom: 12px; }
+      .word-hero { padding: 24px 20px; border-radius: 16px; }
+      .page-panel { padding: 18px 17px 19px; border-radius: 14px; }
+      .detail-section { margin-top: 27px; }
+      .meaning-item { gap: 11px; padding: 15px 14px; }
+      .meaning-text { font-size: 15px; line-height: 1.9; }
+      .related-list { grid-template-columns: 1fr; }
+      .page-pill { min-width: 42px; min-height: 36px; }
+    }
+    @media (prefers-reduced-motion: reduce) { .word-card, .related-word { transition: none; } }
   </style>
 </head>
 <body>
@@ -183,7 +290,7 @@
     <main id="searchScreen">
       <section class="search-area" aria-label="単語検索">
         <h1 class="hero-title">単語検索</h1>
-        <p class="hero-caption">英単語・日本語の意味・品詞・ページをまとめて検索</p>
+        <p class="hero-caption">英単語と日本語の意味を、すばやく検索</p>
         <div class="search-panel">
           <div class="search-field">
             <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg>
@@ -223,21 +330,38 @@
 
   <section id="detailScreen" class="hidden" aria-labelledby="detailTitle">
     <div class="detail-page">
-      <div class="dialog-top">
-        <div><h2 id="detailTitle"></h2><p class="dialog-sub" id="detailPron"></p></div>
+      <nav class="detail-nav" aria-label="ページ操作">
         <button class="back-button" type="button" id="detailPageBack" aria-label="検索結果に戻る">‹</button>
-      </div>
-      <div class="detail-row" id="detailChips"></div>
-      <div class="detail-section"><div class="section-label">日本語の意味</div><div id="detailMeanings"></div></div>
-      <div class="detail-section"><div class="section-label">関連単語</div><div id="detailRelated" class="related-list"></div></div>
-      <div class="detail-section"><div class="section-label">掲載ページ</div><div class="definition" id="detailPages"></div></div>
-      <div class="dialog-actions"><button class="tool-button primary" type="button" id="detailCloseButton">検索結果に戻る</button></div>
+        <span>単語の詳細</span>
+        <span class="detail-nav-spacer" aria-hidden="true"></span>
+      </nav>
+      <header class="word-hero">
+        <div class="word-eyebrow">WORD DETAILS</div>
+        <h1 id="detailTitle"></h1>
+        <div class="detail-row" id="detailChips"></div>
+      </header>
+      <section class="page-panel hidden" id="detailPageSection" aria-labelledby="detailPageHeading">
+        <div class="page-panel-heading">
+          <div><span class="section-kicker">REFERENCE</span><h2 id="detailPageHeading">掲載ページ</h2></div>
+          <span class="page-total" id="detailPagesCount"></span>
+        </div>
+        <div class="page-list" id="detailPages"></div>
+      </section>
+      <section class="detail-section meaning-section" aria-labelledby="detailMeaningHeading">
+        <div class="section-heading"><div><span class="section-kicker">MEANING</span><h2 id="detailMeaningHeading">意味</h2></div><span class="section-count" id="detailMeaningsCount"></span></div>
+        <div id="detailMeanings" class="meaning-list"></div>
+      </section>
+      <section class="detail-section related-section" aria-labelledby="detailRelatedHeading">
+        <div class="section-heading"><div><span class="section-kicker">RELATED WORDS</span><h2 id="detailRelatedHeading">関連単語</h2></div><span class="section-count" id="detailRelatedCount"></span></div>
+        <div id="detailRelated" class="related-list"></div>
+      </section>
+      <div class="detail-bottom"><button class="tool-button" type="button" id="detailCloseButton">検索結果に戻る</button></div>
     </div>
   </section>
 
   <div class="overlay" id="importOverlay" hidden>
     <section class="dialog" role="dialog" aria-modal="true" aria-labelledby="importTitle">
-      <div class="dialog-top"><div><h2 id="importTitle">CSVを読み込む</h2><p class="dialog-sub">複数のCSVをまとめて読み込めます</p></div><button class="close-button" type="button" data-close="importOverlay" aria-label="閉じる">×</button></div>
+      <div class="dialog-top"><div><h2 id="importTitle">CSVを読み込む</h2></div><button class="close-button" type="button" data-close="importOverlay" aria-label="閉じる">×</button></div>
       <div class="form-row"><label for="encodingSelect">文字コード</label><select id="encodingSelect"><option value="UTF-8">UTF-8</option><option value="Shift_JIS">Shift_JIS（Excel保存など）</option></select></div>
       <label class="file-pick" for="csvFileInput">CSVファイルを選択<input id="csvFileInput" type="file" accept=".csv,text/csv,.txt,text/plain" multiple></label>
     </section>
@@ -353,14 +477,13 @@
       var headerAliases = {
         id: ['id', 'no', 'number', '番号', '識別子', '管理番号', '単語id'],
         word: ['word', 'english', '英単語', '単語', '見出し語', '見出し', 'headword', 'term', '英語'],
-        pronunciation: ['pronunciation', 'phonetic', 'ipa', '発音', '発音記号', '発音表記', '音標'],
         pos: ['pos', 'partofspeech', '品詞', '品詞記号', '品詞表記', '語品'],
         meaning: ['meaning', 'japanese', 'translation', 'definition', '日本語', '日本語訳', '意味', '訳', '和訳', '語義'],
-        page: ['page', 'pageno', 'pagenumber', 'ページ', '頁', '掲載ページ', '出典ページ'],
+        page: ['page', 'pages', 'pageno', 'pagenumber', 'pagecount', 'numberofpages', 'totalpages', 'ページ', '頁', 'ページ番号', 'ページ数', '掲載ページ', '掲載ページ数', '出典ページ'],
         weight: ['weight', 'importance', 'priority', '重み', '重要度']
       };
       function findHeaderMap(headerRow) {
-        var map = { id: -1, word: -1, pronunciation: -1, pos: -1, meaning: -1, page: -1, weight: -1 };
+        var map = { id: -1, word: -1, pos: -1, meaning: -1, page: -1, weight: -1 };
         var normalHeaders = [], i, field, aliases, j;
         for (i = 0; i < headerRow.length; i += 1) normalHeaders.push(headerKey(headerRow[i]));
         for (field in headerAliases) {
@@ -396,8 +519,8 @@
           map = detected;
           start = 1;
         } else {
-          // 見出し行がない場合の標準順：ID, 英単語, 発音記号, 品詞, 日本語の意味, ページ
-          map = { id: 0, word: 1, pronunciation: 2, pos: 3, meaning: 4, page: 5, weight: -1 };
+          // 見出し行がない場合の旧形式：ID, 英単語, 品詞, 意味, ページ, 重み
+          map = { id: 0, word: 1, pos: 2, meaning: 3, page: 4, weight: 5 };
           start = 0;
           warnings.push('見出し行を検出できなかったため、標準の6列順として読み込みました。');
         }
@@ -408,14 +531,13 @@
           record = {
             id: map.id >= 0 ? String(row[map.id] || '').trim() : '',
             word: map.word >= 0 ? String(row[map.word] || '').trim() : '',
-            pronunciation: map.pronunciation >= 0 ? String(row[map.pronunciation] || '').trim() : '',
             pos: map.pos >= 0 ? String(row[map.pos] || '').trim() : '',
             meaning: map.meaning >= 0 ? String(row[map.meaning] || '').trim() : '',
             page: map.page >= 0 ? String(row[map.page] || '').trim() : '',
             weight: map.weight >= 0 ? String(row[map.weight] || '').trim() : '',
             rowNumber: i + 1
           };
-          if (!record.word && !record.meaning && !record.pos && !record.page) continue;
+          if (!record.word && !record.meaning && !record.pos && !record.page && !record.weight) continue;
           if (!record.word) { warnings.push((i + 1) + '行目：英単語が空のためスキップしました。'); continue; }
           originalId = record.id;
           baseId = originalId || 'row-' + (i + 1);
@@ -434,14 +556,27 @@
         try { if (text.normalize) text = text.normalize('NFKC'); } catch (e) {}
         return text.toLowerCase().replace(/[\s\u3000]+/g, ' ').trim();
       }
+      function splitMetadataValues(value) {
+        return String(value == null ? '' : value).split(/[;；、，,]/).map(function (part) { return part.trim(); }).filter(Boolean);
+      }
+      function mergeMetadataValues(first, second) {
+        var values = splitMetadataValues(first).concat(splitMetadataValues(second));
+        var seen = Object.create(null), merged = [];
+        values.forEach(function (value) {
+          var key = duplicateNormalise(value);
+          if (!key || seen[key]) return;
+          seen[key] = true;
+          merged.push(value);
+        });
+        return merged.join('、');
+      }
       function duplicateRecordKey(record) {
-        // IDとページは重複判定から除外。ページ違いの同一データは1行にまとめてページ情報を統合する。
+        // 同じ単語・品詞・意味なら、ページや重みが違っても同一項目として統合する。
+        // 意味や品詞が異なるものは別データとして残す。
         return JSON.stringify([
           duplicateNormalise(record.word),
-          duplicateNormalise(record.pronunciation),
           duplicateNormalise(record.pos),
-          duplicateNormalise(record.meaning),
-          duplicateNormalise(record.weight)
+          duplicateNormalise(record.meaning)
         ]);
       }
       function deduplicateRecords(inputRecords) {
@@ -452,19 +587,8 @@
           if (Object.prototype.hasOwnProperty.call(byKey, key)) {
             duplicates += 1;
             var existing = output[byKey[key]];
-            var oldPages = String(existing.page || '').split(/[;；、，]/);
-            var newPages = String(record.page || '').split(/[;；、，]/);
-            var pageSet = Object.create(null);
-            oldPages.concat(newPages).forEach(function (page) {
-              page = String(page || '').trim();
-              if (!page) return;
-              var pageKey = duplicateNormalise(page);
-              if (!pageSet[pageKey]) {
-                pageSet[pageKey] = true;
-                if (!existing.page) existing.page = page;
-                else if (duplicateNormalise(existing.page).split(/[;；、，]/).indexOf(pageKey) < 0) existing.page += '、' + page;
-              }
-            });
+            existing.page = mergeMetadataValues(existing.page, record.page);
+            existing.weight = mergeMetadataValues(existing.weight, record.weight);
             continue;
           }
           byKey[key] = output.length;
@@ -472,28 +596,26 @@
         }
         return { records: output, duplicates: duplicates };
       }
-      function getGroupKey(word) { return String(word == null ? '' : word).trim(); }
+      function getGroupKey(word) { return duplicateNormalise(word); }
       function buildGroups(inputRecords) {
-        var byKey = {}, order = [], i, item, key, group, j, found;
+        var byKey = Object.create(null), order = [], i, item, key, group;
         for (i = 0; i < inputRecords.length; i += 1) {
           item = inputRecords[i];
           key = getGroupKey(item.word);
-          if (!byKey[key]) {
-            byKey[key] = { key: key, word: item.word, pronunciation: [], pos: [], meanings: [], pages: [], rows: [] };
+          if (!Object.prototype.hasOwnProperty.call(byKey, key)) {
+            byKey[key] = { key: key, word: item.word, pos: [], meanings: [], pages: [], weights: [], rows: [] };
             order.push(key);
           }
           group = byKey[key];
           group.rows.push(item);
-          if (item.pronunciation && group.pronunciation.indexOf(item.pronunciation) < 0) group.pronunciation.push(item.pronunciation);
           if (item.pos && group.pos.indexOf(item.pos) < 0) group.pos.push(item.pos);
           if (item.meaning && group.meanings.indexOf(item.meaning) < 0) group.meanings.push(item.meaning);
-          if (item.page) {
-            var pagePieces = item.page.split(/[;；、，]/);
-            for (j = 0; j < pagePieces.length; j += 1) {
-              var pageText = pagePieces[j].trim();
-              if (pageText && group.pages.indexOf(pageText) < 0) group.pages.push(pageText);
-            }
-          }
+          splitMetadataValues(item.page).forEach(function (pageText) {
+            if (!group.pages.some(function (existing) { return duplicateNormalise(existing) === duplicateNormalise(pageText); })) group.pages.push(pageText);
+          });
+          splitMetadataValues(item.weight).forEach(function (weightText) {
+            if (!group.weights.some(function (existing) { return duplicateNormalise(existing) === duplicateNormalise(weightText); })) group.weights.push(weightText);
+          });
         }
         var result = [];
         for (i = 0; i < order.length; i += 1) result.push(byKey[order[i]]);
@@ -747,7 +869,7 @@
         if (mode === 'en') return normalise(record.word).indexOf(q) >= 0;
         if (mode === 'pos') return normalise(record.pos).indexOf(q) >= 0;
         if (mode === 'page') return /^\d+$/.test(q) && pageMatches(record.page, q);
-        return normalise(record.word).indexOf(q) >= 0 || normalise(record.meaning).indexOf(q) >= 0 || normalise(record.pos).indexOf(q) >= 0 || normalise(record.pronunciation).indexOf(q) >= 0 || pageMatches(record.page, q);
+        return normalise(record.word).indexOf(q) >= 0 || normalise(record.meaning).indexOf(q) >= 0 || normalise(record.pos).indexOf(q) >= 0 || pageMatches(record.page, q);
       }
       function groupMatches(group, query, mode) {
         var i;
@@ -794,16 +916,15 @@
         var html = '';
         for (var i = 0; i < items.length; i += 1) {
           var g = items[i];
-          var pron = g.pronunciation.length ? '<span class="word-pron">' + escapeHtml(g.pronunciation.join(' ・ ')) + '</span>' : '';
-          var metadata = [];
-          for (var j = 0; j < g.pos.length && j < 3; j += 1) metadata.push(posLabel(g.pos[j]));
-          if (g.pages.length) metadata.push(pageLabel(g.pages.join(', ')));
+          var metadata = '';
+          for (var j = 0; j < g.pos.length && j < 4; j += 1) metadata += '<span class="result-tag pos">' + escapeHtml(posLabel(g.pos[j])) + '</span>';
+          if (g.pages.length) metadata += '<span class="result-tag page">掲載ページ ' + g.pages.length + '件</span>'; 
+          if (g.weights.length) metadata += '<span class="result-tag">重み ' + escapeHtml(g.weights.join('・')) + '</span>';
           var preview = g.meanings.length ? g.meanings.slice(0, 2).join(' ／ ') : '意味は登録されていません';
           html += '<button class="word-card" type="button" data-word-key="' + escapeHtml(g.key) + '">' +
             '<span class="word-title">' + escapeHtml(g.word) + '</span>' +
-            (pron ? '<span class="word-pron-line">' + pron + '</span>' : '') +
             '<span class="meaning-preview">' + escapeHtml(preview).replace(/\n/g, '<br>') + '</span>' +
-            (metadata.length ? '<span class="result-meta">' + escapeHtml(metadata.join('　·　')) + '</span>' : '') +
+            (metadata ? '<span class="result-meta">' + metadata + '</span>' : '') +
             (g.meanings.length > 2 ? '<span class="meaning-more">ほか ' + (g.meanings.length - 2) + ' 件の意味</span>' : '') +
           '</button>';
         }
@@ -887,7 +1008,7 @@
         var text = String(value == null ? '' : value).replace(/\r\n?/g, '\n').trim();
         if (!text) return [];
         // ①②③、(1)(2)、1. などの番号が始まる位置で分割し、番号自体は残す。
-        var marker = /(?=(?:[①-⑳❶-❿]|\(\s*\d+\s*\)|\d+[.．、]))/g;
+        var marker = /(?=(?:[①-⑳❶-❿]|\(\s*\d+\s*\)|\d+[.．、](?=\s|$)))/g;
         var parts = text.split(marker).map(function (part) { return part.trim(); }).filter(Boolean);
         var out = [];
         parts.forEach(function (part) {
@@ -942,26 +1063,48 @@
       }
 
       function openGroup(key, recordAction) {
-        var group = null, i, j, meanings = '', chips = '', pron, pageText;
+        var group = null, i;
         for (i = 0; i < groups.length; i += 1) if (groups[i].key === key) { group = groups[i]; break; }
         if (!group) return;
         currentGroupKey = key;
         $('detailTitle').textContent = group.word;
-        pron = group.pronunciation.length ? group.pronunciation.join(' · ') : '発音記号は登録されていません';
-        $('detailPron').textContent = pron;
+
+        var chips = '';
         for (i = 0; i < group.pos.length; i += 1) chips += '<span class="chip pos">' + escapeHtml(posLabel(group.pos[i])) + '</span>';
-        if (group.pages.length) chips += '<span class="chip">' + escapeHtml(pageLabel(group.pages.join(', '))) + '</span>';
-        $('detailChips').innerHTML = chips || '<span class="chip">追加情報なし</span>';
-        if (group.meanings.length) {
-          for (j = 0; j < group.meanings.length; j += 1) {
-            var meaningParts = splitMeaningEntries(group.meanings[j]);
-            for (var mp = 0; mp < meaningParts.length; mp += 1) {
-              meanings += '<div class="definition">' + escapeHtml(meaningParts[mp]).replace(/\n/g, '<br>') + '</div>';
-            }
-          }
-        } else { meanings = '<div class="definition">日本語の意味は登録されていません。</div>'; }
-        $('detailMeanings').innerHTML = meanings;
-        // 関連単語は複数の根拠を点数化して順位付けする。CSVの単語表記は変更しない。
+        if (group.weights.length) chips += '<span class="chip weight">重み ' + escapeHtml(group.weights.join('・')) + '</span>';
+        $('detailChips').innerHTML = chips;
+
+        var meanings = [], meaningHtml = '';
+        group.meanings.forEach(function (meaningValue) {
+          splitMeaningEntries(meaningValue).forEach(function (part) { meanings.push(part); });
+        });
+        meanings.forEach(function (part) {
+          var match = part.match(/^([①-⑳❶-❿]|\(\s*\d+\s*\)|\d+[.．、])\s*(.*)$/);
+          var marker = match ? match[1] : '';
+          var text = match ? match[2] : part;
+          meaningHtml += '<div class="meaning-item">' +
+            (marker ? '<span class="meaning-marker">' + escapeHtml(marker) + '</span>' : '<span class="meaning-marker empty" aria-hidden="true"></span>') +
+            '<div class="meaning-text">' + escapeHtml(text).replace(/\n/g, '<br>') + '</div>' +
+          '</div>';
+        });
+        $('detailMeanings').innerHTML = meaningHtml || '<div class="related-empty">意味データは登録されていません。</div>';
+        $('detailMeaningsCount').textContent = meanings.length ? meanings.length + '項目' : '';
+
+        // ページ情報はデータベースにある値だけを、ページ単位のチップとして表示する。
+        var pages = group.pages || [];
+        if (pages.length) {
+          $('detailPageSection').classList.remove('hidden');
+          $('detailPagesCount').textContent = pages.length + '件';
+          $('detailPages').innerHTML = pages.map(function (page) {
+            return '<span class="page-pill">' + escapeHtml(page) + '</span>';
+          }).join('');
+        } else {
+          $('detailPageSection').classList.add('hidden');
+          $('detailPagesCount').textContent = '';
+          $('detailPages').innerHTML = '';
+        }
+
+        // 関連単語は複数の根拠を点数化して順位付けする。重複した単語はグループ化済み。
         var related = [], relatedHtml = '', candidate, score, scored = [];
         var currentMeaningText = group.meanings.join(' ');
         for (i = 0; i < groups.length; i += 1) {
@@ -976,13 +1119,13 @@
           relatedHtml += '<button type="button" class="related-word" data-related-key="' + escapeHtml(related[i].key) + '">' + escapeHtml(related[i].word) + '</button>';
         }
         $('detailRelated').innerHTML = relatedHtml || '<div class="related-empty">関連する単語は見つかりませんでした。</div>';
-        pageText = group.pages.length ? group.pages.join(' ／ ') : 'ページ情報は登録されていません。';
-        $('detailPages').textContent = pageText;
+        $('detailRelatedCount').textContent = related.length ? related.length + '件' : '';
         $('searchScreen').className = 'hidden';
         $('historyScreen').className = 'hidden';
         $('detailScreen').className = '';
         if (recordAction) addHistory({ type: 'open', query: group.word, mode: currentMode, label: group.word });
         saveAppState();
+        window.scrollTo(0, 0);
       }
       function closeDetail() {
         $('detailScreen').className = 'hidden';
