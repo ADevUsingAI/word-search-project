@@ -1019,10 +1019,17 @@
         var marker = /(?=(?:[①-⑳❶-❿]|\(\s*\d+\s*\)|\d+[.．、](?=\s|$)))/g;
         var parts = text.split(marker).map(function (part) { return part.trim(); }).filter(Boolean);
         var out = [];
+        // CSV内で意味の間に単独の「/」「／」が置かれている場合は、
+        // それを意味項目として表示しない。意味本文中のスラッシュは保持する。
+        var separatorOnly = /^[\/／|｜・、,，;；\s]+$/;
         parts.forEach(function (part) {
-          part.split(/\n+/).forEach(function (line) { if (line.trim()) out.push(line.trim()); });
+          part.split(/\n+/).forEach(function (line) {
+            var cleaned = line.trim();
+            if (!cleaned || separatorOnly.test(cleaned)) return;
+            out.push(cleaned);
+          });
         });
-        return out.length ? out : [text];
+        return out;
       }
       function relatedNormalise(value) {
         return String(value == null ? '' : value).toLowerCase()
